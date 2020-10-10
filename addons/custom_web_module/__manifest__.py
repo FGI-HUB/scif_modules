@@ -9,7 +9,7 @@
     """,
 
     'author': "EWONGA Sarl",
-    'website': "http://www.ewonga.tech",
+    'website': "https://www.ewonga.tech",
 
     'category': 'Theme/Creative',
     'version': '0.1',

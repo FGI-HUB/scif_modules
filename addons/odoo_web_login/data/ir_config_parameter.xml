@@ -23,7 +23,7 @@
         
         <record id="login_form_background_default" model="ir.config_parameter">
             <field name="key">login_form_background_default</field>
-            <field name="value">/odoo_web_login/static/src/img/background_login_6.jpg</field>
+            <field name="value">/odoo_web_login/static/src/img/background_login_5.png</field>
         </record>
         <record id="login_form_background_dawn" model="ir.config_parameter">
             <field name="key">login_form_background_dawn</field>

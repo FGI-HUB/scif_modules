@@ -1,0 +1,24 @@
+<odoo>
+  <data>
+      <record id="menu_home_index" model="website.menu">
+        <field name="name">Accueil</field>
+        <field name="url">/</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">12</field>
+      </record>
+
+      <record id="menu_about_us" model="website.menu">
+        <field name="name">A propos de nous</field>
+        <field name="url">/aboutus</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">13</field>
+      </record>
+
+      <record id="menu_contact_us" model="website.menu">
+        <field name="name">Contactez-nous</field>
+        <field name="url">/contactus</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">14</field>
+      </record>
+  </data>
+</odoo>

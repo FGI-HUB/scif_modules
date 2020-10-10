@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+  <template id="assets_login" inherit_id="web.assets_frontend">
+    <xpath expr="." position="inside">
+      <link rel="stylesheet" href="/custom_web_module/static/src/css/custom_style.css"/>
+    </xpath>
+  </template>
+
+
+  <!-- NAVBAR TEMPLATE -->
+  <template id="custom_header" inherit_id="website.layout" name="Custom Header">
+    <xpath expr="//header" position="before">
+        <div class="topNav">
+          <div class="row" style="margin-left: 0; margin-right: 0">
+            <div class="container">
+              <div class="contact_top">
+                <span class="email_line" style="margin-right: 10px"><i class="fa fa-envelope"/>&amp;nbsp;
+                                        info@scif-immobilier.cm
+                                    </span>
+                <span class="separator_contact">|</span>
+                <span class="email_line" style="margin-left: 10px"><i class="fa fa-phone"/>&amp;nbsp; (+237)&amp;nbsp;675 882 167 /&amp;nbsp;699 538 389&amp;nbsp;</span>
+                <div class="logo_topNav">
+                  <img t-att-src="'/logo.png?company=%s' % res_company.id" t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </xpath>
+  </template>
+  <!-- NAVBAR TEMPLATE END -->
+
+
+
+
+  <template id="custom_homepage_view" name="Custom Home Page" inherit_id="website.homepage" customize_show="True" active="True">
+    <data inherit_id="website.homepage">
+      <xpath expr="//div[@id='wrap']" position="replace">
+        <section class="s_comparisons">
+          <div class="main_banner">
+            <div class="container">
+              <div class="row" style="margin-left: 0; margin-right: 0">
+                <div class="col-md-7 col_form">
+                  <div class="search_form_wrapper pt48 pb48">
+                    <div class="row" style="margin-left: 0; margin-right: 0">
+                      <div class="col-md-12">
+                        <div class="card p-3 py-4 banner_search_form">
+                          <form id="checkoutForm" method="post" action="/checkout/form/submit">
+                            <div id="before_submit">
+                              <div class="tab" style="margin-left: 0; margin-right: 0">
+                                <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
+                                  <div class="col-md-12">
+                                    <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24;" for="appart_type" class="text-white" checked="true">Type d'appartement</label>
+                                    <div class="form-group row" style="margin-left: 0; margin-right: 0">
+                                      <div class="form-check form-check-inline col-md-6">
+                                        <input class="form-check-input" type="radio" name="appart_type" id="inlineRadio1" value="3rooms"/>
+                                        <label class="form-check-label text-white" for="inlineRadio1">3 chambres</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="appart_type" id="inlineRadio2" value="2rooms"/>
+                                        <label class="form-check-label text-white" for="inlineRadio2">2 chambre</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label for="app_nber" class="text-white">Qté app.</label>
+                                      <input name="app_nber" id="app_nber" class="form-control" placeholder="Quantité" type="number"/>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label for="start_date" class="text-white">Date d'arrivée</label>
+                                      <input type="date" class="form-control" id="start_date" name="start_date"/>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label for="end_date" class="text-white">Date de départ</label>
+                                      <input type="date" class="form-control" id="end_date" name="end_date"/>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
+                                  <div class="col-md-12">
+                                    <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24;" for="caracteristic" class="text-white">Séjournez-vous avec des</label>
+                                    <div class="form-group row" style="margin-left: 0; margin-right: 0">
+                                      <div class="form-check form-check-inline col-md-4">
+                                        <input class="form-check-input" name="old" type="checkbox" id="inlineCheckbox1" value="old"/>
+                                        <label class="form-check-label text-white" for="inlineCheckbox1">Vieux</label>
+                                      </div>
+                                      <div class="form-check form-check-inline col-md-4">
+                                        <input class="form-check-input" name="invalid" type="checkbox" id="inlineCheckbox2" value="invalid"/>
+                                        <label class="form-check-label text-white" for="inlineCheckbox2">Handicapés</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="allergic" type="checkbox" id="inlineCheckbox3" value="allergic"/>
+                                        <label class="form-check-label text-white" for="inlineCheckbox3">Allergiques</label>
+                                      </div>
+                                    </div>
+                                    <div class="form-group row" style="margin-left: 0; margin-right: 0">
+                                      <div class="form-check form-check-inline col-md-4">
+                                        <input class="form-check-input" name="children" type="checkbox" id="inlineCheckbox4" value="children"/>
+                                        <label class="form-check-label text-white" for="inlineCheckbox4">Enfants</label>
+                                      </div>
+                                      <div class="form-check form-check-inline col-md-4">
+                                        <input class="form-check-input" name="sicks" type="checkbox" id="inlineCheckbox5" value="sicks"/>
+                                        <label class="form-check-label text-white" for="inlineCheckbox5">Maladifs</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tab" style="margin-left: 0; margin-right: 0">
+                                <div>
+                                  <h4 class="text-center text-white" style="margin-bottom: 20px; text-transform: uppercase">Informations sur le client</h4>
+                                </div>
+                                <div class="row" style="margin: 0">
+                                  <div class="form-group col-md-6">
+                                    <label for="name" class="text-white">Nom (s)</label>
+                                    <input name="name" id="name" class="form-control" placeholder="Nom du client" type="text"/>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="surname" class="text-white">Prénom (s)</label>
+                                    <input name="surname" id="surname" class="form-control" placeholder="Prénom du client" type="text"/>
+                                  </div>
+                                </div>
+                                <div class="row" style="margin: 0">
+                                  <div class="form-group col-md-6">
+                                    <label for="email" class="text-white">Email</label>
+                                    <input name="email" id="email" class="form-control" placeholder="Adresse email" type="email"/>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="phone" class="text-white">N° de téléphone</label>
+                                    <input name="phone" id="phone" class="form-control" placeholder="Téléphone" type="text"/>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div style="overflow:auto; padding: 15px">
+                                <div style="float:right;">
+                                  <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="btn btn-back flat flat" style="text-transform: uppercase; padding: 15px 40px; margin-right: 10px">Retour</button>
+                                  <button type="button" id="nextBtn" onclick="nextPrev(1)" class="btn btn-next flat flat" style="text-transform: uppercase; padding: 15px 40px">Suivant</button>
+                                </div>
+                              </div>
+
+                              <div style="text-align:center;margin-top:40px;">
+                                <span class="step"></span>
+                                <span class="step"></span>
+                              </div>
+                            </div>
+
+                            <div id="after_submit">
+                              <div class="submitted_wrapper" style="padding: 15px">
+                                <div class="s_t_wrapper" style="">
+                                  <h2 class="text-center" style="color: #fff">Formulaire envoyé avec succès!</h2>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6"> </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- MOBILE SEARCH FORM -->
+        <section>
+          <div class="mobile_search_form_wrapper pt48 pb48">
+            <div class="row mb-3" style="margin-left: 0; margin-right: 0">
+                <h3 class="text-center" style="width: 100%">
+                  <font style="font-size: 38px;">Rés<span style="padding-bottom: 10px; border-bottom: 5px solid #ff5a24">ervat</span>ion</font>
+                </h3>
+            </div>
+            <div class="row" style="margin-left: 0; margin-right: 0; padding-top: 20px">
+              <div class="col-md-12" style="padding-left: 20px; padding-right:20px">
+                <div class="card p-3 py-4 banner_search_form">
+                  <form>
+                    <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
+                      <div class="col-md-12">
+                        <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24;" for="appart_type" class="text-white">Type d'appartement</label>
+                        <div class="form-group row" style="margin-left: 0; margin-right: 0">
+                          <div class="form-check form-check-inline col-md-6">
+                            <input class="form-check-input" type="radio" name="appart_type" id="inlineRadio1" value="1"/>
+                            <label class="form-check-label text-white" for="inlineRadio1">3 chambres</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="appart_type" id="inlineRadio2" value="2"/>
+                            <label class="form-check-label text-white" for="inlineRadio2">2 chambre</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="app_nber" class="text-white">Nb. d'appartement</label>
+                          <input name="app_nber" id="app_nber" class="form-control" placeholder="Quantité" type="number"/>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="start_date" class="text-white">Date d'arrivée</label>
+                          <input type="date" class="form-control" id="start_date" name="start_date"/>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="end_date" class="text-white">Date de départ</label>
+                          <input type="date" class="form-control" id="end_date" name="end_date"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
+                      <div class="col-md-12">
+                        <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24;" for="caracteristic" class="text-white">Séjournez-vous avec des</label>
+                        <div class="form-group row" style="margin-left: 0; margin-right: 0">
+                          <div class="form-check form-check-inline col-md-4">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="old"/>
+                            <label class="form-check-label text-white" for="inlineCheckbox1">Vieux</label>
+                          </div>
+                          <div class="form-check form-check-inline col-md-4">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="handicap"/>
+                            <label class="form-check-label text-white" for="inlineCheckbox2">Handicapés</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="allergic"/>
+                            <label class="form-check-label text-white" for="inlineCheckbox3">Allergiques</label>
+                          </div>
+                        </div>
+                        <div class="form-group row" style="margin-left: 0; margin-right: 0">
+                          <div class="form-check form-check-inline col-md-4">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="children"/>
+                            <label class="form-check-label text-white" for="inlineCheckbox4">Enfants</label>
+                          </div>
+                          <div class="form-check form-check-inline col-md-4">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="sicks"/>
+                            <label class="form-check-label text-white" for="inlineCheckbox5">Maladifs</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                      <div class="col-md-12">
+                        <div class="mr-auto mx-auto" style="text-align: center">
+                          <input type="submit" class="btn btn-secondary flat flat" style="text-transform: uppercase; padding: 15px 40px" value="Reserver"/>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END MOBILE SEARCH FORM -->
+
+
+        <section class="pt-5 pb-5">
+          <div class="container">
+            <div class="row" style="margin-left:0; margin-right: 0">
+              <div class="col-md-6 description_home">
+                <h4>LA SOCIETE CAMEROUNAISE MMOBILIERE ET FAMILIALE</h4>
+                <p>
+                  Vous avez à votre disposition
+                  un immeuble de 24 appartements
+                  meublés et haut standing, sécurisé,
+                  éclairé et situé à quelques mètres
+                  de la plage du lycée
+                </p>
+                <div>
+                  <a href="a-propos" class="btn btn-secondary" style="text-transform: uppercase; border-radius: 10px">
+                    A propos de nous
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row" style="margin-left:0; margin-right: 0">
+                  <div class="col-md-4 col-4 one">
+                    <dv class="second_img_wrapper">
+                      <img src="/web/image/967/Asset%208.png" alt="amenity 1"/>
+                    </dv>
+                    <dv class="second_img_text">
+                      <p>
+                          Climatisation
+                      </p>
+                    </dv>
+                  </div>
+                  <div class="col-md-4 col-4 two">
+                    <dv class="second_img_wrapper">
+                      <img src="/web/image/943/Asset%201.png" alt="amenity 1" title="" aria-describedby="tooltip766153"/>
+                    </dv>
+                    <dv class="second_img_text">
+                      <p>
+                          Cuisine
+                      </p>
+                    </dv>
+                  </div>
+                  <div class="col-md-4 col-4 three">
+                    <dv class="second_img_wrapper">
+                      <img src="/web/image/953/Asset%204.png" alt="amenity 1"/>
+                    </dv>
+                    <dv class="second_img_text">
+                      <p>
+                          Douche
+                      </p>
+                    </dv>
+                  </div>
+                </div>
+                <div class="row" style="margin-left:0; margin-right: 0">
+                  <div class="col-md-4 col-4 four">
+                    <dv class="second_img_wrapper">
+                      <img src="/web/image/973/Asset%209.png" alt="amenity 1"/>
+                    </dv>
+                    <dv class="second_img_text">
+                      <p>
+                          Staff</p>
+                    </dv>
+                  </div>
+                  <div class="col-md-4 col-4 five">
+                    <dv class="second_img_wrapper">
+                      <img src="/web/image/876/virgil.png" alt="amenity 1" title="" aria-describedby="tooltip766153"/>
+                    </dv>
+                    <dv class="second_img_text">
+                      <p>
+                          Gardien de sécurité</p>
+                    </dv>
+                  </div>
+                  <div class="col-md-4 col-4 six">
+                    <dv class="second_img_wrapper">
+                      <img src="/web/image/878/hot_water.png" alt="amenity 1"/>
+                    </dv>
+                    <dv class="second_img_text">
+                      <p>
+                          Chauffe eau</p>
+                    </dv>
+                  </div>
+                </div>
+                <div class="row" style="margin-left:0; margin-right: 0">
+                  <div class="col-md-4 col-4 seven">
+                    <dv class="second_img_wrapper">
+                      <img src="/web/image/946/Asset%203.png" alt="amenity 1" title="" aria-describedby="tooltip936665"/>
+                    </dv>
+                    <dv class="second_img_text">
+                      <p>
+                          Jardinier
+                      </p>
+                    </dv>
+                  </div>
+                  <div class="col-md-4 col-4 height">
+                    <dv class="second_img_wrapper">
+                      <img src="/web/image/955/Asset%206.png" alt="amenity 1" title="" aria-describedby="tooltip766153"/>
+                    </dv>
+                    <dv class="second_img_text">
+                      <p>
+                          Sécurité
+                      </p>
+                    </dv>
+                  </div>
+                  <div class="col-md-4 col-4 nine">
+                    <dv class="second_img_wrapper">
+                      <img src="/web/image/957/Asset%205.png" alt="amenity 1"/>
+                    </dv>
+                    <dv class="second_img_text">
+                      <p>
+                          Machine à laver
+                      </p>
+                    </dv>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- MINI GALERY 4 IMG -->
+        <section>
+            <div class="min_gallery_wrapper">
+                <div class="row" style="margin: 0">
+                    <div class="col-md-3 col-6 bloc_img_container">
+                        <img src="/custom_web_module/static/src/img/home/home_block1/pic1.jpg" style="width:100%" />
+                        <div class="min_gal_pic_overlay">
+                            <h3>Salon équipé</h3>
+                            <div class="pic_overlay_btn">
+                                <a href="#" class="btn btn-secondary">Voir +</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 bloc_img_container">
+                        <img src="/custom_web_module/static/src/img/home/home_block1/pic2.jpg" style="width:100%" />
+                        <div class="min_gal_pic_overlay">
+                            <h3>Cuisine moderne</h3>
+                            <div class="pic_overlay_btn">
+                                <a href="#" class="btn btn-secondary">Voir +</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 bloc_img_container">
+                        <img src="/custom_web_module/static/src/img/home/home_block1/pic3.jpg" style="width:100%" />
+                        <div class="min_gal_pic_overlay">
+                            <h3>Salle de bain</h3>
+                            <div class="pic_overlay_btn">
+                                <a href="#" class="btn btn-secondary">Voir +</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 bloc_img_container">
+                        <img src="/custom_web_module/static/src/img/home/home_block1/pic4.jpg" style="width:100%" />
+                        <div class="min_gal_pic_overlay">
+                            <h3>Chambre climatisée</h3>
+                            <div class="pic_overlay_btn">
+                                <a href="#" class="btn btn-secondary">Voir +</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END MINI GALERY 4 IMG -->
+
+        <!--APPARTMENT CATEGORIES-->
+        <section class="pt72 pb-5">
+          <div class="col-md-12 text-center">
+            <h3>
+              <font style="font-size: 48px;">Cat<span style="padding-bottom: 20px; border-bottom: 5px solid #ff5a24">égo</span>ries</font>
+            </h3>
+            <div class="container">
+              <div class="row" style="margin-left: 0; margin-right: 0px">
+                <div class="col-md-6 first">
+                  <div class="block_wrapper">
+                    <a href="#" class="block_content">
+                      <div class="category_pic">
+                        <img src="/custom_web_module/static/src/img/home/home_block1/pic4.jpg" alt="Interior 1" title="" aria-describedby="tooltip640627"/>
+                      </div>
+                      <div class="category_legend" style="text-align: left">
+                          <div class="category_legend_title" style="padding-bottom: 20px">
+                              <h3 class="text-white"><span style="border-bottom: 1px solid #ff5a24">3 CHA</span>MBRES</h3>
+                          </div>
+                          <div class="category_legend_row">
+                            <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
+                                <div class="col-8" style="text-align: left">
+                                    Grand séjour climatisé
+                                </div>
+                                <div class="col-4" style="text-align: right">
+                                    <span class="nber" style="padding: 3px; border-radius: 48%; background-color: #fff; color: #0b1735">01</span>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
+                                <div class="col-8" style="text-align: left">
+                                    Chambre climatisée avec douche
+                                </div>
+                                <div class="col-4" style="text-align: right">
+                                    <span class="nber" style="padding: 3px; border-radius: 48%; background-color: #fff; color: #0b1735">01</span>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
+                                <div class="col-8" style="text-align: left">
+                                    Chambre avec douche commune
+                                </div>
+                                <div class="col-4" style="text-align: right">
+                                    <span class="nber" style="padding: 3px; border-radius: 48%; background-color: #fff; color: #0b1735">02</span>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
+                                <div class="col-8" style="text-align: left">
+                                    Toilette visiteur
+                                </div>
+                                <div class="col-4" style="text-align: right">
+                                    <span class="nber" style="padding: 3px; border-radius: 48%; background-color: #fff; color: #0b1735">01</span>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 second">
+                  <div class="block_wrapper">
+                    <a href="#" class="block_content">
+                      <div class="category_pic">
+                        <img src="/web/image/924/12.jpg" alt="Interior 1" title="" aria-describedby="tooltip640627"/>
+                      </div>
+                      <div class="category_legend" style="text-align:left">
+                          <div class="category_legend_title" style="padding-bottom: 20px">
+                              <h3 class="text-white"><span style="border-bottom: 1px solid #ff5a24">2 CHA</span>MBRES</h3>
+                          </div>
+                          <div class="category_legend_row">
+                            <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
+                                <div class="col-8" style="text-align: left">
+                                    Grand séjour climatisé
+                                </div>
+                                <div class="col-4" style="text-align: right">
+                                    <span class="nber" style="padding: 3px; border-radius: 48%; background-color: #fff; color: #0b1735">01</span>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
+                                <div class="col-8" style="text-align: left">
+                                    Chambre climatisée avec douche
+                                </div>
+                                <div class="col-4" style="text-align: right">
+                                    <span class="nber" style="padding: 3px; border-radius: 48%; background-color: #fff; color: #0b1735">02</span>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
+                                <div class="col-8" style="text-align: left">
+                                    Toilette visiteur
+                                </div>
+                                <div class="col-4" style="text-align: right">
+                                    <span class="nber" style="padding: 3px; border-radius: 48%; background-color: #fff; color: #0b1735">01</span>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px; opacity: 0">
+                                <div class="col-8" style="text-align: left">
+                                    Toilette visiteur
+                                </div>
+                                <div class="col-4" style="text-align: right">
+                                    <span class="nber" style="padding: 3px; border-radius: 48%; background-color: #fff; color: #0b1735">01</span>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END BLOCK -->
+
+        <!-- GALLERY CUSTOMIZED -->
+        <section class="container-fluid pb-5" style="padding-left: 0; padding-right: 0">
+          <div class="">
+            <div class="container">
+              <div class="row s_nb_column_fixed" style="margin-left: 0; margin-right: 0">
+                <div class="col-lg-12 s_title pt16 pb16" style="text-align: center; font-size: 2.4rem !important; text-transform: uppercase; padding-bottom: 20px; margin-bottom: 30px">
+                  <h2 class="text-dark">
+                      Gal<span style="padding-bottom: 20px; border-bottom: 5px solid #32a8e8">erie ph</span>oto
+                    </h2>
+                </div>
+                <div class="offset-2 col-8">
+                    <p style="text-align:center">
+                        Ma gallerie représentatives des différentes pièces constitutives
+                        des appartements. Cela est un très grand aperçu en image de ce que
+                        nous proposons
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-left:0; margin-right: 0">
+            <div class="tab-content">
+              <div id="itemblock1" class="tab-pane active">
+                <div class="row_gallery">
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" title="" aria-describedby="tooltip303825"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home stable">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"/>
+                  </div>
+                <!--</div>
+                <div class="row_gallery">-->
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor" title="" aria-describedby="tooltip283729"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="myModal" class="modal" style="display: none;">
+              <span class="close cursor" onclick="closeModal()">×</span>
+              <div class="modal-content">
+                <div class="mySlides" style="display: block;">
+                  <div class="numbertext">1 / 10</div>
+                  <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" title="" aria-describedby="tooltip355920"/>
+                </div>
+                <div class="mySlides" style="display: none;">
+                  <div class="numbertext">2 / 10</div>
+                  <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%"/>
+                </div>
+                <div class="mySlides" style="display: none;">
+                  <div class="numbertext">3 / 10</div>
+                  <img src="/custom_web_module/static/src/img/home/home_block2/pic3.jpg" style="width:100%"/>
+                </div>
+                <div class="mySlides" style="display: none;">
+                  <div class="numbertext">4 / 10</div>
+                  <img src="/web/image/920/10.jpg" style="width:100%"/>
+                </div>
+                <div class="mySlides" style="display: none;">
+                  <div class="numbertext">5 / 10</div>
+                  <img src="/custom_web_module/static/src/img/home/home_block2/pic5.jpg" style="width:100%"/>
+                </div>
+                <div class="mySlides" style="display: none;">
+                  <div class="numbertext">6 / 10</div>
+                  <img src="/custom_web_module/static/src/img/home/home_block2/pic6.jpg" style="width:100%"/>
+                </div>
+                <div class="mySlides" style="display: none;">
+                  <div class="numbertext">7 / 10</div>
+                  <img src="/custom_web_module/static/src/img/home/home_block2/pic7.jpg" style="width:100%"/>
+                </div>
+                <div class="mySlides" style="display: none;">
+                  <div class="numbertext">8 / 10</div>
+                  <img src="/custom_web_module/static/src/img/home/home_block2/pic8.jpg" style="width:100%"/>
+                </div>
+                <div class="mySlides" style="display: none;">
+                  <div class="numbertext">9 / 10</div>
+                  <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%"/>
+                </div>
+                <div class="mySlides" style="display: none;">
+                  <div class="numbertext">10 / 10</div>
+                  <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%"/>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                <div class="caption-container">
+                  <p id="caption">Appartrements vues de l'intérieur</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- GALLERY CUSTOMIZED ENDBLOCK -->
+
+        <section class="s_cover parallax s_parallax_is_fixed pb96 s_parallax_no_overflow_hidden bg-black-50 pt0" data-scroll-background-ratio="1" style="background-image: none;">
+          <span class="s_parallax_bg oe_img_bg oe_custom_bg" style="background-image: url(&quot;/web/image/847/about_pic.jpg&quot;); background-position: 50% 0px; background-color: rgba(38, 74, 186, 0.75);"/>
+          <div class="container">
+            <div class="row s_nb_column_fixed" style="margin-left: 0; margin-right: 0">
+              <div class="contact_form_wrapper" style="width: 100%">
+                <div class="row d-flex justify-content-center" style="margin-left: 0; margin-right: 0">
+                  <div class="col-md-8 offset-md-2 pt72" style="margin-left: 0">
+                    <div class="row" style="margin-left: 0; margin-right: 0">
+                      <div class="col-md-8 offset-md-2">
+                        <div class="card p-3 py-4 mb-5" style="border-top: 10px solid #d94d24">
+                          <h3 class="s_title_thin text-center" style="text-align: left; padding-bottom: 10px">
+                            <font style="color: rgba(101, 101, 101, 1); font-size: 20px;">Votre adresse email</font>
+                          </h3>
+                          <h3 class="s_title_thin text-center" style="text-align: left; padding-bottom: 10px">
+                            <font style="color: rgb(0, 0, 0); font-size: 20px;">scif-mail@mail.com</font>
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card p-3 py-4">
+                      <form style="padding: 20px">
+                        <h1 class="s_title_thin" style="text-align: left; padding-bottom: 30px">
+                          <font style="color: rgb(0, 0, 0); font-size: 30px;">Laisser un message</font>
+                        </h1>
+                        <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input type="text" class="form-control" id="name" name="name" placeholder="Nom"/>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input type="text" class="form-control" id="surname" name="surname" placeholder="Prénom"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input type="email" class="form-control" id="email" name="email" placeholder="Email"/>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Numéro de téléphone"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <select class="form-control" id="contactMethod" name="contactMethod" placeholder="Moyen de communication préféré">
+                                <option>Moyen de communication préféré</option>
+                                <option>Téléphone</option>
+                                <option>Whatsapp</option>
+                                <option>SMS</option>
+                                <option>Email</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <select class="form-control" id="lookingFor" name="lookingFor" placeholder="Que cherchez vous exactement?">
+                                <option>Que cherchez vous exactement</option>
+                                <option>Appartement</option>
+                                <option>Studio</option>
+                                <option>Maison</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <textarea rows="4" class="form-control" id="message" name="message" placeholder="Message"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                          <div class="col-md-12">
+                            <div class="mr-auto mx-auto" style="text-align: right">
+                              <input type="submit" class="btn btn-primary flat flat" value="envoyer" style="text-transform: uppercase; padding: 15px 40px"/>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <script>
+          function openModal() {
+            document.getElementById("myModal").style.display = "block";
+          }
+
+          function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+          }
+
+          var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n &gt; slides.length) {
+              slideIndex = 1;
+            }
+
+            if (1 &gt; n) {
+              slideIndex = slides.length;
+            }
+            for (var i = 0; slides.length &gt; i; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; dots.length &gt; i; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+          }
+        </script>
+        <script>
+          var currentTab = 0; // Current tab is set to be the first tab (0)
+            showTab(currentTab); // Display the current tab
+
+            function showTab(n) {
+              // This function will display the specified tab of the form...
+              var x = document.getElementsByClassName("tab");
+              x[n].style.display = "block";
+              //... and fix the Previous/Next buttons:
+              if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+              } else {
+                document.getElementById("prevBtn").style.display = "inline";
+              }
+              if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Réserver";
+              } else {
+                document.getElementById("nextBtn").innerHTML = "Suivant";
+              }
+              //... and run a function that will display the correct step indicator:
+              fixStepIndicator(n)
+            }
+
+            function nextPrev(n) {
+              // This function will figure out which tab to display
+              var x = document.getElementsByClassName("tab");
+              // Exit the function if any field in the current tab is invalid:
+              // Hide the current tab:
+              x[currentTab].style.display = "none";
+              // Increase or decrease the current tab by 1:
+              currentTab = currentTab + n;
+              // if you have reached the end of the form...
+              console.log("A+Current tab=================", currentTab);
+              console.log("A+Value of x=================", x);
+              if (currentTab >= x.length) {
+                // ... the form gets submitted:
+                document.getElementById("checkoutForm").submit();
+                console.log("Submited..............................");
+                $("#before_submit").hide()
+                $("#after_submit").show();
+                return false;
+              }
+              // Otherwise, display the correct tab:
+              showTab(currentTab);
+            }
+
+            function fixStepIndicator(n) {
+              // This function removes the "active" class of all steps...
+              var i, x = document.getElementsByClassName("step");
+              for (i = 0; i &lt; x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+              }
+              //... and adds the "active" class on the current step:
+              x[n].className += " active";
+            }
+
+            $("#before_submit").show()
+            $("#after_submit").hide()
+        </script>
+      </xpath>
+    </data>
+  </template>
+
+
+  <template id="customized_footer_copy" inherit_id="website.layout" name="Footer Copyright">
+    <xpath expr="//footer" position="replace">
+      <section class="s_text_block pt-3 pb8">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-3">
+                <a href="/" class="footer-brand logo">
+                <img t-att-src="'/logo.png?company=%s' % res_company.id" t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name"/>
+                </a>
+            </div>
+            <div class="col-lg-3 quick-link">
+                <h5 style="padding-top: 10px" class="text-secondary">
+                <b> Liens rapides </b>
+                </h5>
+                <ul class="list-unstyled">
+                <li>
+                    <a href="/" data-original-title="" title="" aria-describedby="tooltip102467">Accueil</a>
+                </li>
+                <li>
+                    <a href="/appartements" data-original-title="" title="" aria-describedby="tooltip380513">Appartements</a>
+                </li>
+                <li>
+                    <a href="/contactus">Contactez-nous</a>
+                </li>
+                <li>
+                    <a href="/a-propos">A propos</a>
+                </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 quick-link">
+                <h5 style="padding-top: 10px" class="text-secondary">
+                <b>Contacts</b>
+                </h5>
+                <ul class="list-unstyled">
+                <li>
+                    <a href="#">Kribi - NGOYE</a>
+                </li>
+                <li>
+                    <a href="tel:+237675882167">+237 675 882 167</a>
+                </li>
+                <li>
+                    <a href="tel:+237699538389">+237 699 538 389</a>
+                </li>
+                <li>
+                    <a href="/a-propos">service@scif.com</a>
+                </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 follow-link">
+                <h5 style="padding-top: 10px" class="text-secondary">
+                <b> Suivez nous </b>
+                </h5>
+                <div class="s_share">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A9000%2F%23" class="s_share_facebook" target="_blank">
+                    <i class="fa fa-1x fa-facebook bg-primary shadow-sm"/>
+                </a>
+                <a href="https://twitter.com/intent/tweet?text=Home%20%7C%20My%20Website&amp;url=http%3A%2F%2Flocalhost%3A9000%2F%23" class="s_share_twitter" target="_blank">
+                    <i class="fa fa-1x fa-twitter bg-primary shadow-sm"/>
+                </a>
+                <a href="mailto:?body=http%3A%2F%2Flocalhost%3A9000%2F%23&amp;subject=Home%20%7C%20My%20Website" class="s_share_email">
+                    <i class="fa fa-1x fa-instagram bg-primary shadow-sm"/>
+                </a>
+                </div>
+            </div>
+            </div>
+            <div class="row" style="mergin-left: 0; margin-right: 0">
+            <div class="col-lg-3">
+                <h3>
+                <font style="font-size: 18px;">
+                    <b>SOCIÉTÉ CIVILE IMMOBILIÈRE ET FAMILIALE</b>
+                </font>
+                </h3>
+            </div>
+            <div class="col-lg-3">
+                </div>
+            <div class="col-lg-6">
+                <font style="font-size: 11px;">Inscrivez-vous à notre newsletter</font>
+                <br/>
+                <form class="form-inline" style="width: 100%">
+                <div class="form-group mx-sm-3 mb-2 footer_form" style="width: 100%; margin-left: 0 !important">
+                    <label for="inputEmail" class="sr-only">Email</label>
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Votre adresse email" style="border-radius: 0 !important; width: 80%"/>
+                    <div style="padding-left: 10px; width: 15%;">
+                    <button type="submit" class="btn btn-secondary" style="border-radius: 0 !important">S'inscrire</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        </section>
+    </xpath>
+  </template>
+
+  <template id="web_assets_frontend" name="Website Assets">
+    <xpath expr=".">
+      <script type="text/javascript" src="/custom_web_module/static/src/js/jquery.fancybox.min.js"></script>
+    </xpath>
+  </template>
+</odoo>

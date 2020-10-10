@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="__manifest__.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__manifest__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/custom_web_module/__manifest__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
-              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -23,8 +23,24 @@
       <file leaf-file-name="templates.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/custom_web_module/views/templates.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="944" column="12" lean-forward="true" selection-start-line="944" selection-start-column="12" selection-end-line="944" selection-end-column="12" />
+            <state relative-caret-position="12104">
+              <caret line="944" column="12" selection-start-line="944" selection-start-column="12" selection-end-line="944" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fr.po" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hotel_reservation/i18n/fr.po">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8619" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hotel_reservation_view.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hotel_reservation/views/hotel_reservation_view.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="281" column="46" selection-start-line="281" selection-start-column="46" selection-end-line="281" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -70,6 +86,17 @@
             <path>
               <item name="addons" type="b2602c69:ProjectViewProjectNode" />
               <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="custom_web_module" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="addons" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="custom_web_module" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="addons" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
               <item name="ew_reservation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -77,6 +104,40 @@
               <item name="addons" type="462c0819:PsiDirectoryNode" />
               <item name="ew_reservation" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="addons" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="hotel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="addons" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="hotel" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="addons" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="hotel" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="addons" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="hotel_reservation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="addons" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="hotel_reservation" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="addons" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="hotel_reservation" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -155,17 +216,29 @@
     <entry file="file://$PROJECT_DIR$/custom_web_module/views/views.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/custom_web_module/views/templates.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="944" column="12" lean-forward="true" selection-start-line="944" selection-start-column="12" selection-end-line="944" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/custom_web_module/__manifest__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom_web_module/views/templates.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12104">
+          <caret line="944" column="12" selection-start-line="944" selection-start-column="12" selection-end-line="944" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hotel_reservation/i18n/fr.po">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8619" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hotel_reservation/views/hotel_reservation_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="281" column="46" selection-start-line="281" selection-start-column="46" selection-end-line="281" selection-end-column="46" />
         </state>
       </provider>
     </entry>

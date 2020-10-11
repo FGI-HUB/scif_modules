@@ -90,7 +90,7 @@
                                     <div class="form-group row" style="margin-left: 0; margin-right: 0">
                                       <div class="form-check form-check-inline col-md-4">
                                         <input class="form-check-input" name="old" type="checkbox" id="inlineCheckbox1" value="old"/>
-                                        <label class="form-check-label text-white" for="inlineCheckbox1">Vieux</label>
+                                        <label class="form-check-label text-white" for="inlineCheckbox1">Personnes agées</label>
                                       </div>
                                       <div class="form-check form-check-inline col-md-4">
                                         <input class="form-check-input" name="invalid" type="checkbox" id="inlineCheckbox2" value="invalid"/>
@@ -110,6 +110,20 @@
                                         <input class="form-check-input" name="sicks" type="checkbox" id="inlineCheckbox5" value="sicks"/>
                                         <label class="form-check-label text-white" for="inlineCheckbox5">Maladifs</label>
                                       </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label for="child_number" class="text-white">Qté app.</label>
+                                      <input name="child_number" id="child_number" class="form-control" placeholder="Nbre d'enfatnts" type="number"/>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label for="adult_number" class="text-white">Qté app.</label>
+                                      <input name="adult_number" id="adult_number" class="form-control" placeholder="Nbre d'adultes" type="number"/>
                                     </div>
                                   </div>
                                 </div>
@@ -286,7 +300,7 @@
                 <div class="row" style="margin-left:0; margin-right: 0">
                   <div class="col-md-4 col-4 one">
                     <dv class="second_img_wrapper">
-                      <img src="/web/image/967/Asset%208.png" alt="amenity 1"/>
+                      <img src="/custom_web_module/static/src/img/amenities/1.png" alt="amenity 1"/>
                     </dv>
                     <dv class="second_img_text">
                       <p>
@@ -296,7 +310,7 @@
                   </div>
                   <div class="col-md-4 col-4 two">
                     <dv class="second_img_wrapper">
-                      <img src="/web/image/943/Asset%201.png" alt="amenity 1" title="" aria-describedby="tooltip766153"/>
+                      <img src="/custom_web_module/static/src/img/amenities/2.png" alt="amenity 1" title="" aria-describedby="tooltip766153"/>
                     </dv>
                     <dv class="second_img_text">
                       <p>
@@ -306,7 +320,7 @@
                   </div>
                   <div class="col-md-4 col-4 three">
                     <dv class="second_img_wrapper">
-                      <img src="/web/image/953/Asset%204.png" alt="amenity 1"/>
+                      <img src="/custom_web_module/static/src/img/amenities/3.png" alt="amenity 1"/>
                     </dv>
                     <dv class="second_img_text">
                       <p>
@@ -318,7 +332,7 @@
                 <div class="row" style="margin-left:0; margin-right: 0">
                   <div class="col-md-4 col-4 four">
                     <dv class="second_img_wrapper">
-                      <img src="/web/image/973/Asset%209.png" alt="amenity 1"/>
+                      <img src="/custom_web_module/static/src/img/amenities/4.png" alt="amenity 1"/>
                     </dv>
                     <dv class="second_img_text">
                       <p>
@@ -327,7 +341,7 @@
                   </div>
                   <div class="col-md-4 col-4 five">
                     <dv class="second_img_wrapper">
-                      <img src="/web/image/876/virgil.png" alt="amenity 1" title="" aria-describedby="tooltip766153"/>
+                      <img src="/custom_web_module/static/src/img/amenities/5.png" alt="amenity 1" title="" aria-describedby="tooltip766153"/>
                     </dv>
                     <dv class="second_img_text">
                       <p>
@@ -336,7 +350,7 @@
                   </div>
                   <div class="col-md-4 col-4 six">
                     <dv class="second_img_wrapper">
-                      <img src="/web/image/878/hot_water.png" alt="amenity 1"/>
+                      <img src="/custom_web_module/static/src/img/amenities/6.png" alt="amenity 1"/>
                     </dv>
                     <dv class="second_img_text">
                       <p>
@@ -347,7 +361,7 @@
                 <div class="row" style="margin-left:0; margin-right: 0">
                   <div class="col-md-4 col-4 seven">
                     <dv class="second_img_wrapper">
-                      <img src="/web/image/946/Asset%203.png" alt="amenity 1" title="" aria-describedby="tooltip936665"/>
+                      <img src="/custom_web_module/static/src/img/amenities/7.png" alt="amenity 1" title="" aria-describedby="tooltip936665"/>
                     </dv>
                     <dv class="second_img_text">
                       <p>
@@ -357,7 +371,7 @@
                   </div>
                   <div class="col-md-4 col-4 height">
                     <dv class="second_img_wrapper">
-                      <img src="/web/image/955/Asset%206.png" alt="amenity 1" title="" aria-describedby="tooltip766153"/>
+                      <img src="/custom_web_module/static/src/img/amenities/8.png" alt="amenity 1" title="" aria-describedby="tooltip766153"/>
                     </dv>
                     <dv class="second_img_text">
                       <p>
@@ -367,7 +381,7 @@
                   </div>
                   <div class="col-md-4 col-4 nine">
                     <dv class="second_img_wrapper">
-                      <img src="/web/image/957/Asset%205.png" alt="amenity 1"/>
+                      <img src="/custom_web_module/static/src/img/amenities/9.png" alt="amenity 1"/>
                     </dv>
                     <dv class="second_img_text">
                       <p>
@@ -486,7 +500,7 @@
                   <div class="block_wrapper">
                     <a href="#" class="block_content">
                       <div class="category_pic">
-                        <img src="/web/image/924/12.jpg" alt="Interior 1" title="" aria-describedby="tooltip640627"/>
+                        <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" alt="Interior 1" title="" aria-describedby="tooltip640627"/>
                       </div>
                       <div class="category_legend" style="text-align:left">
                           <div class="category_legend_title" style="padding-bottom: 20px">
@@ -650,7 +664,7 @@
         <!-- GALLERY CUSTOMIZED ENDBLOCK -->
 
         <section class="s_cover parallax s_parallax_is_fixed pb96 s_parallax_no_overflow_hidden bg-black-50 pt0" data-scroll-background-ratio="1" style="background-image: none;">
-          <span class="s_parallax_bg oe_img_bg oe_custom_bg" style="background-image: url(&quot;/web/image/847/about_pic.jpg&quot;); background-position: 50% 0px; background-color: rgba(38, 74, 186, 0.75);"/>
+          <span class="s_parallax_bg oe_img_bg oe_custom_bg" style="background-image: url(&quot;/custom_web_module/static/src/img/home/about_pic.jpg&quot;); background-position: 50% 0px; background-color: rgba(38, 74, 186, 0.75);"/>
           <div class="container">
             <div class="row s_nb_column_fixed" style="margin-left: 0; margin-right: 0">
               <div class="contact_form_wrapper" style="width: 100%">

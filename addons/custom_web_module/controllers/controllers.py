@@ -16,6 +16,8 @@ class CustomWebHomepage(Home):
 class CheckoutForm(http.Controller):
     @http.route(['/checkout/form/submit'], type='http', auth="public", website=True, csrf=False)
     def new_checkout(self, **post):
+        customer_obj = request.env['res.partner']
+        reservation_obj = request.env['hotel.reservation']
         posted_dict = {
             "appart_type": post.get("appart_type"),
             "app_nber": post.get("app_nber"),
@@ -29,20 +31,63 @@ class CheckoutForm(http.Controller):
             "surname": post.get("surname"),
             "email": post.get("email"),
             "phone": post.get("phone"),
+            "child_number": post.get("child_number"),
+            "adult_number": post.get("adult_number"),
         }
 
-        product = request.env['product.template'].search([('ilike','=','value')])
+        # Check if a client with this email is available on the system
+        user = request.env['res.partner'].search([('email', '=', posted_dict["email"])])
+        if (user.id):
+            # If user exist, make reservation with the user account
+            customer = user
+        else:
+            # Create a new client
+            name = "%s %s" % (posted_dict["name"], posted_dict["surname"])
+            email = posted_dict["email"]
+            phone = posted_dict["phone"]
+            company_type = "person"
+            user_val = {
+                "name": name,
+                "email": email,
+                "phone": phone,
+                "company_type": company_type,
+            }
+            customer = customer_obj.sudo().create(user_val)
 
-        print (posted_dict)
-#     @http.route('/custom_web_homepage/custom_web_homepage/objects/', auth='public')
-#     def list(self, **kw):
-#         return http.request.render('custom_web_homepage.listing', {
-#             'root': '/custom_web_homepage/custom_web_homepage',
-#             'objects': http.request.env['custom_web_homepage.custom_web_homepage'].search([]),
-#         })
+        if(posted_dict["appart_type"]):
+            if ("3rooms" == posted_dict["appart_type"]):
+                # TODO Check if category and if room... Else return a same page with context value to display, like
+                #  flash message
+                category = request.env['hotel.room.type'].search([('name', '=', 'Appartement de trois chambres')])
+                # TODO Write a domain to find only one user with categ_id egal to selected categ and with status
+                rooms = request.env['hotel.room'].search([('categ_id', '=', category.id)])
+            else:
+                context_value = "Aucune catégorie de ce type (Trois chambres) retrouvée dans le système"
+        if(posted_dict["appart_type"]):
+            if ("2rooms" == posted_dict["appart_type"]):
+                # TODO Check if category and if room... Else return a same page with context value to display, like
+                #  flash message
+                category = request.env['hotel.room.type'].search([('name', '=', 'Appartement de deux chambres')])
+                # TODO Write a domain to find only one user with categ_id egal to selected categ and with status
+                rooms = request.env['hotel.room'].search([('categ_id', '=', category.id)])
+            context_value = "Aucune catégorie de ce type (Deux achambres) retrouvée dans le système"
 
-#     @http.route('/custom_web_homepage/custom_web_homepage/objects/<model("custom_web_homepage.custom_web_homepage"):obj>/', auth='public')
-#     def object(self, obj, **kw):
-#         return http.request.render('custom_web_homepage.object', {
-#             'object': obj
-#         })
+        # TODO check if room is list or a single value. Anyway, reate for statement and adding reservation line,
+
+        # Now we are creating a reservation object
+        reservation = reservation_obj.sudo().create(
+            {
+                "partner_id": customer.id,
+                "checkin": posted_dict["start_date"],
+                "adults": posted_dict["adult_number"],
+                "children": posted_dict["child_number"],
+                "checkout": posted_dict["end_date"],
+                # TODO Set reservation lines
+            }
+        )
+
+        context = {
+            "value": context_value
+        }
+
+        return request.render('custom_web_module.custom_homepage_view', context);

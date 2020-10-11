@@ -51,10 +51,10 @@
                               <div class="tab" style="margin-left: 0; margin-right: 0">
                                 <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
                                   <div class="col-md-12">
-                                    <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24;" for="appart_type" class="text-white" checked="true">Type d'appartement</label>
+                                    <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24; font-weight: bold; text-transform: uppercase" for="appart_type" class="text-white" checked="true">Type d'appartement</label>
                                     <div class="form-group row" style="margin-left: 0; margin-right: 0">
                                       <div class="form-check form-check-inline col-md-6">
-                                        <input class="form-check-input" type="radio" name="appart_type" id="inlineRadio1" value="3rooms"/>
+                                        <input class="form-check-input" type="radio" name="appart_type" id="inlineRadio1" value="3rooms" checked="checked"/>
                                         <label class="form-check-label text-white" for="inlineRadio1">3 chambres</label>
                                       </div>
                                       <div class="form-check form-check-inline">
@@ -67,7 +67,7 @@
                                 <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
                                   <div class="col-md-4">
                                     <div class="form-group">
-                                      <label for="app_nber" class="text-white">Qté app.</label>
+                                      <label for="app_nber" class="text-white">Qté d'appartements</label>
                                       <input name="app_nber" id="app_nber" class="form-control" placeholder="Quantité" type="number"/>
                                     </div>
                                   </div>
@@ -86,7 +86,7 @@
                                 </div>
                                 <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
                                   <div class="col-md-12">
-                                    <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24;" for="caracteristic" class="text-white">Séjournez-vous avec des</label>
+                                    <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24; font-weight: bold; text-transform: uppercase" for="caracteristic" class="text-white">Séjournez-vous avec des</label>
                                     <div class="form-group row" style="margin-left: 0; margin-right: 0">
                                       <div class="form-check form-check-inline col-md-4">
                                         <input class="form-check-input" name="old" type="checkbox" id="inlineCheckbox1" value="old"/>
@@ -113,24 +113,40 @@
                                     </div>
                                   </div>
                                 </div>
+                              </div>
+                              <div class="tab" style="margin-left: 0; margin-right: 0">
                                 <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
                                   <div class="col-md-6">
                                     <div class="form-group">
-                                      <label for="child_number" class="text-white">Qté app.</label>
-                                      <input name="child_number" id="child_number" class="form-control" placeholder="Nbre d'enfatnts" type="number"/>
+                                      <label for="floor" class="text-white">Sélectionner l'étage</label>
+                                      <select class="form-control" default="">
+                                        <option value="">------------</option>
+                                        <option value="first_floor">Premier étage</option>
+                                        <option value="second_floor">Deuxième étage</option>
+                                        <option value="thirth_floor">Troisième étage</option>
+                                        <option value="four_floor">Quatrième étage</option>
+                                      </select>
                                     </div>
                                   </div>
                                   <div class="col-md-6">
-                                    <div class="form-group">
-                                      <label for="adult_number" class="text-white">Qté app.</label>
-                                      <input name="adult_number" id="adult_number" class="form-control" placeholder="Nbre d'adultes" type="number"/>
+                                    <div class="row" style="margin-left: 0; margin-right: 0">
+                                      <div class="col-md-6" style="padding-left: 0px">
+                                        <div class="form-group">
+                                          <label for="child_number" class="text-white">Enfants</label>
+                                          <input name="child_number" id="child_number" class="form-control" placeholder="Nbre" type="number"/>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-6" style="padding-right: 0px">
+                                        <div class="form-group">
+                                          <label for="adult_number" class="text-white">Adultes</label>
+                                          <input name="adult_number" id="adult_number" class="form-control" placeholder="Nbre" type="number"/>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="tab" style="margin-left: 0; margin-right: 0">
-                                <div>
-                                  <h4 class="text-center text-white" style="margin-bottom: 20px; text-transform: uppercase">Informations sur le client</h4>
+                                <div class="col-md-12" style="margin-top: 10px">
+                                  <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24; font-weight: bold; text-transform: uppercase" class="text-white">Informations sur le client</label>
                                 </div>
                                 <div class="row" style="margin: 0">
                                   <div class="form-group col-md-6">
@@ -200,7 +216,7 @@
                   <form>
                     <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
                       <div class="col-md-12">
-                        <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24;" for="appart_type" class="text-white">Type d'appartement</label>
+                        <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24; font-weight: bold; text-transform: uppercase" for="appart_type" class="text-white">Type d'appartement</label>
                         <div class="form-group row" style="margin-left: 0; margin-right: 0">
                           <div class="form-check form-check-inline col-md-6">
                             <input class="form-check-input" type="radio" name="appart_type" id="inlineRadio1" value="1"/>
@@ -235,7 +251,7 @@
                     </div>
                     <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
                       <div class="col-md-12">
-                        <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24;" for="caracteristic" class="text-white">Séjournez-vous avec des</label>
+                        <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24; font-weight: bold; text-transform: uppercase" for="caracteristic" class="text-white">Séjournez-vous avec des</label>
                         <div class="form-group row" style="margin-left: 0; margin-right: 0">
                           <div class="form-check form-check-inline col-md-4">
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="old"/>
@@ -867,7 +883,7 @@
 
   <template id="customized_footer_copy" inherit_id="website.layout" name="Footer Copyright">
     <xpath expr="//footer" position="replace">
-      <section class="s_text_block pt-3 pb8">
+      <footer class="s_text_block pt-3 pb8">
         <div class="container">
             <div class="row">
             <div class="col-lg-3">
@@ -955,7 +971,7 @@
             </div>
             </div>
         </div>
-        </section>
+        </footer>
     </xpath>
   </template>
 

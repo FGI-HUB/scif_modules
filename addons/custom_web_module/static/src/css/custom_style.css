@@ -313,6 +313,12 @@ header .navbar-brand.logo img{
   padding: 0 0 4px 8px
 }
 
+.custom_gallery_nav_pill{
+    width: 35%;
+    margin: 0 auto;
+    padding: 15px 0px 10px 0px;
+}
+
 .column_gallery {
   float: left;
   width: 20%;
@@ -329,7 +335,7 @@ header .navbar-brand.logo img{
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 15;
   padding-top: 50px;
   left: 0;
   top: 0;

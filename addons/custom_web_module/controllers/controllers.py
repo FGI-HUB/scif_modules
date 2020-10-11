@@ -115,7 +115,7 @@ class CheckoutForm(http.Controller):
             "value": "context_value"
         }
 
-        return request.render('custom_web_module.custom_homepage_view', context)
+        #return request.render('custom_web_module.custom_homepage_view', context)
 
 
 class CheckoutForm(http.Controller):

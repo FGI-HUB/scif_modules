@@ -587,7 +587,27 @@
             </div>
           </div>
           <div class="row" style="margin-left:0; margin-right: 0">
+            <!-- Tab nav -->
+            <ul class="nav nav-pills custom_gallery_nav_pill">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#itemblock1">Aléatoire</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#itemblock2">Salon</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#itemblock3">Chambre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#itemblock4">Cuisine</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#itemblock5">Douche</a>
+              </li>
+            </ul>
+            <!-- Tab nav end -->
             <div class="tab-content">
+              <!-- Tab 1 -->
               <div id="itemblock1" class="tab-pane active">
                 <div class="row_gallery">
                   <div class="column_gallery home">
@@ -624,7 +644,168 @@
                   </div>
                 </div>
               </div>
+              <!-- Tab 1 end -->
+
+
+              <!-- Tab 2 -->
+              <div id="itemblock2" class="tab-pane fade">
+                <div class="row_gallery">
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor" title="" aria-describedby="tooltip283729"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor"/>
+                  </div>
+
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" title="" aria-describedby="tooltip303825"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home stable">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"/>
+                  </div>
+                </div>
+              </div>
+              <!-- Tab 2 end -->
+
+              <!-- Tab 3 -->
+              <div id="itemblock3" class="tab-pane fade">
+                <div class="row_gallery">
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" title="" aria-describedby="tooltip303825"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home stable">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"/>
+                  </div>
+                <!--</div>
+                <div class="row_gallery">-->
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor" title="" aria-describedby="tooltip283729"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor"/>
+                  </div>
+                </div>
+              </div>
+              <!-- Tab 3 end -->
+
+              <!-- Tab 4 -->
+              <div id="itemblock4" class="tab-pane fade">
+                <div class="row_gallery">
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor" title="" aria-describedby="tooltip283729"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor"/>
+                  </div>
+
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" title="" aria-describedby="tooltip303825"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home stable">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"/>
+                  </div>
+                </div>
+              </div>
+              <!-- Tab 4 end -->
+
+              <!-- Tab 5 -->
+              <div id="itemblock5" class="tab-pane fade">
+                <div class="row_gallery">
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" title="" aria-describedby="tooltip303825"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home stable">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"/>
+                  </div>
+                <!--</div>
+                <div class="row_gallery">-->
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor" title="" aria-describedby="tooltip283729"/>
+                  </div>
+                  <div class="column_gallery home">
+                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor"/>
+                  </div>
+                </div>
+              </div>
+              <!-- Tab 5 end -->
+
+
             </div>
+
+
+
             <div id="myModal" class="modal" style="display: none;">
               <span class="close cursor" onclick="closeModal()">×</span>
               <div class="modal-content">

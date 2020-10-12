@@ -26,7 +26,10 @@ class CheckoutForm(http.Controller):
 
         posted_dict = {
             "appart_type": post.get("appart_type"),
-            "app_nber": post.get("app_nber"),
+            "3rooms": post.get("category_3rooms"),
+            "2rooms": post.get("category_2rooms"),
+            "3rooms_qty": post.get("category_3rooms_qty"),
+            "2rooms_qty": post.get("category_2rooms_qty"),
             "start_date": post.get("start_date"),
             "end_date": post.get("end_date"),
             "old": post.get("old"),
@@ -41,9 +44,6 @@ class CheckoutForm(http.Controller):
             "adult_number": post.get("adult_number"),
             "floor": post.get("floor"),
         }
-
-        import pdb; pdb.set_trace()
-        print(posted_dict)
 
         # Check if a client with this email is available on the system
         user = request.env['res.partner'].search([('email', '=', posted_dict["email"])])
@@ -64,63 +64,77 @@ class CheckoutForm(http.Controller):
             }
             customer = customer_obj.sudo().create(user_val)
 
-        if(posted_dict["appart_type"]):
-            if ("3rooms" == posted_dict["appart_type"]):
-                # TODO Check if category and if room... Else return a same page with context value to display, like
-                #  flash message
-                category = request.env['hotel.room.type'].search([('name', '=', 'Appartement de trois chambres')])
-                # TODO Write a domain to find only one user with categ_id egal to selected categ and with status
-                rooms = request.env['hotel.room'].search([('categ_id', '=', category.id), ('status', '=', 'available')])
+        if "3rooms" == posted_dict["3rooms"]:
+            category = request.env['hotel.room.type'].search([('slug', '=', posted_dict["3rooms"])])
+            rooms = request.env['hotel.room'].search([('categ_id', '=', category.id), ('status', '=', 'available')])
 
-                if rooms:
-                    tab = []
-                    for room in rooms:
-                        tab.append(room.id)
-                    # If rooms is not empty, process operation
-                    print("EXcept code room tab", tab)
+            if rooms:
+                tab = []
+                for room in rooms:
+                    tab.append(room.id)
 
-                    # Now we are creating a reservation object
-                    reservation = reservation_obj.sudo().create(
-                        {
-                            "partner_id": customer.id,
-                            "warehouse_id": 1,
-                            "pricelist_id": 1,
-                            "checkin": posted_dict["start_date"],
-                            "adults": posted_dict["adult_number"],
-                            "children": posted_dict["child_number"],
-                            "checkout": posted_dict["end_date"],
-                        }
-                    )
+                # Now we are creating a reservation object
+                reservation = reservation_obj.sudo().create(
+                    {
+                        "partner_id": customer.id,
+                        "warehouse_id": 1,
+                        "pricelist_id": 1,
+                        "checkin": posted_dict["start_date"],
+                        "adults": posted_dict["adult_number"],
+                        "children": posted_dict["child_number"],
+                        "checkout": posted_dict["end_date"],
+                    }
+                )
 
-                    reservation_line = reservation_line_obj.sudo().create(
-                        {
-                            "name": "Line-%s" %(customer.name),
-                            "line_id": reservation.id,
-                            "categ_id": category.id,
-                            "reserve": [(6, 0, tab)]
-                        }
-                    )
+                reservation_line = reservation_line_obj.sudo().create(
+                    {
+                        "name": "Line-%s" %(customer.name),
+                        "line_id": reservation.id,
+                        "categ_id": category.id,
+                        "reserve": [(6, 0, tab)]
+                    }
+                )
 
-            elif ("2rooms" == posted_dict["appart_type"]):
-                # TODO Check if category and if room... Else return a same page with context value to display, like
-                #  flash message
-                category = request.env['hotel.room.type'].search([('name', '=', 'Appartement de deux chambres')])
-                # TODO Write a domain to find only one user with categ_id egal to selected categ and with status
-                rooms = request.env['hotel.room'].search([('categ_id', '=', category.id)])
-            else:
-                context_value = "Aucune catégorie de ce type sélectionnée"
+        elif "2rooms" == posted_dict["2rooms"]:
+            category = request.env['hotel.room.type'].search([('slug', '=', posted_dict["2rooms"])])
+            rooms = request.env['hotel.room'].search([('categ_id', '=', category.id)])
 
-        # TODO check if room is list or a single value. Anyway, reate for statement and adding reservation line,
+            if rooms:
+                tab = []
+                for room in rooms:
+                    tab.append(room.id)
 
+                # Now we are creating a reservation object
+                reservation = reservation_obj.sudo().create(
+                    {
+                        "partner_id": customer.id,
+                        "warehouse_id": 1,
+                        "pricelist_id": 1,
+                        "checkin": posted_dict["start_date"],
+                        "adults": posted_dict["adult_number"],
+                        "children": posted_dict["child_number"],
+                        "checkout": posted_dict["end_date"],
+                    }
+                )
 
+                reservation_line = reservation_line_obj.sudo().create(
+                    {
+                        "name": "Line-%s" %(customer.name),
+                        "line_id": reservation.id,
+                        "categ_id": category.id,
+                        "reserve": [(6, 0, tab)]
+                    }
+                )
+        else:
+            context_value = "Aucune catégorie de ce type sélectionnée"
+            print("Error on reservation, due to rooms type", context_value)
+            pass
 
-        print ("Notre reservation",reservation)
-        context = {
-            #"value": context_value
-            "value": "context_value"
-        }
-
-        #return request.render('custom_web_module.custom_homepage_view', context)
+        # context = {
+        #    #"value": context_value
+        #    "value": "context_value"
+        # }
+        # return request.render('custom_web_module.custom_homepage_view', context)
 
 
 class CheckoutForm(http.Controller):

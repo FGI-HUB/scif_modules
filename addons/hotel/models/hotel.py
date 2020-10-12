@@ -79,6 +79,7 @@ class HotelRoomType(models.Model):
 
     name = fields.Char(required=True)
     categ_id = fields.Many2one("hotel.room.type", "Category")
+    slug = fields.Char("Slug", required=False)
     child_ids = fields.One2many(
         "hotel.room.type", "categ_id", "Child Categories"
     )

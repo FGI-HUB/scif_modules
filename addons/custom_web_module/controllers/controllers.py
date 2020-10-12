@@ -10,11 +10,11 @@ class CustomWebHomepage(Home):
         #invoices = request.env['account.invoice'].sudo().search([])
         #import pdb;pdb.set_trace()
         super(CustomWebHomepage, self).index()
-        categories = request.env['hotel.room.type'].search([()])
+        categories = request.env['hotel.room.type'].search([])
         context = {
             "categories": categories
         }
-        return request.render('website.homepage')
+        return request.render('website.homepage', context)
 
 
 class CheckoutForm(http.Controller):
@@ -42,6 +42,7 @@ class CheckoutForm(http.Controller):
             "floor": post.get("floor"),
         }
 
+        import pdb; pdb.set_trace()
         print(posted_dict)
 
         # Check if a client with this email is available on the system

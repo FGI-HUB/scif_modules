@@ -10,6 +10,10 @@ class CustomWebHomepage(Home):
         #invoices = request.env['account.invoice'].sudo().search([])
         #import pdb;pdb.set_trace()
         super(CustomWebHomepage, self).index()
+        categories = request.env['hotel.room.type'].search([()])
+        context = {
+            "categories": categories
+        }
         return request.render('website.homepage')
 
 

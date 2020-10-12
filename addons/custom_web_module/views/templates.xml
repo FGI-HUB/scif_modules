@@ -62,22 +62,50 @@
                                         <label class="form-check-label text-white" for="inlineRadio2">2 chambre</label>
                                       </div>
                                     </div>
+
+                                    <div class="row mb-3" style="margin-left: 0; margin-right: 0">
+                                      <div class="col-md-6" style="padding-left: 0px">
+                                        <div class="row mb-2" style="margin-left: 0; margin-right: 0">
+                                          <div class="form-check form-check-inline col-md-12">
+                                            <input class="form-check-input" name="appartZ" type="checkbox" id="appartZCheckbox" value="appartZ"/>
+                                            <label class="form-check-label text-white" for="appartZCheckbox">3 chambres</label>
+                                          </div>
+                                        </div>
+                                        <div class="row" style="margin-left: 0; margin-right: 0">
+                                          <input name="app_nber_qty" id="app_nber_qty" class="form-control" placeholder="Quantité" type="number"/>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-md-6" style="padding-right: 0px">
+                                        <div class="row mb-2" style="margin-left: 0; margin-right: 0">
+                                          <div class="form-check form-check-inline col-md-12">
+                                            <input class="form-check-input" name="appartZ2" type="checkbox" id="appartZ2Checkbox" value="appartZ2"/>
+                                            <label class="form-check-label text-white" for="appartZ2Checkbox">2 chambres</label>
+                                          </div>
+                                        </div>
+                                        <div class="row" style="margin-left: 0; margin-right: 0">
+                                          <input name="app_nber_qty2" id="app_nber_qty2" class="form-control" placeholder="Quantité" type="number"/>
+                                        </div>
+                                      </div>
+
+
+                                    </div>
                                   </div>
                                 </div>
                                 <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
-                                  <div class="col-md-4">
+                                  <!--div class="col-md-4">
                                     <div class="form-group">
                                       <label for="app_nber" class="text-white">Qté d'appartements</label>
                                       <input name="app_nber" id="app_nber" class="form-control" placeholder="Quantité" type="number"/>
                                     </div>
-                                  </div>
-                                  <div class="col-md-4">
+                                  </div-->
+                                  <div class="col-md-6">
                                     <div class="form-group">
                                       <label for="start_date" class="text-white">Date d'arrivée</label>
                                       <input type="date" class="form-control" id="start_date" name="start_date"/>
                                     </div>
                                   </div>
-                                  <div class="col-md-4">
+                                  <div class="col-md-6">
                                     <div class="form-group">
                                       <label for="end_date" class="text-white">Date de départ</label>
                                       <input type="date" class="form-control" id="end_date" name="end_date"/>

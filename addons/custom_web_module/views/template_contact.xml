@@ -1,0 +1,169 @@
+<odoo>
+  <template id="custom_contact_us" name="Contact us | SCIF">
+    <t t-call="website.layout">
+      <t set-title="Contact us" />
+      <div id="wrap">
+          <div class="oe_structure">
+            <section class="s_text_image pt32 pb32">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-lg-6 pt16 pb16">
+                    <img src="/custom_web_module/static/src/img/home/about_pic.jpg" class="img img-fluid mx-auto" alt="Odoo • Image et Texte" data-original-title="" title="" aria-describedby="tooltip231317"/>
+                  </div>
+                  <div class="col-lg-6 pt16 pb16">
+                    <h2>
+                      <font class="text-beta" style="">Nous restons toujours à votre écoute</font>
+                    </h2>
+                    <p>Ecrivez-nous par SMS whatsapp ou mail à tout instant et un de nos conseillés vous&amp;nbsp; apportera toujours réponse à toutes vos préoccupation.&amp;nbsp;&amp;nbsp;</p>
+                    <p>Vous pouvez directement nous envoyer un mail si vous le souhaitez.</p>
+                    <div class="pb16 pt16 s_btn text-left">
+                      <a href="#" class="btn btn-outline-primary" data-original-title="" title="" aria-describedby="tooltip705561">Envoyer un mail</a>
+                      <br/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="s_text_block pt32 pb32">
+              <div class="container">
+                <h1 class="s_title_thin text-primary" style="text-align: left; padding-bottom: 10px; border-bottom: 2px solid #264aba !important">
+                  <font style="text-transform: uppercase; font-size: 30px;">Laisser un message</font>
+                </h1>
+                <div class="row">
+                  <div class="col-lg-6 pt32 pb32">
+                    <form style="padding: 0 20px 20px;">
+                      <div class="row g-3 mt-2">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nom"/>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="surname" name="surname" placeholder="Prénom"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row g-3 mt-2">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email"/>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Numéro de téléphone"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row g-3 mt-2">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Sujet"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row g-3 mt-1">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <textarea rows="4" class="form-control" id="message" name="message" placeholder="Message"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row g-3 mt-1">
+                        <div class="col-md-12">
+                          <div class="mr-auto mx-auto" style="text-align: right">
+                            <input type="submit" class="btn btn-primary flat flat" value="envoyer" style="text-transform: uppercase; padding: 15px 40px"/>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-lg-6 pt32 pb32">
+                    <h3 class="lead">
+                      <b>
+                        <font style="font-size: 36px;">Avez-vous des questions sur nous ?</font>
+                      </b>
+                    </h3>
+                    <p>
+                      <font style="font-size: 18px;">Tous types de solutions commerciales et conseil, n'hésitez pas à nous contacter pour initier le support client. Nous somme ravis de vous entendre</font>
+                    </p>
+                    <p>
+                      <b>
+                        <font style="font-size: 18px;">Heures de bureau:&amp;nbsp;</font>
+                      </b>
+                      <font style="font-size: 18px;">Nous sommes toujours ouvert</font>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="container mt-2">
+              <div class="row mt-3">
+                <div class="col-md-4">
+                  <div class="card_wrapper mt-3 mb-3">
+                    <div class="custom_card">
+                      <div class="icon_wrapper text-center" style="padding-bottom: 10px">
+                        <i class="fa fa-map-marker fa-3x text-primary" data-original-title="" title="" aria-describedby="tooltip600376"/>
+                        <br/>
+                        <span class="text-secondary">Notre adresse</span>
+                      </div>
+                      <div class="address_bloc text-center text-primary">
+                        <h4>Kribi</h4>
+                        <h6 style="text-transform: uppercase">Ngoye Reserve</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card_wrapper mt-3 mb-3">
+                    <div class="custom_card">
+                      <div class="icon_wrapper text-center" style="padding-bottom: 10px">
+                        <i class="fa fa-headphones fa-3x text-primary"/>
+                        <br/>
+                        <span class="text-secondary">Téléphones</span>
+                      </div>
+                      <div class="address_bloc text-center text-primary">
+                        <h4>675 882 167</h4>
+                        <h6>699 538 389</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card_wrapper mt-3 mb-3">
+                    <div class="custom_card">
+                      <div class="icon_wrapper text-center" style="padding-bottom: 10px">
+                        <i class="fa fa-share-square fa-3x text-primary"/>
+                        <br/>
+                        <span class="text-secondary">Rester en contact</span>
+                      </div>
+                      <div class="address_bloc text-center text-primary">
+                        <div class="s_share" style="padding: 5px">
+                          <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F63.250.42.141%2Fcontactus%23" class="s_share_facebook" target="_blank">
+                            <i class="fa fa-1x fa-facebook rounded shadow-sm"/>
+                          </a>
+                          <a href="https://twitter.com/intent/tweet?text=Contact%20Us%20%7C%20My%20Website&amp;url=http%3A%2F%2F63.250.42.141%2Fcontactus%23" class="s_share_twitter" target="_blank">
+                            <i class="fa fa-1x fa-twitter rounded shadow-sm"/>
+                          </a>
+                          <a href="mailto:?body=http%3A%2F%2F63.250.42.141%2Fcontactus%23&amp;subject=Contact%20Us%20%7C%20My%20Website" class="s_share_email">
+                            <i class="fa fa-1x fa-envelope rounded shadow-sm"/>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row"> </div>
+            </div>
+            <section class="container pb48 pt0">
+              <div style="width: 100%">
+                <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Kribi%20ngoye+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"/>
+              </div>
+            </section>
+          </div>
+        </div>
+    </t>
+  </template>
+</odoo>

@@ -5,7 +5,7 @@ from odoo.http import request
 
 
 class CustomWebHomepage(Home):
-    @http.route()
+    @http.route(auth="public",)
     def index(self, **kw):
         #invoices = request.env['account.invoice'].sudo().search([])
         #import pdb;pdb.set_trace()
@@ -14,7 +14,17 @@ class CustomWebHomepage(Home):
         context = {
             "categories": categories
         }
-        return request.render('website.homepage', context)
+        return request.render('custom_web_module.homepage', context)
+
+    @http.route(['/aboutus'], type='http', auth="public", website=True)
+    def about(self, **post):
+        context = {}
+        return request.render('custom_web_module.custom_about', context)
+
+    @http.route(['/contactus'], type='http', auth="public", website=True)
+    def contact(self, **post):
+        context = {}
+        return request.render('custom_web_module.custom_contact_us', context)
 
 
 class CheckoutForm(http.Controller):
@@ -136,9 +146,3 @@ class CheckoutForm(http.Controller):
         # }
         # return request.render('custom_web_module.custom_homepage_view', context)
 
-
-class CheckoutForm(http.Controller):
-    @http.route(['/aboutus'], type='http', auth="public", website=True)
-    def new_checkout(self, **post):
-        context = {}
-        return request.render('custom_web_module.custom_homepage_view', context)

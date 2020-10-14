@@ -21,7 +21,10 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/templates.xml',
-        'data/menu.xml',
+        'views/template_about.xml',
+        'views/template_contact.xml',
+        'views/template_home.xml',
+        'views/menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [],

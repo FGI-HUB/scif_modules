@@ -1,0 +1,190 @@
+<odoo>
+  <template id="custom_about" name="About | SCIF">
+    <t t-call="website.layout">
+      <t set-title="About us" />
+       <div id="wrap" class="oe_structure oe_empty">
+        <section class="s_cover parallax s_parallax_is_fixed pt96 pb96 s_parallax_no_overflow_hidden bg-black-25" data-scroll-background-ratio="1" style="background-image: none;">
+          <span class="s_parallax_bg oe_img_bg oe_custom_bg" style="background-image: url('/custom_web_module/static/src/img/home/10.jpg'); background-position: 20.26% 36.49%;"/>
+          <div class="container">
+            <div class="row s_nb_column_fixed">
+              <div class="col-lg-12 s_title" data-name="Title">
+                <h1 class="s_title_thin" style="font-size: 62px; text-align: center;">
+                  <font style="color: rgb(255, 255, 255); font-size: 48px;">
+                    <b style="padding: 5px 20px; background-color: rgba(38, 74, 184, 0.6196078431372549);border-radius: 10px;">A PROPOS DE NOUS</b>
+                  </font>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_text_image pt32 pb32">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 pt16 pb16" style="padding-right: 20px">
+                <div class="block_wrapper bg-primary" style="padding: 30px 15px">
+                  <div class="row">
+                    <div class="img_wrapper col-lg-12 pb56">
+                      <img src="/custom_web_module/static/src/img/home/23.jpg" class="img-fluid" alt="Batiment" data-original-title="" title="" aria-describedby="tooltip895011"/>
+                    </div>
+                  </div>
+                  <div class="text_wrapper" style="20px 15px">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <p style="font-weight: bold">Adresse :</p>
+                        <p style="font-weight: bold">Téléphone :</p>
+                        <p style="font-weight: bold">Email :</p>
+                        <p style="font-weight: bold">Suivez-nous :</p>
+                      </div>
+                      <div class="col-md-8">
+                        <p>Kribi NGOYE RESERVE</p>
+                        <p>675 882 167 / 699 538 389</p>
+                        <p>mail@company.mail</p>
+                        <p/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8 pb16 pt16">
+                <p>
+                  <font style="color: rgb(84, 84, 84); font-size: 18px;">La Société Camerounaise Immobilière et Familiale (SCIF) est une société au capital d'un million au régime simplifié situé à Kribi au lieu dit "Carrefour Djamboulani" derrière le lycée technique route antenne Orange.</font>
+                </p>
+                <p>
+                  <b>
+                    <font style="color: rgb(84, 84, 84); font-size: 18px;">BP</font>
+                  </b>
+                  <font style="color: rgb(84, 84, 84); font-size: 18px;">: 125 Kribi&amp;nbsp;&amp;nbsp;</font>
+                </p>
+                <p>
+                  <b>
+                    <span style="color: rgb(84, 84, 84); font-size: 18px;">
+                    La SCIF a pour objectif :
+                  </span>
+                  </b>
+                </p>
+                <ul>
+                  <li>
+                    <font style="color: rgb(84, 84, 84); font-size: 18px;">
+                      <b>L'acquisition et gestion des immeubles</b>
+                    </font>
+                  </li>
+                  <li>
+                    <font style="color: rgb(84, 84, 84); font-size: 18px;">
+                      <b>Traveaux de construction</b>
+                    </font>
+                  </li>
+                  <li>
+                    <font style="color: rgb(84, 84, 84); font-size: 18px;">
+                      <b>Lotissement des terrains</b>
+                    </font>
+                  </li>
+                </ul>
+                <br/>
+                <p/>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="pt32 pb0">
+          <div class="container">
+            <div class="row s_nb_column_fixed">
+              <div class="col-lg-12 s_title pt16 pb0">
+                <h3 class="s_title_default text-secondary" style="text-align: left; border-bottom: 4px solid #264aba; padding-bottom: 5px">PRÉSENTATION PROPREMENT DITE</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_text_block pb22">
+          <div class="container">
+            <div class="row">
+              <div class="pb32 col-lg-12" style="padding-top: 20px">
+                <p class="lead">La SCIF met à la disposition de ses clients 24 appartements meublés haut standing dont :</p>
+                <p class="lead"><b class="text-secondary">6 appartements de 3 chambres</b> comportant:</p>
+                <ul>
+                  <li>
+                    <p class="lead">1 grand séjour</p>
+                  </li>
+                  <li>
+                    <p class="lead">3 chambres avec une chambre principale climatisée ayant une douche interne et deux autres chambres partageant une douche commune</p>
+                  </li>
+                  <li>
+                    <p class="lead">1 toilette visiteur</p>
+                  </li>
+                  <li>
+                    <p class="lead">1 cuisine équipé d'ustensiles et appareils modernes</p>
+                  </li>
+                  <li>
+                    <p class="lead">Une réserve avec installation pour machine à laver</p>
+                  </li>
+                  <li>
+                    <p class="lead">Un chauffe-eau alimentant la cuisine et les douches</p>
+                  </li>
+                </ul>
+                <p>
+
+                </p>
+                <p class="lead"><b class="text-secondary">18 appartements de 2 chambres</b> comportant:</p>
+                <ul>
+                  <li>
+                    <p class="lead">1 grand séjour</p>
+                  </li>
+                  <li>
+                    <p class="lead">2 chambres climatisées avec douche interne</p>
+                  </li>
+                  <li>
+                    <p class="lead">1 toilette visiteur</p>
+                  </li>
+                  <li>
+                    <p class="lead">1 cuisine équipé d'ustensiles et appareils modernes</p>
+                  </li>
+                  <li>
+                    <p class="lead">Une réserve avec installation pour machine à laver</p>
+                  </li>
+                  <li>
+                    <p class="lead">Un chauffe-eau alimentant la cuisine et les douches</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--BLOC PERSONNEL-->
+        <section class="pb0">
+          <div class="container">
+            <div class="row s_nb_column_fixed">
+              <div class="col-lg-12 s_title pt16 pb0">
+                <h3 class="s_title_default text-secondary" style="text-align: left; border-bottom: 4px solid #264aba; padding-bottom: 5px">PERSONNEL</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_text_block pb32">
+          <div class="container">
+            <div class="row">
+              <div class="pb32 col-lg-12" style="padding-top: 20px">
+                <p class="lead">La SCIF est dotée d'un personnel disponible, accueillant et accessible comprenant :</p>
+                <ul>
+                  <li>
+                    <p class="lead">Un gérant</p>
+                  </li>
+                  <li>
+                    <p class="lead">Des gardiens</p>
+                  </li>
+                  <li>
+                    <p class="lead">Des techniciens de surface</p>
+                  </li>
+                  <li>
+                    <p class="lead">Des jardiniers</p>
+                  </li>
+                  <li>
+                    <p class="lead">Un staff de technicien disponible</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+</odoo>

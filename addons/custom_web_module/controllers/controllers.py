@@ -5,7 +5,7 @@ from odoo.http import request
 
 
 class CustomWebHomepage(Home):
-    @http.route(auth="public",)
+    @http.route(auth="public")
     def index(self, **kw):
         #invoices = request.env['account.invoice'].sudo().search([])
         #import pdb;pdb.set_trace()

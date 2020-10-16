@@ -454,7 +454,7 @@
                           </div>
                           <div class="category_legend_row">
                             <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
-                                <div class="col-8" style="text-align: left">
+                                <div class="col-8 text-white" style="text-align: left">
                                     Grand séjour climatisé
                                 </div>
                                 <div class="col-4" style="text-align: right">
@@ -462,7 +462,7 @@
                                 </div>
                             </div>
                             <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
-                                <div class="col-8" style="text-align: left">
+                                <div class="col-8 text-white" style="text-align: left">
                                     Chambre climatisée avec douche
                                 </div>
                                 <div class="col-4" style="text-align: right">
@@ -470,7 +470,7 @@
                                 </div>
                             </div>
                             <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
-                                <div class="col-8" style="text-align: left">
+                                <div class="col-8 text-white" style="text-align: left">
                                     Chambre avec douche commune
                                 </div>
                                 <div class="col-4" style="text-align: right">
@@ -478,7 +478,7 @@
                                 </div>
                             </div>
                             <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
-                                <div class="col-8" style="text-align: left">
+                                <div class="col-8 text-white" style="text-align: left">
                                     Toilette visiteur
                                 </div>
                                 <div class="col-4" style="text-align: right">
@@ -487,7 +487,7 @@
                             </div>
                             <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
                               <div class="col-8" style="text-align: left">
-                                <a href="#checkoutForm" class="btn btn-secondary flat flat" style="text-transform: uppercase; padding: 15px 40px">
+                                <a href="#checkoutForm" class="btn btn-secondary flat flat text-white" style="text-transform: uppercase; padding: 15px 40px">
                                   Reserver
                                 </a>
                               </div>
@@ -509,7 +509,7 @@
                           </div>
                           <div class="category_legend_row">
                             <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
-                                <div class="col-8" style="text-align: left">
+                                <div class="col-8 text-white" style="text-align: left">
                                     Grand séjour climatisé
                                 </div>
                                 <div class="col-4" style="text-align: right">
@@ -517,7 +517,7 @@
                                 </div>
                             </div>
                             <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
-                                <div class="col-8" style="text-align: left">
+                                <div class="col-8 text-white" style="text-align: left">
                                     Chambre climatisée avec douche
                                 </div>
                                 <div class="col-4" style="text-align: right">
@@ -525,7 +525,7 @@
                                 </div>
                             </div>
                             <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
-                                <div class="col-8" style="text-align: left">
+                                <div class="col-8 text-white" style="text-align: left">
                                     Toilette visiteur
                                 </div>
                                 <div class="col-4" style="text-align: right">
@@ -533,7 +533,7 @@
                                 </div>
                             </div>
                             <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px; opacity: 0">
-                                <div class="col-8" style="text-align: left">
+                                <div class="col-8 text-white" style="text-align: left">
                                     Toilette visiteur
                                 </div>
                                 <div class="col-4" style="text-align: right">
@@ -542,7 +542,7 @@
                             </div>
                             <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
                               <div class="col-8" style="text-align: left">
-                                <a class="btn btn-secondary flat flat" href="#checkoutForm" style="text-transform: uppercase; padding: 15px 40px">
+                                <a class="btn btn-secondary flat flat" href="#" style="text-transform: uppercase; padding: 15px 40px">
                                   Reserver
                                 </a>
                               </div>

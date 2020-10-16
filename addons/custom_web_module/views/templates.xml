@@ -4,6 +4,7 @@
   <template id="assets_login" inherit_id="web.assets_frontend">
     <xpath expr="." position="inside">
       <link rel="stylesheet" href="/custom_web_module/static/src/css/custom_style.css"/>
+      <link rel="stylesheet" href="/custom_web_module/static/src/scss/gallery_style.scss"/>
     </xpath>
   </template>
 

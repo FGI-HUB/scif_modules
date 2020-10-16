@@ -285,7 +285,7 @@
                   de la plage du lycée
                 </p>
                 <div>
-                  <a href="a-propos" class="btn btn-secondary" style="text-transform: uppercase; border-radius: 10px">
+                  <a href="/aboutus" class="btn btn-secondary" style="text-transform: uppercase; border-radius: 10px">
                     A propos de nous
                   </a>
                 </div>
@@ -398,7 +398,7 @@
                         <div class="min_gal_pic_overlay">
                             <h3>Salon équipé</h3>
                             <div class="pic_overlay_btn">
-                                <a href="#" class="btn btn-secondary">Voir +</a>
+                                <a href="#whole_gallery" class="btn btn-secondary">Voir +</a>
                             </div>
                         </div>
                     </div>
@@ -407,7 +407,7 @@
                         <div class="min_gal_pic_overlay">
                             <h3>Cuisine moderne</h3>
                             <div class="pic_overlay_btn">
-                                <a href="#" class="btn btn-secondary">Voir +</a>
+                                <a href="#whole_gallery" class="btn btn-secondary">Voir +</a>
                             </div>
                         </div>
                     </div>
@@ -416,7 +416,7 @@
                         <div class="min_gal_pic_overlay">
                             <h3>Salle de bain</h3>
                             <div class="pic_overlay_btn">
-                                <a href="#" class="btn btn-secondary">Voir +</a>
+                                <a href="#whole_gallery" class="btn btn-secondary">Voir +</a>
                             </div>
                         </div>
                     </div>
@@ -425,7 +425,7 @@
                         <div class="min_gal_pic_overlay">
                             <h3>Chambre climatisée</h3>
                             <div class="pic_overlay_btn">
-                                <a href="#" class="btn btn-secondary">Voir +</a>
+                                <a href="#whole_gallery" class="btn btn-secondary">Voir +</a>
                             </div>
                         </div>
                     </div>
@@ -485,6 +485,13 @@
                                     <span class="nber" style="padding: 3px; border-radius: 48%; background-color: #fff; color: #0b1735">01</span>
                                 </div>
                             </div>
+                            <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
+                              <div class="col-8" style="text-align: left">
+                                <a href="#checkoutForm" class="btn btn-secondary flat flat" style="text-transform: uppercase; padding: 15px 40px">
+                                  Reserver
+                                </a>
+                              </div>
+                            </div>
                           </div>
                       </div>
                     </a>
@@ -532,6 +539,13 @@
                                 <div class="col-4" style="text-align: right">
                                     <span class="nber" style="padding: 3px; border-radius: 48%; background-color: #fff; color: #0b1735">01</span>
                                 </div>
+                            </div>
+                            <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
+                              <div class="col-8" style="text-align: left">
+                                <a class="btn btn-secondary flat flat" href="#checkoutForm" style="text-transform: uppercase; padding: 15px 40px">
+                                  Reserver
+                                </a>
+                              </div>
                             </div>
                         </div>
                       </div>
@@ -584,41 +598,117 @@
               </li>
             </ul>
             <!-- Tab nav end -->
-            <div class="tab-content">
+            <div class="tab-content" id="whole_gallery">
               <!-- Tab 1 -->
               <div id="itemblock1" class="tab-pane active">
-                <div class="row_gallery">
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home//10.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" title="" aria-describedby="tooltip303825"/>
+                <div id="gallery">
+                  <div><img src="/custom_web_module/static/src/img/home//10.jpg"/><a href="#lightbox-1">Balcon</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/cuisine/66.jpg"/><a href="#lightbox-2">Cuisine</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg"/><a href="#lightbox-3">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/home_block2/pic4.jpg"/><a href="#lightbox-4">Chambre</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/home_block2/pic5.jpg"/><a href="#lightbox-5">Chambre</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/home_block2/pic6.jpg"/><a href="#lightbox-6">Sejour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/23.jpg"/><a href="#lightbox-7">Façade</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg"/><a href="#lightbox-8">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/home_block2/pic8.jpg"/><a href="#lightbox-9">Cuisine</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/chambre/52.jpg"/><a href="#lightbox-10">Chambre</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/douche/41.jpg"/><a href="#lightbox-11">Douche</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/douche/39.jpg"/><a href="#lightbox-12">Douche</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/douche/40.jpg"/><a href="#lightbox-13">Douche</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/salon/2.jpg"/><a href="#lightbox-14">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/chambre/33.jpg"/><a href="#lightbox-15">Douche</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/cuisine/17.jpg"/><a href="#lightbox-16">Cuisine</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/salon/46.jpg"/><a href="#lightbox-17">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/salon/29.jpg"/><a href="#lightbox-18">Séjour</a></div>
+                </div>
+                <div class="lightbox" id="lightbox-1">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home//10.jpg"/>
+                    <div class="title">No. <b>1</b> Vue sur balcon</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-2">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/cuisine/66.jpg"/>
+                    <div class="title">No. <b>2</b> Cuisine moderne équipée</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/cuisine/66.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-3">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg"/>
+                    <div class="title">No. <b>3</b> Grand séjour</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-4">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/home_block2/pic4.jpg"/>
+                    <div class="title">No. <b>4</b> Chambre confortable</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home stable">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-5">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/home_block2/pic5.jpg"/>
+                    <div class="title">No. <b>5</b>  Chambre de confort</div><a class="close" href="#gallery"></a>
                   </div>
-                <!--</div>
-                <div class="row_gallery">-->
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-6">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/home_block2/pic6.jpg"/>
+                    <div class="title">No. <b>6</b> Salon équipé</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/23.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-7">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/23.jpg"/>
+                    <div class="title">No. <b>7</b> Façade principal</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor" title="" aria-describedby="tooltip283729"/>
+                </div>
+                <div class="lightbox" id="lightbox-8">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg"/>
+                    <div class="title">No. <b>8</b> Séjour moderne</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-9">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/home_block2/pic8.jpg"/>
+                    <div class="title">No. <b>9</b> Cuisine moderne</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/chambre/52.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-10">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/chambre/52.jpg"/>
+                    <div class="title">No. <b>10</b> Chambre moderne climatisée</div><a class="close" href="#gallery"></a>
+                  </div>
+                </div>
+                <div class="lightbox" id="lightbox-11">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/douche/41.jpg"/>
+                    <div class="title">No. <b>11</b> Salle de bain modern</div><a class="close" href="#gallery"></a>
+                  </div>
+                </div>
+                <div class="lightbox" id="lightbox-12">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/douche/39.jpg"/>
+                    <div class="title">No. <b>12</b> Salle de bain moderne</div><a class="close" href="#gallery"></a>
+                  </div>
+                </div>
+                <div class="lightbox" id="lightbox-13">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/douche/40.jpg"/>
+                    <div class="title">No. <b>13</b> Salle de bain</div><a class="close" href="#gallery"></a>
+                  </div>
+                </div>
+                <div class="lightbox" id="lightbox-14">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/2.jpg"/>
+                    <div class="title">No. <b>14</b> Grand séjour moderne et climatisé</div><a class="close" href="#gallery"></a>
+                  </div>
+                </div>
+                <div class="lightbox" id="lightbox-15">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/chambre/33.jpg"/>
+                    <div class="title">No. <b>15</b> Chambre climatisée</div><a class="close" href="#gallery"></a>
+                  </div>
+                </div>
+                <div class="lightbox" id="lightbox-16">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/cuisine/17.jpg"/>
+                    <div class="title">No. <b>16</b> Cuisine équipé</div><a class="close" href="#gallery"></a>
+                  </div>
+                </div>
+                <div class="lightbox" id="lightbox-17">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/46.jpg"/>
+                    <div class="title">No. <b>17</b> Séjour moderne</div><a class="close" href="#gallery"></a>
+                  </div>
+                </div>
+                <div class="lightbox" id="lightbox-18">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/29.jpg"/>
+                    <div class="title">No. <b>18</b> Séjour moderne</div><a class="close" href="#gallery"></a>
                   </div>
                 </div>
               </div>
@@ -627,37 +717,78 @@
 
               <!-- Tab 2 -->
               <div id="itemblock2" class="tab-pane fade">
-                <div class="row_gallery">
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"/>
+                 <div id="gallery">
+                  <div><img src="/custom_web_module/static/src/img/home/salon/1.jpg"/><a href="#lightbox-19">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/salon/2.jpg"/><a href="#lightbox-20">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/salon/9.jpg"/><a href="#lightbox-21">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/salon/11.jpg"/><a href="#lightbox-22">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/salon/29.jpg"/><a href="#lightbox-23">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/salon/46.jpg"/><a href="#lightbox-24">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/salon/71.jpg"/><a href="#lightbox-25">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/salon/55.jpg"/><a href="#lightbox-251">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/salon/60.jpg"/><a href="#lightbox-26">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/salon/65.jpg"/><a href="#lightbox-27">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/salon/63.jpg"/><a href="#lightbox-28">Séjour</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/salon/68.jpg"/><a href="#lightbox-29">Séjour</a></div>
+                </div>
+                <div class="lightbox" id="lightbox-19">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/1.jpg"/>
+                    <div class="title">No. <b>1</b> Salon moderne</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-20">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/2.jpg"/>
+                    <div class="title">No. <b>2</b> Salon moderne</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-21">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/9.jpg"/>
+                    <div class="title">No. <b>3</b> Salon moderne</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor" title="" aria-describedby="tooltip283729"/>
+                </div>
+                <div class="lightbox" id="lightbox-22">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/11.jpg"/>
+                    <div class="title">No. <b>4</b> Salon moderne</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-23">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/29.jpg"/>
+                    <div class="title">No. <b>5</b> Salon moderne</div><a class="close" href="#gallery"></a>
                   </div>
-
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" title="" aria-describedby="tooltip303825"/>
+                </div>
+                <div class="lightbox" id="lightbox-24">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/46.jpg"/>
+                    <div class="title">No. <b>6</b> Salon moderne</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-25">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/71.jpg"/>
+                    <div class="title">No. <b>7</b> Salon moderne</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-251">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/55.jpg"/>
+                    <div class="title">No. <b>7.1</b> Salon moderne</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-26">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/60.jpg"/>
+                    <div class="title">No. <b>8</b> Salon moderne</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home stable">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-27">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/65.jpg"/>
+                    <div class="title">No. <b>9</b> Salon moderne</div><a class="close" href="#gallery"></a>
+                  </div>
+                </div>
+                <div class="lightbox" id="lightbox-28">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/63.jpg"/>
+                    <div class="title">No. <b>10</b> Salon moderne</div><a class="close" href="#gallery"></a>
+                  </div>
+                </div>
+                <div class="lightbox" id="lightbox-29">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/salon/68.jpg"/>
+                    <div class="title">No. <b>11</b> Salon moderne</div><a class="close" href="#gallery"></a>
                   </div>
                 </div>
               </div>
@@ -665,38 +796,42 @@
 
               <!-- Tab 3 -->
               <div id="itemblock3" class="tab-pane fade">
-                <div class="row_gallery">
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" title="" aria-describedby="tooltip303825"/>
+                <div id="gallery">
+                  <div><img src="/custom_web_module/static/src/img/home/chambre/42.jpg"/><a href="#lightbox-30">Chambre</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/chambre/31.jpg"/><a href="#lightbox-31">Chambre</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/chambre/43.jpg"/><a href="#lightbox-32">Chambre</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/chambre/52.jpg"/><a href="#lightbox-33">Chambre</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/chambre/53.jpg"/><a href="#lightbox-34">Chambre</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/chambre/38.jpg"/><a href="#lightbox-35">Chambre</a></div>
+                </div>
+                <div class="lightbox" id="lightbox-30">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/chambre/42.jpg"/>
+                    <div class="title">No. <b>1</b> Chambre moderne climatisée</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-31">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/chambre/31.jpg"/>
+                    <div class="title">No. <b>2</b> Chambre moderne climatisée</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-32">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/chambre/43.jpg"/>
+                    <div class="title">No. <b>3</b> Chambre moderne climatisée</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-33">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/chambre/52.jpg"/>
+                    <div class="title">No. <b>4</b> Chambre moderne climatisée</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home stable">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-34">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/chambre/53.jpg"/>
+                    <div class="title">No. <b>5</b> Chambre moderne climatisée</div><a class="close" href="#gallery"></a>
                   </div>
-                <!--</div>
-                <div class="row_gallery">-->
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"/>
-                  </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor"/>
-                  </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor"/>
-                  </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor" title="" aria-describedby="tooltip283729"/>
-                  </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-35">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/chambre/38.jpg"/>
+                    <div class="title">No. <b>6</b> Chambre moderne climatisée</div><a class="close" href="#gallery"></a>
                   </div>
                 </div>
               </div>
@@ -704,37 +839,42 @@
 
               <!-- Tab 4 -->
               <div id="itemblock4" class="tab-pane fade">
-                <div class="row_gallery">
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"/>
+                <div id="gallery">
+                  <div><img src="/custom_web_module/static/src/img/home/cuisine/3.jpg"/><a href="#lightbox-40">Cuisine</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/cuisine/16.jpg"/><a href="#lightbox-41">Cuisine</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/cuisine/17.jpg"/><a href="#lightbox-42">Cuisine</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/cuisine/50.jpg"/><a href="#lightbox-43">Cuisine</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/cuisine/66.jpg"/><a href="#lightbox-44">Cuisine</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/cuisine/67.jpg"/><a href="#lightbox-45">Cuisine</a></div>
+                </div>
+                <div class="lightbox" id="lightbox-40">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/cuisine/3.jpg"/>
+                    <div class="title">No. <b>1</b> Cuisine équipée</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-41">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/cuisine/16.jpg"/>
+                    <div class="title">No. <b>2</b> Cuisine équipée</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-42">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/cuisine/17.jpg"/>
+                    <div class="title">No. <b>3</b> Cuisine équipée</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor" title="" aria-describedby="tooltip283729"/>
+                </div>
+                <div class="lightbox" id="lightbox-43">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/cuisine/50.jpg"/>
+                    <div class="title">No. <b>4</b> Cuisine équipée</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-44">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/cuisine/66.jpg"/>
+                    <div class="title">No. <b>5</b> Cuisine équipée</div><a class="close" href="#gallery"></a>
                   </div>
-
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" title="" aria-describedby="tooltip303825"/>
-                  </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"/>
-                  </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"/>
-                  </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"/>
-                  </div>
-                  <div class="column_gallery home stable">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-45">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/cuisine/67.jpg"/>
+                    <div class="title">No. <b>6</b> Cuisine équipée</div><a class="close" href="#gallery"></a>
                   </div>
                 </div>
               </div>
@@ -742,97 +882,30 @@
 
               <!-- Tab 5 -->
               <div id="itemblock5" class="tab-pane fade">
-                <div class="row_gallery">
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" title="" aria-describedby="tooltip303825"/>
+                <div id="gallery">
+                  <div><img src="/custom_web_module/static/src/img/home/douche/39.jpg"/><a href="#lightbox-50">Douche</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/douche/40.jpg"/><a href="#lightbox-51">Douche</a></div>
+                  <div><img src="/custom_web_module/static/src/img/home/douche/41.jpg"/><a href="#lightbox-52">Douche</a></div>
+                </div>
+                <div class="lightbox" id="lightbox-50">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/douche/39.jpg"/>
+                    <div class="title">No. <b>1</b> Douche moderne</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-51">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/douche/40.jpg"/>
+                    <div class="title">No. <b>2</b> Douche moderne</div><a class="close" href="#gallery"></a>
                   </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"/>
-                  </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"/>
-                  </div>
-                  <div class="column_gallery home stable">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"/>
-                  </div>
-                <!--</div>
-                <div class="row_gallery">-->
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"/>
-                  </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor"/>
-                  </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor"/>
-                  </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor" title="" aria-describedby="tooltip283729"/>
-                  </div>
-                  <div class="column_gallery home">
-                    <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor"/>
+                </div>
+                <div class="lightbox" id="lightbox-52">
+                  <div class="content"><img src="/custom_web_module/static/src/img/home/douche/41.jpg"/>
+                    <div class="title">No. <b>3</b> Douche moderne</div><a class="close" href="#gallery"></a>
                   </div>
                 </div>
               </div>
               <!-- Tab 5 end -->
 
 
-            </div>
-
-
-
-            <div id="myModal" class="modal" style="display: none;">
-              <span class="close cursor" onclick="closeModal()">×</span>
-              <div class="modal-content">
-                <div class="mySlides" style="display: block;">
-                  <div class="numbertext">1 / 10</div>
-                  <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%" title="" aria-describedby="tooltip355920"/>
-                </div>
-                <div class="mySlides" style="display: none;">
-                  <div class="numbertext">2 / 10</div>
-                  <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%"/>
-                </div>
-                <div class="mySlides" style="display: none;">
-                  <div class="numbertext">3 / 10</div>
-                  <img src="/custom_web_module/static/src/img/home/home_block2/pic3.jpg" style="width:100%"/>
-                </div>
-                <div class="mySlides" style="display: none;">
-                  <div class="numbertext">4 / 10</div>
-                  <img src="/web/image/920/10.jpg" style="width:100%"/>
-                </div>
-                <div class="mySlides" style="display: none;">
-                  <div class="numbertext">5 / 10</div>
-                  <img src="/custom_web_module/static/src/img/home/home_block2/pic5.jpg" style="width:100%"/>
-                </div>
-                <div class="mySlides" style="display: none;">
-                  <div class="numbertext">6 / 10</div>
-                  <img src="/custom_web_module/static/src/img/home/home_block2/pic6.jpg" style="width:100%"/>
-                </div>
-                <div class="mySlides" style="display: none;">
-                  <div class="numbertext">7 / 10</div>
-                  <img src="/custom_web_module/static/src/img/home/home_block2/pic7.jpg" style="width:100%"/>
-                </div>
-                <div class="mySlides" style="display: none;">
-                  <div class="numbertext">8 / 10</div>
-                  <img src="/custom_web_module/static/src/img/home/home_block2/pic8.jpg" style="width:100%"/>
-                </div>
-                <div class="mySlides" style="display: none;">
-                  <div class="numbertext">9 / 10</div>
-                  <img src="/custom_web_module/static/src/img/home/home_block2/pic1.jpg" style="width:100%"/>
-                </div>
-                <div class="mySlides" style="display: none;">
-                  <div class="numbertext">10 / 10</div>
-                  <img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg" style="width:100%"/>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-                <div class="caption-container">
-                  <p id="caption">Appartrements vues de l'intérieur</p>
-                </div>
-              </div>
             </div>
           </div>
         </section>

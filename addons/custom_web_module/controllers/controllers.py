@@ -146,3 +146,6 @@ class CheckoutForm(http.Controller):
         # }
         # return request.render('custom_web_module.custom_homepage_view', context)
 
+    @http.route(['/contact/form/submit'], type='http', auth="public", website=True, csrf=False)
+    def contact_form(self, **post):
+        print("Posted!!!!!!!!", post)

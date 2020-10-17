@@ -18,7 +18,6 @@
                                   <div class="col-md-12">
                                     <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24; font-weight: bold; text-transform: uppercase" class="text-white">Type d'appartement</label>
                                     <div class="row mb-3" style="margin-left: 0; margin-right: 0">
-
                                       <t t-if="categories">
                                           <t t-foreach="categories" t-as="category">
                                             <div class="col-md-6" style="padding-left: 0px" t-if="category.slug == '3rooms' or category.slug == '2rooms'">
@@ -42,12 +41,6 @@
                                   </div>
                                 </div>
                                 <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
-                                  <!--div class="col-md-4">
-                                    <div class="form-group">
-                                      <label for="app_nber" class="text-white">Qté d'appartements</label>
-                                      <input name="app_nber" id="app_nber" class="form-control" placeholder="Quantité" type="number"/>
-                                    </div>
-                                  </div-->
                                   <div class="col-md-6">
                                     <div class="form-group">
                                       <label for="start_date" class="text-white">Date d'arrivée</label>
@@ -542,7 +535,7 @@
                             </div>
                             <div class="row" style="margin-left:0; margin-right: 0; margin-bottom: 20px">
                               <div class="col-8" style="text-align: left">
-                                <a class="btn btn-secondary flat flat" href="#" style="text-transform: uppercase; padding: 15px 40px">
+                                <a class="btn btn-secondary flat flat text-white" href="#" style="text-transform: uppercase; padding: 15px 40px">
                                   Reserver
                                 </a>
                               </div>
@@ -931,68 +924,68 @@
                       </div>
                     </div>
                     <div class="card p-3 py-4">
-                      <form style="padding: 20px">
-                        <h1 class="s_title_thin" style="text-align: left; padding-bottom: 30px">
-                          <font style="color: rgb(0, 0, 0); font-size: 30px;">Laisser un message</font>
-                        </h1>
-                        <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <input type="text" class="form-control" id="name" name="name" placeholder="Nom"/>
+                      <form style="padding: 20px" id="contactForm" action="/contact/form/submit">
+                        <div id="main_form">
+                          <h1 class="s_title_thin" style="text-align: left; padding-bottom: 30px">
+                            <font style="color: rgb(0, 0, 0); font-size: 30px;">Laisser un message</font>
+                          </h1>
+                          <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="ContactName" name="ContactName" placeholder="Nom"/>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="contactSurname" name="contactSurname" placeholder="Prénom"/>
+                              </div>
                             </div>
                           </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <input type="text" class="form-control" id="surname" name="surname" placeholder="Prénom"/>
+                          <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <input type="email" class="form-control" id="contactEmail" name="contactEmail" placeholder="Email"/>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="contactPhone" name="contactPhone" placeholder="Numéro de téléphone"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <select class="form-control" id="contactMethod" name="contactMethod" placeholder="Moyen de communication préféré">
+                                  <option value="">Moyen de communication préféré</option>
+                                  <option value="phone">Téléphone</option>
+                                  <option value="whatsapp">Whatsapp</option>
+                                  <option value="sms">SMS</option>
+                                  <option value="email">Email</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <textarea rows="4" class="form-control" id="message" name="message" placeholder="Message"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                            <div class="col-md-12">
+                              <div class="mr-auto mx-auto" style="text-align: right">
+                                <input type="submit" class="btn btn-primary flat flat" value="envoyer" style="text-transform: uppercase; padding: 15px 40px"/>
+                              </div>
                             </div>
                           </div>
                         </div>
-                        <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <input type="email" class="form-control" id="email" name="email" placeholder="Email"/>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Numéro de téléphone"/>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <select class="form-control" id="contactMethod" name="contactMethod" placeholder="Moyen de communication préféré">
-                                <option>Moyen de communication préféré</option>
-                                <option>Téléphone</option>
-                                <option>Whatsapp</option>
-                                <option>SMS</option>
-                                <option>Email</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <select class="form-control" id="lookingFor" name="lookingFor" placeholder="Que cherchez vous exactement?">
-                                <option>Que cherchez vous exactement</option>
-                                <option>Appartement</option>
-                                <option>Studio</option>
-                                <option>Maison</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <textarea rows="4" class="form-control" id="message" name="message" placeholder="Message"/>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
-                          <div class="col-md-12">
-                            <div class="mr-auto mx-auto" style="text-align: right">
-                              <input type="submit" class="btn btn-primary flat flat" value="envoyer" style="text-transform: uppercase; padding: 15px 40px"/>
+
+                        <div id="after_contact_submit">
+                          <div class="submitted_wrapper" style="padding: 25px">
+                            <div class="s_t_wrapper" style="">
+                              <h2 class="text-center" style="color: #000">Formulaire envoyé avec succès!</h2>
                             </div>
                           </div>
                         </div>
@@ -1093,6 +1086,7 @@
 
               // CHECK IF THE FRONT END FORM IS VALID BEFORE CONTINUE, RETRIEVE ERROR ELSE
               var valid = false
+              var complete = false
               if(start_date &amp;&amp; end_date){
                 valid = true
               }
@@ -1113,6 +1107,8 @@
                 }
                 // Otherwise, display the correct tab:
                 showTab(currentTab);
+              } else {
+                alert("Bien vouloir remplir intégralement le formulaire")
               }
             }
             function fixStepIndicator(n) {
@@ -1160,6 +1156,18 @@
               $("#category_2rooms_qty").show()
             }
           })
+        </script>
+        <script>
+          $(document).ready(function(){
+            $("#after_contact_submit").hide();
+            $("#contactForm").submit(function(){
+              $(this)[0].reset()
+
+              $("#main_form").hide()
+              $("#after_contact_submit").show();
+              return true
+            });
+          });
         </script>
       </div>
     </t>

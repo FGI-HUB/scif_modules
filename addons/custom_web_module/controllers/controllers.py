@@ -66,7 +66,7 @@ class CheckoutForm(http.Controller):
         print("DICT CLEANNED DATA", post)
 
         # Check if a client with this email is available on the system
-        user = request.env['res.partner'].search([('email', '=', posted_dict["email"])])
+        user = request.env['res.partner'].sudo().search([('email', '=', posted_dict["email"])])
         if user.id:
             # If user exist, make reservation with the user account
             customer = user
@@ -85,8 +85,8 @@ class CheckoutForm(http.Controller):
             customer = customer_obj.sudo().create(user_val)
 
         if "3rooms" == posted_dict["3rooms"]:
-            category = request.env['hotel.room.type'].search([('slug', '=', posted_dict["3rooms"])])
-            rooms = request.env['hotel.room'].search([('categ_id', '=', category.id), ('status', '=', 'available')])
+            category = request.env['hotel.room.type'].sudo().search([('slug', '=', posted_dict["3rooms"])])
+            rooms = request.env['hotel.room'].sudo().search([('categ_id', '=', category.id), ('status', '=', 'available')])
 
             if rooms:
                 tab = []
@@ -116,8 +116,8 @@ class CheckoutForm(http.Controller):
                 )
 
         elif "2rooms" == posted_dict["2rooms"]:
-            category = request.env['hotel.room.type'].search([('slug', '=', posted_dict["2rooms"])])
-            rooms = request.env['hotel.room'].search([('categ_id', '=', category.id)])
+            category = request.env['hotel.room.type'].sudo().search([('slug', '=', posted_dict["2rooms"])])
+            rooms = request.env['hotel.room'].sudo().search([('categ_id', '=', category.id)])
 
             if rooms:
                 tab = []

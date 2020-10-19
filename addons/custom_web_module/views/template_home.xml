@@ -17,7 +17,7 @@
                                 <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
                                   <div class="col-md-12">
                                     <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24; font-weight: bold; text-transform: uppercase" class="text-white">Type d'appartement</label>
-                                    <div class="row mb-3" style="margin-left: 0; margin-right: 0">
+                                    <div class="row" style="margin-left: 0; margin-right: 0">
                                       <t t-if="categories">
                                           <t t-foreach="categories" t-as="category">
                                             <div class="col-md-6" style="padding-left: 0px" t-if="category.slug == '3rooms' or category.slug == '2rooms'">
@@ -51,6 +51,37 @@
                                     <div class="form-group">
                                       <label for="end_date" class="text-white">Date de départ</label>
                                       <input type="date" class="form-control" id="end_date" name="end_date"/>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label for="floor" class="text-white">Sélectionner l'étage</label>
+                                      <select name="floor" class="form-control" default="">
+                                        <option value="">------------</option>
+                                        <option value="base">Rez de chaussée</option>
+                                        <option value="first_floor">Premier étage</option>
+                                        <option value="second_floor">Deuxième étage</option>
+                                        <option value="thirth_floor">Troisième étage</option>
+                                        <option value="four_floor">Quatrième étage</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="row" style="margin-left: 0; margin-right: 0">
+                                      <div class="col-md-6" style="padding-left: 0px">
+                                        <div class="form-group">
+                                          <label for="child_number" class="text-white">Enfants</label>
+                                          <input name="child_number" id="child_number" class="form-control" placeholder="Nbre" type="number"/>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-6" style="padding-right: 0px">
+                                        <div class="form-group">
+                                          <label for="adult_number" class="text-white">Adultes</label>
+                                          <input name="adult_number" id="adult_number" class="form-control" placeholder="Nbre" type="number"/>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -88,31 +119,30 @@
                                 <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
                                   <div class="col-md-6">
                                     <div class="form-group">
-                                      <label for="floor" class="text-white">Sélectionner l'étage</label>
-                                      <select class="form-control" default="">
-                                        <option value="">------------</option>
-                                        <option value="base">Rez de chaussée</option>
-                                        <option value="first_floor">Premier étage</option>
-                                        <option value="second_floor">Deuxième étage</option>
-                                        <option value="thirth_floor">Troisième étage</option>
-                                        <option value="four_floor">Quatrième étage</option>
+                                      <label for="floor" class="text-white">Service(s)</label>
+                                      <select name="services_ids" class="form-control" multiple="multiple">
+                                        <t t-if="services">
+                                          <t t-foreach="services" t-as="service">
+                                            <option t-att-value="service.id">
+                                              <t t-esc="service.name"></t>
+                                            </option>
+                                          </t>
+                                        </t>
                                       </select>
                                     </div>
                                   </div>
                                   <div class="col-md-6">
-                                    <div class="row" style="margin-left: 0; margin-right: 0">
-                                      <div class="col-md-6" style="padding-left: 0px">
-                                        <div class="form-group">
-                                          <label for="child_number" class="text-white">Enfants</label>
-                                          <input name="child_number" id="child_number" class="form-control" placeholder="Nbre" type="number"/>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-6" style="padding-right: 0px">
-                                        <div class="form-group">
-                                          <label for="adult_number" class="text-white">Adultes</label>
-                                          <input name="adult_number" id="adult_number" class="form-control" placeholder="Nbre" type="number"/>
-                                        </div>
-                                      </div>
+                                    <div class="form-group">
+                                      <label for="floor" class="text-white">Commodité (s)</label>
+                                      <select name="amenities_ids" class="form-control" multiple="multiple">
+                                        <t t-if="amenities">
+                                          <t t-foreach="amenities" t-as="amenitie">
+                                            <option t-att-value="amenitie.id">
+                                              <t t-esc="amenitie.name"></t>
+                                            </option>
+                                          </t>
+                                        </t>
+                                      </select>
                                     </div>
                                   </div>
                                 </div>
@@ -137,6 +167,12 @@
                                   <div class="form-group col-md-6">
                                     <label for="phone" class="text-white">N° de téléphone</label>
                                     <input name="phone" id="phone" class="form-control" placeholder="Téléphone" type="text"/>
+                                  </div>
+                                </div>
+                                <div class="row" style="margin: 0">
+                                  <div class="form-group col-md-12">
+                                    <label for="whole_address" class="text-white">Adresse complète</label>
+                                    <input name="whole_address" id="whole_address" class="form-control" placeholder="Votre adresse" type="text"/>
                                   </div>
                                 </div>
                               </div>
@@ -997,6 +1033,13 @@
             </div>
           </div>
         </section>
+
+        <!-- Return to Top -->
+        <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+        <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
         <script>
           function openModal() {
             document.getElementById("myModal").style.display = "block";
@@ -1167,6 +1210,21 @@
               $("#after_contact_submit").show();
               return true
             });
+          });
+        </script>
+        <script>
+          // ===== Scroll to Top ====
+          $(window).scroll(function() {
+              if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+                  $('#return-to-top').fadeIn(200);    // Fade in the arrow
+              } else {
+                  $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+              }
+          });
+          $('#return-to-top').click(function() {      // When arrow is clicked
+              $('body,html').animate({
+                  scrollTop : 0                       // Scroll to top of body
+              }, 500);
           });
         </script>
       </div>

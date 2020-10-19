@@ -10,9 +10,13 @@ class CustomWebHomepage(Home):
         #invoices = request.env['account.invoice'].sudo().search([])
         #import pdb;pdb.set_trace()
         super(CustomWebHomepage, self).index()
-        categories = request.env['hotel.room.type'].search([])
+        categories = request.env['hotel.room.type'].sudo().search([])
+        amenities = request.env['hotel.room.amenities'].sudo().search([])
+        services = request.env['hotel.services'].sudo().search([])
         context = {
-            "categories": categories
+            "categories": categories,
+            "amenities": amenities,
+            "services": services
         }
         return request.render('custom_web_module.homepage', context)
 
@@ -34,8 +38,10 @@ class CheckoutForm(http.Controller):
         reservation_obj = request.env['hotel.reservation']
         reservation_line_obj = request.env["hotel_reservation.line"]
 
+        print("POSTED DATA", post)
         posted_dict = {
             "appart_type": post.get("appart_type"),
+            "address": post.get("whole_address"),
             "3rooms": post.get("category_3rooms"),
             "2rooms": post.get("category_2rooms"),
             "3rooms_qty": post.get("category_3rooms_qty"),
@@ -53,7 +59,11 @@ class CheckoutForm(http.Controller):
             "child_number": post.get("child_number"),
             "adult_number": post.get("adult_number"),
             "floor": post.get("floor"),
+            "services_ids": request.httprequest.form.getlist('services_ids'),
+            "amenities_ids": request.httprequest.form.getlist('amenities_ids'),
         }
+
+        print("DICT CLEANNED DATA", post)
 
         # Check if a client with this email is available on the system
         user = request.env['res.partner'].search([('email', '=', posted_dict["email"])])

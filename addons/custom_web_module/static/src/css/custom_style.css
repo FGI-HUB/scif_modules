@@ -70,29 +70,6 @@ header .navbar-brand.logo img{
     background-color: rgba(43, 79, 188, 0.6) !important;
 }
 
-.banner_house_wrapper{
-    display: none;
-}
-.banner_house{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 10px 0px 0px 70px;
-}
-.house_text_inner{
-    padding: 20px;
-    color: #fff;
-    background-color: rgba(255, 90, 36, 0.8);
-}
-.house_text_inner h2{
-    text-transform: uppercase;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #fff;
-    font-size: 2.75rem;
-}
-.house_text_inner p{
-    font-size: 1.33rem;
-}
 
 .mobile_search_form_wrapper{
     display: none;
@@ -121,8 +98,11 @@ header .navbar-brand.logo img{
 .tab {
   display: none;
 }
+.tab_mobile {
+  display: none;
+}
 
-#prevBtn {
+#prevBtn, prevBtn_mobile {
   background-color: #bbbbbb;
   color: #fff;
 }
@@ -553,30 +533,15 @@ footer{
     }
     /*++++++++++++++++++++++++++++++++++*/
 
-    .banner_house_wrapper{
-        padding-top: 150px;
-        padding-bottom: 50px;
-    }
-    .banner_house {
-        position: relative;
-        padding: 20px;
-        top: unset;
-        right: unset;
-    }
-    .house_text_inner h2{
-        text-transform: uppercase;
-        padding-bottom: 5px;
-        border-bottom: 1px solid #fff;
-        font-size: 1.65rem;
-        text-align: center;
-    }
-    .house_text_inner p{
-        font-size: 0.98rem;
-        text-align: justify;
-    }
-
     .mobile_search_form_wrapper{
         display: block;
+    }
+
+    .col-md-6.child{
+        padding-right: 0px;
+    }
+    .col-md-6.adult{
+        padding-left: 0px;
     }
 
     .nav-tabs .nav-item {

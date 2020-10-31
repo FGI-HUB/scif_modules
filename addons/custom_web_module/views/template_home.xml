@@ -220,75 +220,189 @@
             <div class="row" style="margin-left: 0; margin-right: 0; padding-top: 20px">
               <div class="col-md-12" style="padding-left: 20px; padding-right:20px">
                 <div class="card p-3 py-4 banner_search_form">
-                  <form>
-                    <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
-                      <div class="col-md-12">
-                        <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24; font-weight: bold; text-transform: uppercase" for="appart_type" class="text-white">Type d'appartement</label>
-                        <div class="form-group row" style="margin-left: 0; margin-right: 0">
-                          <div class="form-check form-check-inline col-md-6">
-                            <input class="form-check-input" type="radio" name="appart_type" id="inlineRadio1" value="1"/>
-                            <label class="form-check-label text-white" for="inlineRadio1">3 chambres</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="appart_type" id="inlineRadio2" value="2"/>
-                            <label class="form-check-label text-white" for="inlineRadio2">2 chambre</label>
+                  <form id="checkoutForm_mobile" method="post" action="/checkout/form/submit">
+                    <div id="before_submit_mobile">
+                      <div class="tab_mobile" style="margin-left: 0; margin-right: 0">
+                        <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
+                          <div class="col-md-12">
+                            <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24; font-weight: bold; text-transform: uppercase" class="text-white">Type d'appartement</label>
+                            <div class="row" style="margin-left: 0; margin-right: 0">
+                              <t t-if="categories">
+                                  <t t-foreach="categories" t-as="category">
+                                    <div class="col-md-6" style="padding-left: 0px" t-if="category.slug == '3rooms' or category.slug == '2rooms'">
+                                      <div class="row mb-2" style="margin-left: 0; margin-right: 0">
+                                          <div class="form-check form-check-inline col-md-12">
+                                              <input class="form-check-input" t-attf-name="category_{{ category.slug }}" type="checkbox" t-attf-id="category_{{ category.slug }}_mobile" t-att-value="category.slug "/>
+                                              <label class="form-check-label text-white" t-attf-for="category_{{ category.slug }}_mobile">
+                                                <t t-esc="category.name">
+                                                </t>
+                                              </label>
+                                          </div>
+                                      </div>
+                                      <div class="row mb-3" style="margin-left: 0; margin-right: 0">
+                                        <input t-attf-name="category_{{ category.slug }}_qty" t-attf-id="category_{{ category.slug }}_qty_mobile" class="form-control" placeholder="Quantité" type="number"/>
+                                      </div>
+                                    </div>
+                                  </t>
+                              </t>
+
+                            </div>
                           </div>
                         </div>
+                        <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="start_date" class="text-white">Date d'arrivée</label>
+                              <input type="date" class="form-control" id="start_date_mobile" name="start_date_mobile"/>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="end_date" class="text-white">Date de départ</label>
+                              <input type="date" class="form-control" id="end_date_mobile" name="end_date_mobile"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="floor" class="text-white">Sélectionner l'étage</label>
+                              <select name="floor" class="form-control" default="">
+                                <option value="">------------</option>
+                                <option value="base">Rez de chaussée</option>
+                                <option value="first_floor">Premier étage</option>
+                                <option value="second_floor">Deuxième étage</option>
+                                <option value="thirth_floor">Troisième étage</option>
+                                <option value="four_floor">Quatrième étage</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="row" style="margin-left: 0; margin-right: 0">
+                              <div class="col-md-6 child" style="padding-left: 0px">
+                                <div class="form-group">
+                                  <label for="child_number" class="text-white">Enfants</label>
+                                  <input name="child_number" id="child_number" class="form-control" placeholder="Nbre" type="number"/>
+                                </div>
+                              </div>
+                              <div class="col-md-6 adult" style="padding-right: 0px">
+                                <div class="form-group">
+                                  <label for="adult_number" class="text-white">Adultes</label>
+                                  <input name="adult_number" id="adult_number" class="form-control" placeholder="Nbre" type="number"/>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
+                          <div class="col-md-12">
+                            <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24; font-weight: bold; text-transform: uppercase" for="caracteristic" class="text-white">Séjournez-vous avec des</label>
+                            <div class="form-group row" style="margin-left: 0; margin-right: 0">
+                              <div class="form-check form-check-inline col-md-4">
+                                <input class="form-check-input" name="old" type="checkbox" id="inlineCheckbox1" value="old"/>
+                                <label class="form-check-label text-white" for="inlineCheckbox1">Personnes agées</label>
+                              </div>
+                              <div class="form-check form-check-inline col-md-4">
+                                <input class="form-check-input" name="invalid" type="checkbox" id="inlineCheckbox2" value="invalid"/>
+                                <label class="form-check-label text-white" for="inlineCheckbox2">Handicapés</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="allergic" type="checkbox" id="inlineCheckbox3" value="allergic"/>
+                                <label class="form-check-label text-white" for="inlineCheckbox3">Allergiques</label>
+                              </div>
+                            </div>
+                            <div class="form-group row" style="margin-left: 0; margin-right: 0">
+                              <div class="form-check form-check-inline col-md-4">
+                                <input class="form-check-input" name="children" type="checkbox" id="inlineCheckbox4" value="children"/>
+                                <label class="form-check-label text-white" for="inlineCheckbox4">Enfants</label>
+                              </div>
+                              <div class="form-check form-check-inline col-md-4">
+                                <input class="form-check-input" name="sicks" type="checkbox" id="inlineCheckbox5" value="sicks"/>
+                                <label class="form-check-label text-white" for="inlineCheckbox5">Maladifs</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab_mobile" style="margin-left: 0; margin-right: 0">
+                        <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="floor" class="text-white">Service(s)</label>
+                              <select name="services_ids" class="form-control" multiple="multiple">
+                                <t t-if="services">
+                                  <t t-foreach="services" t-as="service">
+                                    <option t-att-value="service.id">
+                                      <t t-esc="service.name"></t>
+                                    </option>
+                                  </t>
+                                </t>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="floor" class="text-white">Commodité (s)</label>
+                              <select name="amenities_ids" class="form-control" multiple="multiple">
+                                <t t-if="amenities">
+                                  <t t-foreach="amenities" t-as="amenitie">
+                                    <option t-att-value="amenitie.id">
+                                      <t t-esc="amenitie.name"></t>
+                                    </option>
+                                  </t>
+                                </t>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12" style="margin-top: 10px">
+                          <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24; font-weight: bold; text-transform: uppercase" class="text-white">Informations sur le client</label>
+                        </div>
+                        <div class="row" style="margin: 0">
+                          <div class="form-group col-md-6">
+                            <label for="name" class="text-white">Nom (s)</label>
+                            <input name="name" id="name" class="form-control" placeholder="Nom du client" type="text"/>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="surname" class="text-white">Prénom (s)</label>
+                            <input name="surname" id="surname" class="form-control" placeholder="Prénom du client" type="text"/>
+                          </div>
+                        </div>
+                        <div class="row" style="margin: 0">
+                          <div class="form-group col-md-6">
+                            <label for="email" class="text-white">Email</label>
+                            <input name="email" id="email" class="form-control" placeholder="Adresse email" type="email"/>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="phone" class="text-white">N° de téléphone</label>
+                            <input name="phone" id="phone" class="form-control" placeholder="Téléphone" type="text"/>
+                          </div>
+                        </div>
+                        <div class="row" style="margin: 0">
+                          <div class="form-group col-md-12">
+                            <label for="whole_address" class="text-white">Adresse complète</label>
+                            <input name="whole_address" id="whole_address" class="form-control" placeholder="Votre adresse" type="text"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div style="overflow:auto; padding: 15px">
+                        <div style="float:right;">
+                          <button type="button" id="prevBtn_mobile" onclick="nextPrev_mobile(-1)" class="btn btn-back flat flat" style="text-transform: uppercase; padding: 15px 40px; margin-right: 10px">Retour</button>
+                          <button type="button" id="nextBtn_mobile" onclick="nextPrev_mobile(1)" class="btn btn-next flat flat" style="text-transform: uppercase; padding: 15px 40px">Suivant</button>
+                        </div>
+                      </div>
+
+                      <div style="text-align:center;margin-top:40px;">
+                        <span class="step"></span>
+                        <span class="step"></span>
                       </div>
                     </div>
-                    <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="app_nber" class="text-white">Nb. d'appartement</label>
-                          <input name="app_nber" id="app_nber" class="form-control" placeholder="Quantité" type="number"/>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="start_date" class="text-white">Date d'arrivée</label>
-                          <input type="date" class="form-control" id="start_date" name="start_date"/>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="end_date" class="text-white">Date de départ</label>
-                          <input type="date" class="form-control" id="end_date" name="end_date"/>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row g-3 mt-2" style="margin-left: 0; margin-right: 0">
-                      <div class="col-md-12">
-                        <label style="padding-bottom: 5px; border-bottom: 1px solid #d94d24; font-weight: bold; text-transform: uppercase" for="caracteristic" class="text-white">Séjournez-vous avec des</label>
-                        <div class="form-group row" style="margin-left: 0; margin-right: 0">
-                          <div class="form-check form-check-inline col-md-4">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="old"/>
-                            <label class="form-check-label text-white" for="inlineCheckbox1">Vieux</label>
-                          </div>
-                          <div class="form-check form-check-inline col-md-4">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="handicap"/>
-                            <label class="form-check-label text-white" for="inlineCheckbox2">Handicapés</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="allergic"/>
-                            <label class="form-check-label text-white" for="inlineCheckbox3">Allergiques</label>
-                          </div>
-                        </div>
-                        <div class="form-group row" style="margin-left: 0; margin-right: 0">
-                          <div class="form-check form-check-inline col-md-4">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="children"/>
-                            <label class="form-check-label text-white" for="inlineCheckbox4">Enfants</label>
-                          </div>
-                          <div class="form-check form-check-inline col-md-4">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="sicks"/>
-                            <label class="form-check-label text-white" for="inlineCheckbox5">Maladifs</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
-                      <div class="col-md-12">
-                        <div class="mr-auto mx-auto" style="text-align: center">
-                          <input type="submit" class="btn btn-secondary flat flat" style="text-transform: uppercase; padding: 15px 40px" value="Reserver"/>
+
+                    <div id="after_submit_mobile">
+                      <div class="submitted_wrapper" style="padding: 15px">
+                        <div class="s_t_wrapper" style="">
+                          <h2 class="text-center" style="color: #fff">Formulaire envoyé avec succès!</h2>
                         </div>
                       </div>
                     </div>
@@ -1036,51 +1150,6 @@
 
 
         <script>
-          function openModal() {
-            document.getElementById("myModal").style.display = "block";
-          }
-
-          function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-          }
-
-          var slideIndex = 1;
-          showSlides(slideIndex);
-
-          function plusSlides(n) {
-            showSlides(slideIndex += n);
-          }
-
-          function currentSlide(n) {
-            showSlides(slideIndex = n);
-          }
-
-          function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            if (n &gt; slides.length) {
-              slideIndex = 1;
-            }
-
-            if (1 &gt; n) {
-              slideIndex = slides.length;
-            }
-            for (var i = 0; slides.length &gt; i; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; dots.length &gt; i; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-
-
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            captionText.innerHTML = dots[slideIndex-1].alt;
-          }
-        </script>
-        <script>
             var currentTab = 0; // Current tab is set to be the first tab (0)
             showTab(currentTab); // Display the current tab
 
@@ -1094,6 +1163,21 @@
               var start_date = $("#start_date")[0].value;
               document.getElementsByName("end_date")[0].setAttribute('min', start_date)
             })
+
+            // Mobile processing
+            showMobileTab(currentTab)
+            // Freeze before the date days
+            var today = new Date().toISOString().split('T')[0];
+            document.getElementsByName("start_date_mobile")[0].setAttribute('min', today)
+
+            // set disabled date from start date
+            $("#start_date_mobile").change(function(){
+              console.log("start_date changed!!!!!!!")
+              var start_date = $("#start_date_mobile")[0].value;
+              document.getElementsByName("end_date_mobile")[0].setAttribute('min', start_date)
+            })
+
+
 
             function showTab(n) {
               // This function will display the specified tab of the form...
@@ -1109,6 +1193,25 @@
                 document.getElementById("nextBtn").innerHTML = "Réserver";
               } else {
                 document.getElementById("nextBtn").innerHTML = "Suivant";
+              }
+              //... and run a function that will display the correct step indicator:
+              fixStepIndicator(n)
+            }
+
+            function showMobileTab(n) {
+              // This function will display the specified tab of the form...
+              var x = document.getElementsByClassName("tab_mobile");
+              x[n].style.display = "block";
+              //... and fix the Previous/Next buttons:
+              if (n == 0) {
+                document.getElementById("prevBtn_mobile").style.display = "none";
+              } else {
+                document.getElementById("prevBtn_mobile").style.display = "inline";
+              }
+              if (n == (x.length - 1)) {
+                document.getElementById("nextBtn_mobile").innerHTML = "Réserver";
+              } else {
+                document.getElementById("nextBtn_mobile").innerHTML = "Suivant";
               }
               //... and run a function that will display the correct step indicator:
               fixStepIndicator(n)
@@ -1161,6 +1264,47 @@
 
             $("#before_submit").show()
             $("#after_submit").hide()
+
+
+            // mobile processing
+            function nextPrev_mobile(n) {
+              var start_date = $("#start_date_mobile")[0].value;
+              var end_date = $("#end_date_mobile")[0].value
+
+              // This function will figure out which tab to display
+              var x = document.getElementsByClassName("tab_mobile");
+              // Exit the function if any field in the current tab is invalid:
+
+              // CHECK IF THE FRONT END FORM IS VALID BEFORE CONTINUE, RETRIEVE ERROR ELSE
+              var valid = false
+              var complete = false
+              if(start_date &amp;&amp; end_date){
+                valid = true
+              }
+
+              if(valid){
+                // Hide the current tab:
+                x[currentTab].style.display = "none";
+                // Increase or decrease the current tab by 1:
+                currentTab = currentTab + n;
+                // if you have reached the end of the form...
+                if (currentTab >= x.length) {
+                  // ... the form gets submitted:
+                  document.getElementById("checkoutForm_mobile").submit();
+                  console.log("Submited..............................");
+                  $("#before_submit_mobile").hide()
+                  $("#after_submit_mobile").show();
+                  return false;
+                }
+                // Otherwise, display the correct tab:
+                showMobileTab(currentTab);
+              } else {
+                alert("Bien vouloir remplir intégralement le formulaire")
+              }
+            }
+
+            $("#before_submit_mobile").show()
+            $("#after_submit_mobile").hide()
         </script>
         <script type="text/javascript">
           if($("#category_3rooms")[0].checked == false){
@@ -1192,6 +1336,39 @@
             } else {
               $("#category_2rooms_qty").fadeIn()
               $("#category_2rooms_qty").show()
+            }
+          })
+
+          // Mobile processing
+          if($("#category_3rooms_mobile")[0].checked == false){
+            $("#category_3rooms_qty_mobile").fadeOut()
+            $("#category_3rooms_qty_mobile").hide()
+          }
+
+          if($("#category_2rooms_mobile")[0].checked == false){
+            $("#category_2rooms_qty_mobile").fadeOut()
+            $("#category_2rooms_qty_mobile").hide()
+          }
+
+          $("#category_3rooms_mobile").change(function(){
+            console.log("category_3rooms_mobile changed!!!!!!!")
+            if(!($("#category_3rooms_mobile")[0].checked)){
+              $("#category_3rooms_qty_mobile").fadeOut()
+              $("#category_3rooms_qty_mobile").hide()
+            } else {
+              $("#category_3rooms_qty_mobile").fadeIn()
+              $("#category_3rooms_qty_mobile").show()
+            }
+          })
+
+          $("#category_2rooms_mobile").change(function(){
+            console.log("category_2rooms_mobile changed!!!!!!!")
+            if(!($("#category_2rooms_mobile")[0].checked)){
+              $("#category_2rooms_qty_mobile").fadeOut()
+              $("#category_2rooms_qty_mobile").hide()
+            } else {
+              $("#category_2rooms_qty_mobile").fadeIn()
+              $("#category_2rooms_qty_mobile").show()
             }
           })
         </script>

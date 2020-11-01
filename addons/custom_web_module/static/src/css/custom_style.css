@@ -222,7 +222,26 @@ header .navbar-brand.logo img{
     padding-left: 10px !important;
 }
 
+@-webkit-keyframes translationX {
+  0% {transform: translateX(-800px);} /* transformation complète */
+  100% {transform: translateX(0px);} /* retour à l’état initial */
+}
+@-webkit-keyframes translationY {
+  0% {transform: translateY(-800px);} /* transformation complète */
+  100% {transform: translateY(0px);} /* retour à l’état initial */
+}
 
+.second_section {
+  -webkit-animation-name: translationX;  /* nom de l’animation */
+  -webkit-animation-duration: 2s;  /* durée totale
+  -webkit-animation-iteration-count: infinite;   nombre d’itérations*/
+}
+
+.search_form_wrapper {
+  -webkit-animation-name: translationY;  /* nom de l’animation */
+  -webkit-animation-duration: 2s;  /* durée totale
+  -webkit-animation-iteration-count: infinite;   nombre d’itérations*/
+}
 
 
 /* MINI GALLERY */

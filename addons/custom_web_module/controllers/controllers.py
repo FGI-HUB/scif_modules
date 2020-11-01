@@ -48,6 +48,8 @@ class CheckoutForm(http.Controller):
             "2rooms_qty": post.get("category_2rooms_qty"),
             "start_date": post.get("start_date"),
             "end_date": post.get("end_date"),
+            "start_date_mobile": post.get("start_date_mobile"),
+            "end_date_mobile": post.get("end_date_mobile"),
             "old": post.get("old"),
             "invalid": post.get("invalid"),
             "allergic": post.get("allergic"),

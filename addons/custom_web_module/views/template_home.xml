@@ -31,7 +31,7 @@
                                                   </div>
                                               </div>
                                               <div class="row mb-3" style="margin-left: 0; margin-right: 0">
-                                                <input t-attf-name="category_{{ category.slug }}_qty" t-attf-id="category_{{ category.slug }}_qty" class="form-control" placeholder="Quantité" type="number"/>
+                                                <input t-attf-name="category_{{ category.slug }}_qty" t-attf-id="category_{{ category.slug }}_qty" class="form-control" placeholder="Quantité" type="number" min="1" max="10"/>
                                               </div>
                                             </div>
                                           </t>
@@ -73,13 +73,13 @@
                                       <div class="col-md-6" style="padding-left: 0px">
                                         <div class="form-group">
                                           <label for="child_number" class="text-white">Enfants</label>
-                                          <input name="child_number" id="child_number" class="form-control" placeholder="Nbre" type="number"/>
+                                          <input name="child_number" id="child_number" class="form-control" placeholder="Nbre" type="number" default="0" min="0" max="10" required="required"/>
                                         </div>
                                       </div>
                                       <div class="col-md-6" style="padding-right: 0px">
                                         <div class="form-group">
                                           <label for="adult_number" class="text-white">Adultes</label>
-                                          <input name="adult_number" id="adult_number" class="form-control" placeholder="Nbre" type="number"/>
+                                          <input name="adult_number" id="adult_number" class="form-control" placeholder="Nbre" type="number" default="1" min="1" max="10" required="required" />
                                         </div>
                                       </div>
                                     </div>
@@ -152,7 +152,7 @@
                                 <div class="row" style="margin: 0">
                                   <div class="form-group col-md-6">
                                     <label for="name" class="text-white">Nom (s)</label>
-                                    <input name="name" id="name" class="form-control" placeholder="Nom du client" type="text"/>
+                                    <input name="name" id="name" class="form-control" placeholder="Nom du client" type="text" required="required" />
                                   </div>
                                   <div class="form-group col-md-6">
                                     <label for="surname" class="text-white">Prénom (s)</label>
@@ -252,13 +252,13 @@
                         <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
                           <div class="col-md-6">
                             <div class="form-group">
-                              <label for="start_date" class="text-white">Date d'arrivée</label>
+                              <label for="start_date_mobile" class="text-white">Date d'arrivée</label>
                               <input type="date" class="form-control" id="start_date_mobile" name="start_date_mobile"/>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
-                              <label for="end_date" class="text-white">Date de départ</label>
+                              <label for="end_date_mobile" class="text-white">Date de départ</label>
                               <input type="date" class="form-control" id="end_date_mobile" name="end_date_mobile"/>
                             </div>
                           </div>
@@ -266,8 +266,8 @@
                         <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
                           <div class="col-md-6">
                             <div class="form-group">
-                              <label for="floor" class="text-white">Sélectionner l'étage</label>
-                              <select name="floor" class="form-control" default="">
+                              <label for="floor_mobile" class="text-white">Sélectionner l'étage</label>
+                              <select name="floor" id="floor_mobile" class="form-control" default="">
                                 <option value="">------------</option>
                                 <option value="base">Rez de chaussée</option>
                                 <option value="first_floor">Premier étage</option>
@@ -281,14 +281,14 @@
                             <div class="row" style="margin-left: 0; margin-right: 0">
                               <div class="col-md-6 child" style="padding-left: 0px">
                                 <div class="form-group">
-                                  <label for="child_number" class="text-white">Enfants</label>
-                                  <input name="child_number" id="child_number" class="form-control" placeholder="Nbre" type="number"/>
+                                  <label for="child_number_mobile" class="text-white">Enfants</label>
+                                  <input name="child_number" id="child_number_mobile" class="form-control" placeholder="Nbre" type="number"/>
                                 </div>
                               </div>
                               <div class="col-md-6 adult" style="padding-right: 0px">
                                 <div class="form-group">
-                                  <label for="adult_number" class="text-white">Adultes</label>
-                                  <input name="adult_number" id="adult_number" class="form-control" placeholder="Nbre" type="number"/>
+                                  <label for="adult_number_mobile" class="text-white">Adultes</label>
+                                  <input name="adult_number" id="adult_number_mobile" class="form-control" placeholder="Nbre" type="number"/>
                                 </div>
                               </div>
                             </div>
@@ -328,8 +328,8 @@
                         <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
                           <div class="col-md-6">
                             <div class="form-group">
-                              <label for="floor" class="text-white">Service(s)</label>
-                              <select name="services_ids" class="form-control" multiple="multiple">
+                              <label for="services_mobile" class="text-white">Service(s)</label>
+                              <select name="services_ids" id="services_mobile" class="form-control" multiple="multiple">
                                 <t t-if="services">
                                   <t t-foreach="services" t-as="service">
                                     <option t-att-value="service.id">
@@ -342,8 +342,8 @@
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
-                              <label for="floor" class="text-white">Commodité (s)</label>
-                              <select name="amenities_ids" class="form-control" multiple="multiple">
+                              <label for="amenities_mobile" class="text-white">Commodité (s)</label>
+                              <select name="amenities_ids" id="amenities_mobile" class="form-control" multiple="multiple">
                                 <t t-if="amenities">
                                   <t t-foreach="amenities" t-as="amenitie">
                                     <option t-att-value="amenitie.id">
@@ -360,28 +360,28 @@
                         </div>
                         <div class="row" style="margin: 0">
                           <div class="form-group col-md-6">
-                            <label for="name" class="text-white">Nom (s)</label>
-                            <input name="name" id="name" class="form-control" placeholder="Nom du client" type="text"/>
+                            <label for="name_mobile" class="text-white">Nom (s)</label>
+                            <input name="name" id="name_mobile" class="form-control" placeholder="Nom du client" type="text"/>
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="surname" class="text-white">Prénom (s)</label>
-                            <input name="surname" id="surname" class="form-control" placeholder="Prénom du client" type="text"/>
+                            <label for="surname_mobile" class="text-white">Prénom (s)</label>
+                            <input name="surname" id="surname_mobile" class="form-control" placeholder="Prénom du client" type="text"/>
                           </div>
                         </div>
                         <div class="row" style="margin: 0">
                           <div class="form-group col-md-6">
-                            <label for="email" class="text-white">Email</label>
-                            <input name="email" id="email" class="form-control" placeholder="Adresse email" type="email"/>
+                            <label for="email_mobile" class="text-white">Email</label>
+                            <input name="email" id="email_mobile" class="form-control" placeholder="Adresse email" type="email"/>
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="phone" class="text-white">N° de téléphone</label>
-                            <input name="phone" id="phone" class="form-control" placeholder="Téléphone" type="text"/>
+                            <label for="phone_mobile" class="text-white">N° de téléphone</label>
+                            <input name="phone" id="phone_mobile" class="form-control" placeholder="Téléphone" type="text"/>
                           </div>
                         </div>
                         <div class="row" style="margin: 0">
                           <div class="form-group col-md-12">
-                            <label for="whole_address" class="text-white">Adresse complète</label>
-                            <input name="whole_address" id="whole_address" class="form-control" placeholder="Votre adresse" type="text"/>
+                            <label for="whole_address_mobile" class="text-white">Adresse complète</label>
+                            <input name="whole_address" id="whole_address_mobile" class="form-control" placeholder="Votre adresse" type="text"/>
                           </div>
                         </div>
                       </div>
@@ -415,7 +415,7 @@
         <!-- END MOBILE SEARCH FORM -->
 
 
-        <section class="pt-5 pb-5">
+        <section class="pt-5 pb-5 second_section">
           <div class="container">
             <div class="row" style="margin-left:0; margin-right: 0">
               <div class="col-md-6 description_home">

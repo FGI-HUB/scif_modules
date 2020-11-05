@@ -581,15 +581,6 @@ footer{
        width: unset;
     }
 
-
-
-
-
-
-
-
-
-
     /* GALLERY RESPONSIV */
     .navtab_item ul {
         width: 90%;
@@ -598,6 +589,11 @@ footer{
         display: block !important;
         margin: 0 auto;
         width: unset !important;
+    }
+    .gallery_pic_wrapper{
+        width: 45% !important;
+        height: 100% !important;
+        margin: 0 auto !important;
     }
 
     .block_wrapper{

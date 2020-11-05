@@ -861,18 +861,18 @@
               <!-- Tab 2 -->
               <div id="itemblock2" class="tab-pane fade">
                  <div id="gallery" style="height: 100% !important">
-                  <div><img src="/custom_web_module/static/src/img/home/salon/1.jpg"/><a href="#lightbox-19"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/salon/2.jpg"/><a href="#lightbox-20"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/salon/9.jpg"/><a href="#lightbox-21"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/salon/11.jpg"/><a href="#lightbox-22"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/salon/29.jpg"/><a href="#lightbox-23"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/salon/46.jpg"/><a href="#lightbox-24"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/salon/71.jpg"/><a href="#lightbox-25"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/salon/55.jpg"/><a href="#lightbox-251"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/salon/60.jpg"/><a href="#lightbox-26"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/salon/65.jpg"/><a href="#lightbox-27"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/salon/63.jpg"/><a href="#lightbox-28"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/salon/68.jpg"/><a href="#lightbox-29"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/salon/1.jpg"/><a href="#lightbox-19"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/salon/2.jpg"/><a href="#lightbox-20"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/salon/9.jpg"/><a href="#lightbox-21"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/salon/11.jpg"/><a href="#lightbox-22"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/salon/29.jpg"/><a href="#lightbox-23"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/salon/46.jpg"/><a href="#lightbox-24"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/salon/71.jpg"/><a href="#lightbox-25"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/salon/55.jpg"/><a href="#lightbox-251"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/salon/60.jpg"/><a href="#lightbox-26"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/salon/65.jpg"/><a href="#lightbox-27"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/salon/63.jpg"/><a href="#lightbox-28"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/salon/68.jpg"/><a href="#lightbox-29"></a></div>
                 </div>
                 <div class="lightbox" id="lightbox-19">
                   <div class="content"><img src="/custom_web_module/static/src/img/home/salon/1.jpg"/>
@@ -940,12 +940,12 @@
               <!-- Tab 3 -->
               <div id="itemblock3" class="tab-pane fade">
                 <div id="gallery" style="height: 100% !important">
-                  <div><img src="/custom_web_module/static/src/img/home/chambre/42.jpg"/><a href="#lightbox-30"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/chambre/31.jpg"/><a href="#lightbox-31"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/chambre/43.jpg"/><a href="#lightbox-32"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/chambre/52.jpg"/><a href="#lightbox-33"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/chambre/53.jpg"/><a href="#lightbox-34"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/chambre/38.jpg"/><a href="#lightbox-35"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/chambre/42.jpg"/><a href="#lightbox-30"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/chambre/31.jpg"/><a href="#lightbox-31"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/chambre/43.jpg"/><a href="#lightbox-32"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/chambre/52.jpg"/><a href="#lightbox-33"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/chambre/53.jpg"/><a href="#lightbox-34"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/chambre/38.jpg"/><a href="#lightbox-35"></a></div>
                 </div>
                 <div class="lightbox" id="lightbox-30">
                   <div class="content"><img src="/custom_web_module/static/src/img/home/chambre/42.jpg"/>
@@ -983,12 +983,12 @@
               <!-- Tab 4 -->
               <div id="itemblock4" class="tab-pane fade">
                 <div id="gallery" style="height: 100% !important">
-                  <div><img src="/custom_web_module/static/src/img/home/cuisine/3.jpg"/><a href="#lightbox-40"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/cuisine/16.jpg"/><a href="#lightbox-41"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/cuisine/17.jpg"/><a href="#lightbox-42"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/cuisine/50.jpg"/><a href="#lightbox-43"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/cuisine/66.jpg"/><a href="#lightbox-44"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/cuisine/67.jpg"/><a href="#lightbox-45"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/cuisine/3.jpg"/><a href="#lightbox-40"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/cuisine/16.jpg"/><a href="#lightbox-41"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/cuisine/17.jpg"/><a href="#lightbox-42"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/cuisine/50.jpg"/><a href="#lightbox-43"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/cuisine/66.jpg"/><a href="#lightbox-44"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/cuisine/67.jpg"/><a href="#lightbox-45"></a></div>
                 </div>
                 <div class="lightbox" id="lightbox-40">
                   <div class="content"><img src="/custom_web_module/static/src/img/home/cuisine/3.jpg"/>
@@ -1026,9 +1026,9 @@
               <!-- Tab 5 -->
               <div id="itemblock5" class="tab-pane fade">
                 <div id="gallery" style="height: 100% !important">
-                  <div><img src="/custom_web_module/static/src/img/home/douche/39.jpg"/><a href="#lightbox-50"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/douche/40.jpg"/><a href="#lightbox-51"></a></div>
-                  <div><img src="/custom_web_module/static/src/img/home/douche/41.jpg"/><a href="#lightbox-52"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/douche/39.jpg"/><a href="#lightbox-50"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/douche/40.jpg"/><a href="#lightbox-51"></a></div>
+                  <div class="gallery_pic_wrapper"><img src="/custom_web_module/static/src/img/home/douche/41.jpg"/><a href="#lightbox-52"></a></div>
                 </div>
                 <div class="lightbox" id="lightbox-50">
                   <div class="content"><img src="/custom_web_module/static/src/img/home/douche/39.jpg"/>

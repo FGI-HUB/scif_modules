@@ -578,7 +578,8 @@ footer{
     }
 
     ul.nav.nav-pills.custom_gallery_nav_pill {
-       width: unset;
+        width: 90%;
+        margin: 0 auto;
     }
 
     /* GALLERY RESPONSIV */

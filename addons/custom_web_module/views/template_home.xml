@@ -744,7 +744,7 @@
             <div class="tab-content" id="whole_gallery">
               <!-- Tab 1 -->
               <div id="itemblock1" class="tab-pane active">
-                <div id="gallery">
+                <div id="gallery" style="height: 100% !important">
                   <div><img src="/custom_web_module/static/src/img/home//10.jpg"/><a href="#lightbox-1"></a></div>
                   <div><img src="/custom_web_module/static/src/img/home/cuisine/66.jpg"/><a href="#lightbox-2"></a></div>
                   <div><img src="/custom_web_module/static/src/img/home/home_block2/pic2.jpg"/><a href="#lightbox-3"></a></div>
@@ -860,7 +860,7 @@
 
               <!-- Tab 2 -->
               <div id="itemblock2" class="tab-pane fade">
-                 <div id="gallery">
+                 <div id="gallery" style="height: 100% !important">
                   <div><img src="/custom_web_module/static/src/img/home/salon/1.jpg"/><a href="#lightbox-19"></a></div>
                   <div><img src="/custom_web_module/static/src/img/home/salon/2.jpg"/><a href="#lightbox-20"></a></div>
                   <div><img src="/custom_web_module/static/src/img/home/salon/9.jpg"/><a href="#lightbox-21"></a></div>
@@ -939,7 +939,7 @@
 
               <!-- Tab 3 -->
               <div id="itemblock3" class="tab-pane fade">
-                <div id="gallery">
+                <div id="gallery" style="height: 100% !important">
                   <div><img src="/custom_web_module/static/src/img/home/chambre/42.jpg"/><a href="#lightbox-30"></a></div>
                   <div><img src="/custom_web_module/static/src/img/home/chambre/31.jpg"/><a href="#lightbox-31"></a></div>
                   <div><img src="/custom_web_module/static/src/img/home/chambre/43.jpg"/><a href="#lightbox-32"></a></div>
@@ -982,7 +982,7 @@
 
               <!-- Tab 4 -->
               <div id="itemblock4" class="tab-pane fade">
-                <div id="gallery">
+                <div id="gallery" style="height: 100% !important">
                   <div><img src="/custom_web_module/static/src/img/home/cuisine/3.jpg"/><a href="#lightbox-40"></a></div>
                   <div><img src="/custom_web_module/static/src/img/home/cuisine/16.jpg"/><a href="#lightbox-41"></a></div>
                   <div><img src="/custom_web_module/static/src/img/home/cuisine/17.jpg"/><a href="#lightbox-42"></a></div>
@@ -1025,7 +1025,7 @@
 
               <!-- Tab 5 -->
               <div id="itemblock5" class="tab-pane fade">
-                <div id="gallery">
+                <div id="gallery" style="height: 100% !important">
                   <div><img src="/custom_web_module/static/src/img/home/douche/39.jpg"/><a href="#lightbox-50"></a></div>
                   <div><img src="/custom_web_module/static/src/img/home/douche/40.jpg"/><a href="#lightbox-51"></a></div>
                   <div><img src="/custom_web_module/static/src/img/home/douche/41.jpg"/><a href="#lightbox-52"></a></div>

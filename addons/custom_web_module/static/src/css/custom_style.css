@@ -520,7 +520,7 @@ footer{
     header .navbar-brand.logo img {
         position: initial !important;
         bottom: unset;
-        width: 120px !important;
+        width: 90px !important;
         height: 75px !important;
         padding: 8px !important;
         background-color: white;

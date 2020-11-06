@@ -94,6 +94,13 @@ class CheckoutForm(http.Controller):
                 tab = []
                 for room in rooms:
                     tab.append(room.id)
+                try:
+                    qty = posted_dict["3rooms_qty"]
+                    prev_tab = tab
+                    tab = prev_tab[:int(qty)]
+                except Exception as e:
+                    print('EXCEPTIO========')
+                    tab = tab[0]
 
                 # Now we are creating a reservation object
                 reservation = reservation_obj.sudo().create(
@@ -125,6 +132,13 @@ class CheckoutForm(http.Controller):
                 tab = []
                 for room in rooms:
                     tab.append(room.id)
+                try:
+                    qty = posted_dict["2rooms_qty"]
+                    prev_tab = tab
+                    tab = prev_tab[:int(qty)]
+                except Exception as e:
+                    print('EXCEPTIO========')
+                    tab = tab[0]
 
                 # Now we are creating a reservation object
                 reservation = reservation_obj.sudo().create(

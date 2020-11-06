@@ -58,13 +58,16 @@ header .navbar-brand.logo img{
 }
 
 
-/* BANNER CUSTOM STYLE */
-.main_banner{
-    z-index: 1;
-    width: 100%;
-    background-image: url('/custom_web_module/static/src/img/home/home_banner.jpg');
-    background-size: cover;
+.carousel-inner{
+    height: 80vh;
 }
+.carousel-item{
+    height: 100%;
+}
+.carousel-item img{
+    height: 100%;
+}
+
 
 .banner_search_form{
     background-color: rgba(43, 79, 188, 0.6) !important;
@@ -135,7 +138,7 @@ header .navbar-brand.logo img{
 }
 
 .second_img_wrapper img{
-    width: 50%;
+    width: auto;
     display: block;
     margin: 0 auto;
     height: 100%;
@@ -237,10 +240,18 @@ header .navbar-brand.logo img{
   -webkit-animation-iteration-count: infinite;   nombre d’itérations*/
 }
 
-.search_form_wrapper {
-  -webkit-animation-name: translationY;  /* nom de l’animation */
+/*
+.search_form_wrapper, mobile_search_form_wrapper {
+  -webkit-animation-name: translationX;
   -webkit-animation-duration: 2s;  /* durée totale
-  -webkit-animation-iteration-count: infinite;   nombre d’itérations*/
+  -webkit-animation-iteration-count: infinite;   nombre d’itérations
+}
+*/
+
+
+.frame_style{
+  width: 100%;
+  height: 420px;
 }
 
 
@@ -287,14 +298,6 @@ ul.nav.nav-pills.custom_gallery_nav_pill {
     padding: 15px 0px 20px 0px;
     background-color: white;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -536,6 +539,10 @@ footer{
         padding-bottom: 0px;
     }
 
+    .carousel-inner{
+        height: 50vh;
+    }
+
     .col_form{
         display: none;
     }
@@ -566,6 +573,11 @@ footer{
     .nav-tabs .nav-item {
         display: block !important;
         width: 100% !important;
+    }
+
+    .frame_style{
+      width: 100%;
+      height: 280px;
     }
 
     /* MINI GALLERY */
@@ -614,15 +626,17 @@ footer{
         width: unset !important;
     }
 
-
-
-
-
-
-
-
+    .footer_nav{
+        text-align: center;
+    }
+    .footer_nav_next{
+        padding-top: 20px;
+    }
 
 }
+
+
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {

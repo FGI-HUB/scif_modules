@@ -38,12 +38,12 @@
       <footer class="s_text_block pt-3 pb8">
         <div class="container">
             <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3 footer_nav">
                 <a href="/" class="footer-brand logo">
                 <img t-att-src="'/logo.png?company=%s' % res_company.id" t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name"/>
                 </a>
             </div>
-            <div class="col-lg-3 quick-link">
+            <div class="col-lg-3 quick-link footer_nav">
                 <h5 style="padding-top: 10px" class="text-secondary">
                 <b> Liens rapides </b>
                 </h5>
@@ -62,7 +62,7 @@
                 </li>
                 </ul>
             </div>
-            <div class="col-lg-3 quick-link">
+            <div class="col-lg-3 quick-link footer_nav">
                 <h5 style="padding-top: 10px" class="text-secondary">
                 <b>Contacts</b>
                 </h5>
@@ -77,11 +77,11 @@
                     <a href="tel:+237699538389">+237 699 538 389</a>
                 </li>
                 <li>
-                    <a href="/a-propos">service@scif.com</a>
+                    <a href="/a-propos">info@scif-immobilier.cm</a>
                 </li>
                 </ul>
             </div>
-            <div class="col-lg-3 follow-link">
+            <div class="col-lg-3 follow-link footer_nav">
                 <h5 style="padding-top: 10px" class="text-secondary">
                 <b> Suivez nous </b>
                 </h5>
@@ -98,7 +98,7 @@
                 </div>
             </div>
             </div>
-            <div class="row" style="mergin-left: 0; margin-right: 0">
+            <div class="row footer_nav_next" style="mergin-left: 0; margin-right: 0">
             <div class="col-lg-3">
                 <h3>
                 <font style="font-size: 18px; color:#fff">

@@ -1,0 +1,26 @@
+.room-desc {
+    padding: 20px;
+    background-color: white;
+}
+
+.room-rent > h5{
+    text-align: left;
+}
+
+.room-desc .room-name h3 {
+    margin-top: 0px;
+    text-align: left;
+}
+
+.mean-container a.meanmenu-reveal span {
+    background: #6680cd;
+}
+
+@media (max-width: 767px){
+    .custom_container{
+        width: 100%;
+    }
+    .custom_appart_block{
+        margin-bottom: 20px;
+    }
+}

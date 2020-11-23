@@ -1,0 +1,35 @@
+<odoo>
+  <template id="assets_javascript" inherit_id="website.layout" name="Assets Js">
+    <xpath expr="//footer" position="after">
+      <!-- jquery latest version -->
+      <script src="/scif_web_template/static/js/vendor/jquery-1.12.0.min.js"></script>
+      <!-- Bootstrap framework js -->
+      <script src="/scif_web_template/static/js/bootstrap.min.js"></script>
+      <!--counter up js-->
+      <script src="/scif_web_template/static/js/waypoints.min.js"></script>
+      <script src="/scif_web_template/static/js/jquery.counterup.min.js"></script>
+      <!-- Video player js -->
+      <script src="/scif_web_template/static/js/video-player.js"></script>
+      <!-- headlines js -->
+      <script src="/scif_web_template/static/js/animated-headlines.js"></script>
+      <!-- parallax js -->
+      <script src="/scif_web_template/static/js/parallax.js"></script>
+      <!-- textilate js -->
+      <script src="/scif_web_template/static/js/textilate.js"></script>
+      <script src="/scif_web_template/static/js/lettering.js"></script>
+      <!--isotope js-->
+      <script src="/scif_web_template/static/js/isotope.pkgd.min.js"></script>
+      <script src="/scif_web_template/static/js/packery-mode.pkgd.min.js"></script>
+      <!-- Style Customizer Js  -->
+      <script src="/scif_web_template/static/js/style-customizer.js"></script>
+      <!-- Owl carousel Js -->
+      <script src="/scif_web_template/static/js/owl.carousel.min.js"></script>
+      <!--Magnificant js-->
+      <script src="/scif_web_template/static/js/jquery.magnific-popup.js"></script>
+      <!-- All js plugins included in this file. -->
+      <script src="/scif_web_template/static/js/plugins.js"></script>
+      <!-- Main js file that contents all jQuery plugins activation. -->
+      <script src="/scif_web_template/static/js/main.js"></script>
+    </xpath>
+  </template>
+</odoo>

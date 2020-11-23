@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+  <template id="assets_login" inherit_id="web.assets_frontend">
+    <xpath expr="." position="inside">
+      <!-- All css files are included here. -->
+      <!-- Bootstrap fremwork main css -->
+      <link rel="stylesheet" href="/scif_web_template/static/css/bootstrap.min.css" />
+      <!-- This core.css file contents all plugings css file. -->
+      <link rel="stylesheet" href="/scif_web_template/static/css/core.css" />
+      <!-- Theme shortcodes/elements style -->
+      <link rel="stylesheet" href="/scif_web_template/static/css/shortcode/shortcodes.css" />
+      <!-- Theme main style -->
+      <link rel="stylesheet" href="/scif_web_template/static/css/style.css" />
+      <link rel="stylesheet" href="/scif_web_template/static/css/color/color-6.css" />
+      <!-- Responsive css -->
+      <link rel="stylesheet" href="/scif_web_template/static/css/responsive.css" />
+      <link rel="stylesheet" href="/scif_web_template/static/css/ewonga_style.css" />
+
+
+      <!-- Modernizr JS -->
+      <script src="/scif_web_template/static/js/vendor/modernizr-2.8.3.min.js"></script>
+    </xpath>
+  </template>
+</odoo>

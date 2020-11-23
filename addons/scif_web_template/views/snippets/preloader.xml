@@ -1,0 +1,13 @@
+<odoo>
+  <template id="preloader" inherit="scif_web_template.homepage">
+    <div class="preloader">
+      <div class="loading-center">
+        <div class="loading-center-absolute">
+          <div class="object object_one"></div>
+          <div class="object object_two"></div>
+          <div class="object object_three"></div>
+        </div>
+      </div>
+    </div>
+  </template>
+</odoo>

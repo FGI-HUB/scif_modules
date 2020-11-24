@@ -42,8 +42,9 @@
                                             <nav>
                                                 <ul>
                                                     <li><a href="#">home</a></li>
-                                                    <li><a href="#">About</a></li>
                                                     <li><a href="#">Gallery</a></li>
+                                                    <li><a href="#">About</a></li>
+                                                    <li><a href="#">contact</a></li>
                                                     <li><a href="/web/login">Se connecter</a></li>
                                                     <!--li><a href="#">pages<i class="fa fa-angle-down"></i></a>
                                                         <ul class="dropdown_menu">
@@ -59,7 +60,6 @@
 															<li><a href="our-room.html">Room</a></li>
                                                         </ul>
                                                     </li-->
-                                                    <li><a href="#">Contact</a></li>
                                                 </ul>
                                             </nav>
                                         </div>
@@ -79,8 +79,10 @@
                             <nav id="dropdown">
                             <ul>
                                 <li><a href="#">home</a></li>
-                                <li><a href="#">About</a></li>
                                 <li><a href="#">Gallery</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">contact</a></li>
+                                <li><a href="/web/login">Se connecter</a></li>
                                 <!--li><a href="#">pages</a>
                                     <ul>
                                         <li><a href="404.html">404</a></li>
@@ -95,7 +97,6 @@
                                         <li><a href="our-room.html">Room</a></li>
                                     </ul>
                                 </-li-->
-                                <li><a href="#">contact</a></li>
                             </ul>
                         </nav>
                         </div>

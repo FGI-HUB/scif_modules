@@ -12,9 +12,14 @@
     text-align: left;
 }
 
-
 .brand_style {
     padding-top: 80px;
+}
+
+.single-gallery > img {
+    transition: all 0.3s ease 0s;
+    width: 98%;
+    margin: 0 auto;
 }
 
 @media (max-width: 767px){

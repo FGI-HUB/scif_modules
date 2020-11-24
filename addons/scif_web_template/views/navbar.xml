@@ -13,7 +13,7 @@
                             <div class="row">
                                 <div class="col-md-2 col-sm-2 col-xs-12 bg-white">
                                     <div class="logo mt-15">
-                                        <a href="index.html">
+                                        <a href="/">
                                             <img t-att-src="'/logo.png?company=%s' % res_company.id" t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name"/>
                                         </a>
                                     </div>

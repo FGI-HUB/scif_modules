@@ -659,7 +659,7 @@ p.welcome-desc {
 .room-desc .room-book {
   display: inline-block;
   float: right;
-  margin-top: -52px;
+  margin-top: -42px;
 }
 .single-room.mb-70 {
   margin-bottom: 70px;
@@ -1142,7 +1142,7 @@ h3.news-title {
   width: 25%;
 }
 .hotel-cmmunities {
-  background: rgba(0, 0, 0, 0) url("images/bg/communities.jpg") no-repeat scroll center center / cover ;
+  background: rgba(0, 0, 0, 0) url("/scif_web_template/static/img/home/communities.jpg") no-repeat scroll center center / cover ;
   position: relative;
 }
 .hotel-cmmunities.style2{
@@ -2494,7 +2494,7 @@ h3.news-title {
 }
 #scrollUp:hover{background: #4a4a4a;}
 #scrollUp i {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) !important;
 }
 /*------------
    31. Mobile menu Css here

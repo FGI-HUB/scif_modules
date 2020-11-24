@@ -59,13 +59,13 @@ div.style-customizer ul.layoutstyle li {
   background: rgba(244, 67, 59, 0.5) none repeat scroll 0 0;
 }
 .staff-hover-desc,.staff-title,.testimonail-bg-opacity,.single-post > a::before,.search-bar,.single-gallery-hover, .single_gallery-hover,.feature-tab-item ul li a::before {
-  background: rgba(244, 67, 54, 0.9) none repeat scroll 0 0;
+  background: rgb(255, 87, 34) none repeat scroll 0 0;
 }
 .staff-hover-desc::before {
-  border-bottom: 80px solid rgba(244, 67, 54, 0.9);
+  border-bottom: 80px solid rgb(255, 87, 34);
 }
 .staff-title::before,.staff-title::after {
-  border-bottom: 90px solid rgba(244, 67, 54, 0.9);
+  border-bottom: 90px solid rgb(255, 87, 34);
 }
 
 /* ----------------Border Color ----------------- */

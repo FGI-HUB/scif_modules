@@ -16,11 +16,18 @@
     background: #6680cd;
 }
 
+.brand_style {
+    padding-top: 80px;
+}
+
 @media (max-width: 767px){
     .custom_container{
         width: 100%;
     }
     .custom_appart_block{
         margin-bottom: 20px;
+    }
+    .brand_style {
+        padding-top: 40px;
     }
 }

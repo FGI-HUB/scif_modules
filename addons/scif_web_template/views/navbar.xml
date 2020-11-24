@@ -11,7 +11,7 @@
                     <div class="container">
                         <div class="mgea-full-width">
                             <div class="row">
-                                <div class="col-md-2 col-sm-2 col-xs-12 bg-white">
+                                <div class="col-md-2 col-sm-2 col-xs-12">
                                     <div class="logo mt-15">
                                         <a href="/">
                                             <img t-att-src="'/logo.png?company=%s' % res_company.id" t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name"/>
@@ -44,6 +44,7 @@
                                                     <li><a href="#">home</a></li>
                                                     <li><a href="#">About</a></li>
                                                     <li><a href="#">Gallery</a></li>
+                                                    <li><a href="/web/login">Se connecter</a></li>
                                                     <!--li><a href="#">pages<i class="fa fa-angle-down"></i></a>
                                                         <ul class="dropdown_menu">
                                                             <li><a href="404.html">404</a></li>

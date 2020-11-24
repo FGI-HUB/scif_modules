@@ -12,9 +12,6 @@
     text-align: left;
 }
 
-.mean-container a.meanmenu-reveal span {
-    background: #6680cd;
-}
 
 .brand_style {
     padding-top: 80px;
@@ -29,5 +26,12 @@
     }
     .brand_style {
         padding-top: 40px;
+    }
+    .our-gallery .single-gallery {
+        width: 50%;
+        height: 100%;
+    }
+    .our-gallery .single-gallery::before {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     }
 }

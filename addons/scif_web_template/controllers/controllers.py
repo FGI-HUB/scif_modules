@@ -19,3 +19,10 @@ class CustomWebHomepage(Home):
             "services": services
         }
         return request.render('scif_web_template.homepage', context)
+
+
+class ScifWebController(http.Controller):
+    @http.route('/gallery', type='http', auth='public', website=True)
+    def gallery_view(self, **kwagrs):
+        context = {}
+        return request.render('scif_web_template.gallery', context)

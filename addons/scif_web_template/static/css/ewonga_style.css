@@ -22,6 +22,11 @@
     margin: 0 auto;
 }
 
+.custom_gallery_welcome{
+  background: url('/scif_web_template/static/img/home/salon/29.jpg');
+  background-size: cover;
+}
+
 @media (max-width: 767px){
     .custom_container{
         width: 100%;
@@ -38,5 +43,9 @@
     }
     .our-gallery .single-gallery::before {
         background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    }
+
+    .custom_gallery_container{
+        width: 100%;
     }
 }

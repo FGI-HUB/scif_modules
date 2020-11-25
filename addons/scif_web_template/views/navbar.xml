@@ -41,10 +41,10 @@
                                         <div class="menu-list hidden-sm hidden-xs">
                                             <nav>
                                                 <ul>
-                                                    <li><a href="#">home</a></li>
-                                                    <li><a href="#">Gallery</a></li>
-                                                    <li><a href="#">About</a></li>
-                                                    <li><a href="#">contact</a></li>
+                                                    <li><a href="/">home</a></li>
+                                                    <li><a href="/gallery">Gallery</a></li>
+                                                    <li><a href="/about">About</a></li>
+                                                    <li><a href="/contact">contact</a></li>
                                                     <li><a href="/web/login">Se connecter</a></li>
                                                     <!--li><a href="#">pages<i class="fa fa-angle-down"></i></a>
                                                         <ul class="dropdown_menu">
@@ -78,10 +78,10 @@
                         <div class="col-md-12">
                             <nav id="dropdown">
                             <ul>
-                                <li><a href="#">home</a></li>
-                                <li><a href="#">Gallery</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">contact</a></li>
+                                <li><a href="/">home</a></li>
+                                <li><a href="/gallery">Gallery</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/contact">contact</a></li>
                                 <li><a href="/web/login">Se connecter</a></li>
                                 <!--li><a href="#">pages</a>
                                     <ul>

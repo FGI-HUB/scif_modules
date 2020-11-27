@@ -1,0 +1,164 @@
+<odoo>
+  <template id="about" name="A propos | SCIF Immobilier">
+    <t t-call="website.layout">
+      <div class="all_wrapper">
+        <div class="preloader">
+          <div class="loading-center">
+            <div class="loading-center-absolute">
+              <div class="object object_one"></div>
+              <div class="object object_two"></div>
+              <div class="object object_three"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <!--Header section start-->
+          <div class="welcome-section text-center ptb-110 custom_about_welcome">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="breadcurbs-inner">
+                    <div class="breadcrubs">
+                      <h2>A propos de nous</h2>
+                      <div class="breadcrubs-menu">
+                        <ul>
+                          <li><a href="/">Accueil<i class="fa fa-chevron-right"></i></a></li>
+                          <li>à propos de nous</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Header section end-->
+
+          <!--About Section Title start-->
+          <div class="about-section text-center ptb-80 white_bg">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12" id="about">
+                  <div class="section-title mb-80">
+                    <h2>A propos <span>de nous</span></h2>
+                    <p>La Société Camerounaise Immobilière et Familiale (SCIF) est situé à Kribi au lieu dit "Carrefour Djamboulani" derrière le lycée technique route antenne Orange. Nous mettons à la disposition de nos clients 24 appartements meublés haut standing dont :</p>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="about-chondo">
+                    <div class="about-member">
+                      <img src="scif_web_template/static/img/home/about.jpg" alt="" />
+                      <h3>Ngando Paul</h3>
+                      <h5 class="mb-0">Chef du personnel</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--about section start-->
+
+
+          <!--Hotel Exlusive offer start-->
+          <div class="hotel-exclusive ptb-100 text-center">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="single-exclusive">
+                    <h3>Exclusivité</h3>
+                    <p>Bénéficiez de plusieurs service que quelques rares établissements du genre proposent</p>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="single-exclusive">
+                    <h3>Privilégié</h3>
+                    <p>La prioriété chez SCIF est de faire comprendre à nos clients qu'ils sont spéciaux et unique.</p>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="single-exclusive">
+                    <h3>Discrétion</h3>
+                    <p>La discrétion de nos clients est l'un des éléments principal élément sur lequel nous nous attardons.</p>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="single-exclusive">
+                    <h3>Tranquilité</h3>
+                    <p>Havre de paix idéal pour individus désirant se ressourcer ou augmenter sa productivité</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Hotel Exlusive offer end-->
+
+          <!--Hotel feature start-->
+          <div class="hotel-feature ptb-80 white_bg">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="feature-desc text-left">
+                    <div class="section-title mb-30">
+                      <h2>Nos points <span>fort</span></h2>
+                      <p>
+                        Nous sommes une entreprise de gestion immobilière ayant pour mission de faciliter le service d'hébergement dans la ville de Kribi. Nous ciblons exclusivem€nt les entreprises, car ceux-ci sont le plus souvent confrontés à ces problèmes d'himmobilier lorsqu'il s'agit soit d'éffectuer un séminaire dans la ville ou encore d'une escale de voyage. Nos points fort sont:
+                      </p>
+                    </div>
+                    <div class="feature-item">
+                      <ul>
+                        <li>
+                          <span>1.</span>Notre capacité d'accueil de 28 appartements.
+                        </li>
+                        <li>
+                          <span>2.</span>Notre disponibilité 24/7 pour toutes réservation .
+                        </li>
+                        <li>
+                          <span>3.</span>Une équipe de proféssionnelle toujours à l'écoute .
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="feature-img-tab">
+                    <div class="feature-tab-desc">
+                      <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="feature1">
+                          <div class="feature-tab-inner">
+                            <img src="/scif_web_template/static/img/home/salon/49.jpg" alt="" />
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="feature2">
+                          <div class="feature-tab-inner">
+                            <img src="/scif_web_template/static/img/home/salon/49.jpg" alt="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="feature-tab-item">
+                      <ul class="nav" role="tablist">
+                        <li class="active">
+                          <a href="#feature1" data-toggle="tab">
+                            <img src="/scif_web_template/static/img/home/salon/46.jpg" alt="" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#feature2" data-toggle="tab">
+                            <img src="/scif_web_template/static/img/home/salon/48.jpg" alt=""  />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Hotel feature end-->
+
+        </div>
+      </div>
+    </t>
+  </template>
+</odoo>

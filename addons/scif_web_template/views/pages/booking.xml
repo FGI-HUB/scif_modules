@@ -1,0 +1,413 @@
+<odoo>
+  <template id="booking" name="Réservation | SCIF Immobilier">
+    <t t-call="website.layout">
+      <div class="all_wrapper">
+        <div class="preloader">
+          <div class="loading-center">
+            <div class="loading-center-absolute">
+              <div class="object object_one"></div>
+              <div class="object object_two"></div>
+              <div class="object object_three"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <!--Header section start-->
+          <div class="welcome-section text-center ptb-110 custom_booking_welcome">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="breadcurbs-inner">
+                    <div class="breadcrubs">
+                      <h2>Réservation</h2>
+                      <div class="breadcrubs-menu">
+                        <ul>
+                          <li><a href="/">Accueil<i class="fa fa-chevron-right"></i></a></li>
+                          <li>Réservation</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Header section end-->
+
+          <!--Room booking start-->
+          <div class="room-booking ptb-80 white_bg">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="section-title mb-80 text-center">
+                    <h2>Réserver un <span>appartement</span></h2>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered by injected humour.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="booking-rooms-tab">
+                    <ul class="nav nav_booking" role="tablist">
+                        <li class="scif_step">
+                        <a href="#booking" data-toggle="tab">
+                          <span class="tab-border">1</span><span>Info voyage</span></a></li>
+                      <li class="scif_step">
+                        <a href="#personal" data-toggle="tab">
+                          <span class="tab-border">2</span><span>Info. appart</span></a></li>
+                      <li class="scif_step">
+                        <a href="#payment" data-toggle="tab">
+                          <span class="tab-border">3</span><span>Résumé</span></a></li>
+                      <li class="scif_step">
+                        <a href="#done" data-toggle="tab">
+                          <span class="tab-border">4</span><span>Terminé</span></a></li>
+                    </ul>
+                  </div>
+                  <div class="service-tab-desc text-left mt-60 booking_stepper_body col-md-8 offset-md-2 col-xs-12">
+                    <!--tab1 start-->
+                    <div class="tab-content tab">
+                      <div role="tabpanel" class="tab-pane active" id="booking">
+                        <div class="row" style="margin-right: 0px; margin-left: 0px; padding-left: 20px; padding-right: 20px">
+                          <label style="padding-bottom: 5px; border-bottom: 1px solid #fff; font-weight: bold; text-transform: uppercase" class="text-white">Détails réservation</label>
+                        </div>
+                        <div class="booking-info-deatils">
+                          <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                            <fieldset class="fieldset_class">
+                              <legend class="legend_step1">Selectionner une catégorie</legend>
+                              <t t-if="categories">
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="floor" class="text-white">Catégories(s)</label>
+                                    <select name="category_{{ category.slug }}" class="form-control">
+                                        <t t-foreach="categories" t-as="category">
+                                          <option t-att-value="category.slug">
+                                            <t t-esc="category.name"></t>
+                                          </option>
+                                        </t>
+                                    </select>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="room_qty" class="text-white">Quantité de chambre</label>
+                                    <input t-attf-name="room_qty" t-attf-id="room_qty" class="form-control" placeholder="Quantité" type="number" min="1" max="10"/>
+                                  </div>
+                                </div>
+                              </t>
+                            </fieldset>
+                          </div>
+
+                          <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="start_date" class="text-white">Date d'arrivée</label>
+                                <input type="date" class="form-control" id="start_date" name="start_date"/>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="end_date" class="text-white">Date de départ</label>
+                                <input type="date" class="form-control" id="end_date" name="end_date"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="floor" class="text-white">Sélectionner l'étage</label>
+                                <select name="floor" class="form-control" default="">
+                                  <option value="">------------</option>
+                                  <option value="base">Rez de chaussée</option>
+                                  <option value="first_floor">Premier étage</option>
+                                  <option value="second_floor">Deuxième étage</option>
+                                  <option value="thirth_floor">Troisième étage</option>
+                                  <option value="four_floor">Quatrième étage</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="row" style="margin-left: 0; margin-right: 0">
+                                <div class="col-md-6" style="padding-left: 0px">
+                                  <div class="form-group">
+                                    <label for="child_number" class="text-white">Enfants</label>
+                                    <input name="child_number" id="child_number" class="form-control" placeholder="Nbre" type="number" default="0" min="0" max="10" required="required"/>
+                                  </div>
+                                </div>
+                                <div class="col-md-6" style="padding-right: 0px">
+                                  <div class="form-group">
+                                    <label for="adult_number" class="text-white">Adultes</label>
+                                    <input name="adult_number" id="adult_number" class="form-control" placeholder="Nbre" type="number" default="1" min="1" max="10" required="required" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="floor" class="text-white">Service(s)</label>
+                                <select name="services_ids" class="form-control" multiple="multiple">
+                                  <t t-if="services">
+                                    <t t-foreach="services" t-as="service">
+                                      <option t-att-value="service.id">
+                                        <t t-esc="service.name"></t>
+                                      </option>
+                                    </t>
+                                  </t>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="floor" class="text-white">Commodité (s)</label>
+                                <select name="amenities_ids" class="form-control" multiple="multiple">
+                                  <t t-if="amenities">
+                                    <t t-foreach="amenities" t-as="amenitie">
+                                      <option t-att-value="amenitie.id">
+                                        <t t-esc="amenitie.name"></t>
+                                      </option>
+                                    </t>
+                                  </t>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Tab1 end-->
+
+
+                    <!--Tab2 start-->
+                    <div class="tab" style="margin-left: 0; margin-right: 0">
+                      <div class="col-md-12" style="margin-top: 10px; margin-bottom: 15px">
+                        <label style="padding-bottom: 5px; border-bottom: 1px solid #fff; font-weight: bold; text-transform: uppercase" class="text-white">Informations sur le client</label>
+                      </div>
+                      <div class="col-md-12" style="padding: 0">
+                        <div class="form-group col-md-6">
+                          <label for="name" class="text-white">Nom (s)</label>
+                          <input name="name" id="name" class="form-control" placeholder="Nom du client" type="text" required="required" />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="surname" class="text-white">Prénom (s)</label>
+                          <input name="surname" id="surname" class="form-control" placeholder="Prénom du client" type="text"/>
+                        </div>
+                      </div>
+                      <div class="col-md-12" style="padding: 0">
+                        <div class="form-group col-md-6">
+                          <label for="email" class="text-white">Email</label>
+                          <input name="email" id="email" class="form-control" placeholder="Adresse email" type="email"/>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="phone" class="text-white">N° de téléphone</label>
+                          <input name="phone" id="phone" class="form-control" placeholder="Téléphone" type="text"/>
+                        </div>
+                      </div>
+                      <div class="col-md-12" style="padding: 0">
+                        <div class="form-group col-md-12">
+                          <label for="whole_address" class="text-white">Adresse complète</label>
+                          <input name="whole_address" id="whole_address" class="form-control" placeholder="Votre adresse" type="text"/>
+                        </div>
+                      </div>
+
+                      <div class="col-md-12 g-3 mt-2" style="padding: 0">
+                        <div class="col-md-12">
+                          <label style="padding-bottom: 5px; border-bottom: 1px solid #fff; font-weight: bold; text-transform: uppercase" for="caracteristic" class="text-white">Séjournez-vous avec des</label>
+                          <div class="form-group row" style="margin-left: 0; margin-right: 0; margin-bottom: 0">
+                            <div class="form-check form-check-inline col-md-4">
+                              <input class="form-check-input" name="old" type="checkbox" id="inlineCheckbox1" value="old"/>
+                              <label class="form-check-label text-white" for="inlineCheckbox1">Personnes agées</label>
+                            </div>
+                            <div class="form-check form-check-inline col-md-4">
+                              <input class="form-check-input" name="invalid" type="checkbox" id="inlineCheckbox2" value="invalid"/>
+                              <label class="form-check-label text-white" for="inlineCheckbox2">Handicapés</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" name="allergic" type="checkbox" id="inlineCheckbox3" value="allergic"/>
+                              <label class="form-check-label text-white" for="inlineCheckbox3">Allergiques</label>
+                            </div>
+                          </div>
+                          <div class="form-group row" style="margin-left: 0; margin-right: 0">
+                            <div class="form-check form-check-inline col-md-4">
+                              <input class="form-check-input" name="children" type="checkbox" id="inlineCheckbox4" value="children"/>
+                              <label class="form-check-label text-white" for="inlineCheckbox4">Enfants</label>
+                            </div>
+                            <div class="form-check form-check-inline col-md-4">
+                              <input class="form-check-input" name="sicks" type="checkbox" id="inlineCheckbox5" value="sicks"/>
+                              <label class="form-check-label text-white" for="inlineCheckbox5">Maladifs</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Tab2 end-->
+
+                    <div style="overflow:auto; padding: 15px">
+                      <div style="float:right;">
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="" style="text-transform: uppercase; padding: 15px 40px; margin-right: 10px">Retour</button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)" class="" style="text-transform: uppercase; padding: 15px 40px">Suivant</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Room booking end-->
+        </div>
+
+      </div>
+
+
+      <script>
+          var currentTab = 0; // Current tab is set to be the first tab (0)
+          showTab(currentTab); // Display the current tab
+
+          // Freeze before the date days
+          var today = new Date().toISOString().split('T')[0];
+          document.getElementsByName("start_date")[0].setAttribute('min', today)
+
+          // set disabled date from start date
+          $("#start_date").change(function(){
+            console.log("start_date changed!!!!!!!")
+            var start_date = $("#start_date")[0].value;
+            document.getElementsByName("end_date")[0].setAttribute('min', start_date)
+          })
+
+          // Mobile processing
+          showMobileTab(currentTab)
+          // Freeze before the date days
+          var today = new Date().toISOString().split('T')[0];
+          document.getElementsByName("start_date_mobile")[0].setAttribute('min', today)
+
+          // set disabled date from start date
+          $("#start_date_mobile").change(function(){
+            console.log("start_date changed!!!!!!!")
+            var start_date = $("#start_date_mobile")[0].value;
+            document.getElementsByName("end_date_mobile")[0].setAttribute('min', start_date)
+          })
+
+
+
+          function showTab(n) {
+            // This function will display the specified tab of the form...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            //... and fix the Previous/Next buttons:
+            if (n == 0) {
+              document.getElementById("prevBtn").style.display = "none";
+            } else {
+              document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+              document.getElementById("nextBtn").innerHTML = "Réserver";
+            } else {
+              document.getElementById("nextBtn").innerHTML = "Suivant";
+            }
+            //... and run a function that will display the correct step indicator:
+            fixStepIndicator(n)
+          }
+
+          function showMobileTab(n) {
+            // This function will display the specified tab of the form...
+            var x = document.getElementsByClassName("tab_mobile");
+            x[n].style.display = "block";
+            //... and fix the Previous/Next buttons:
+            if (n == 0) {
+              document.getElementById("prevBtn_mobile").style.display = "none";
+            } else {
+              document.getElementById("prevBtn_mobile").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+              document.getElementById("nextBtn_mobile").innerHTML = "Réserver";
+            } else {
+              document.getElementById("nextBtn_mobile").innerHTML = "Suivant";
+            }
+            //... and run a function that will display the correct step indicator:
+            fixStepIndicator(n)
+          }
+
+          function nextPrev(n) {
+            var start_date = $("#start_date")[0].value;
+            var end_date = $("#end_date")[0].value
+
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+
+            // CHECK IF THE FRONT END FORM IS VALID BEFORE CONTINUE, RETRIEVE ERROR ELSE
+            var valid = false
+            var complete = false
+            if(start_date &amp;&amp; end_date){
+              valid = true
+            }
+
+            if(valid){
+              // Hide the current tab:
+              x[currentTab].style.display = "none";
+              // Increase or decrease the current tab by 1:
+              currentTab = currentTab + n;
+              // if you have reached the end of the form...
+              if (currentTab >= x.length) {
+                // ... the form gets submitted:
+                document.getElementById("checkoutForm").submit();
+                console.log("Submited..............................");
+                return false;
+              }
+              // Otherwise, display the correct tab:
+              showTab(currentTab);
+            } else {
+              alert("Bien vouloir remplir intégralement le formulaire")
+            }
+          }
+          function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("scif_step");
+            for (i = 0; i &lt; x.length; i++) {
+              x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class on the current step:
+            x[n].className += " active";
+          }
+
+
+          // mobile processing
+          function nextPrev_mobile(n) {
+            var start_date = $("#start_date_mobile")[0].value;
+            var end_date = $("#end_date_mobile")[0].value
+
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab_mobile");
+            // Exit the function if any field in the current tab is invalid:
+
+            // CHECK IF THE FRONT END FORM IS VALID BEFORE CONTINUE, RETRIEVE ERROR ELSE
+            var valid = false
+            var complete = false
+            if(start_date &amp;&amp; end_date){
+              valid = true
+            }
+
+            if(valid){
+              // Hide the current tab:
+              x[currentTab].style.display = "none";
+              // Increase or decrease the current tab by 1:
+              currentTab = currentTab + n;
+              // if you have reached the end of the form...
+              if (currentTab >= x.length) {
+                // ... the form gets submitted:
+                document.getElementById("checkoutForm_mobile").submit();
+                console.log("Submited..............................");
+                return false;
+              }
+              // Otherwise, display the correct tab:
+              showMobileTab(currentTab);
+            } else {
+              alert("Bien vouloir remplir intégralement le formulaire")
+            }
+          }
+      </script>
+    </t>
+  </template>
+</odoo>

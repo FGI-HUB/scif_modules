@@ -43,8 +43,9 @@
                                                 <ul>
                                                     <li><a href="/">home</a></li>
                                                     <li><a href="/gallery">Gallery</a></li>
-                                                    <li><a href="/about">About</a></li>
-                                                    <li><a href="/contact">contact</a></li>
+                                                    <li><a href="/booking">Réserver</a></li>
+                                                    <li><a href="/about">A propos </a></li>
+                                                    <li><a href="/contact">Contact</a></li>
                                                     <li><a href="/web/login">Se connecter</a></li>
                                                     <!--li><a href="#">pages<i class="fa fa-angle-down"></i></a>
                                                         <ul class="dropdown_menu">
@@ -80,8 +81,9 @@
                             <ul>
                                 <li><a href="/">home</a></li>
                                 <li><a href="/gallery">Gallery</a></li>
-                                <li><a href="/about">About</a></li>
-                                <li><a href="/contact">contact</a></li>
+                                <li><a href="/booking">Réserver</a></li>
+                                <li><a href="/about">A propos</a></li>
+                                <li><a href="/contact">Contact</a></li>
                                 <li><a href="/web/login">Se connecter</a></li>
                                 <!--li><a href="#">pages</a>
                                     <ul>

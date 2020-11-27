@@ -26,3 +26,25 @@ class ScifWebController(http.Controller):
     def gallery_view(self, **kwagrs):
         context = {}
         return request.render('scif_web_template.gallery', context)
+
+    @http.route('/booking', type='http', auth='public', website=True)
+    def booking_view(self, **kwagrs):
+        categories = request.env['hotel.room.type'].sudo().search([])
+        amenities = request.env['hotel.room.amenities'].sudo().search([])
+        services = request.env['hotel.services'].sudo().search([])
+        context = {
+            "categories": categories,
+            "amenities": amenities,
+            "services": services
+        }
+        return request.render('scif_web_template.booking', context)
+
+    @http.route('/about', type='http', auth='public', website=True)
+    def about_view(self, **kwagrs):
+        context = {}
+        return request.render('scif_web_template.about', context)
+
+    @http.route('/contact', type='http', auth='public', website=True)
+    def contact_view(self, **kwagrs):
+        context = {}
+        return request.render('scif_web_template.contact', context)

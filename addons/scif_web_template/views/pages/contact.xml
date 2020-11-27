@@ -1,0 +1,124 @@
+<odoo>
+  <template id="contact" name="Contactez-nous | SCIF Immobilier">
+    <t t-call="website.layout">
+      <div class="all_wrapper">
+        <div class="preloader">
+          <div class="loading-center">
+            <div class="loading-center-absolute">
+              <div class="object object_one"></div>
+              <div class="object object_two"></div>
+              <div class="object object_three"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <!--Header section start-->
+          <div class="welcome-section text-center ptb-110 custom_contact_welcome">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="breadcurbs-inner">
+                    <div class="breadcrubs">
+                      <h2>Contactez-nous</h2>
+                      <div class="breadcrubs-menu">
+                        <ul>
+                          <li><a href="/">Accueil<i class="fa fa-chevron-right"></i></a></li>
+                          <li>contactez-nous nous</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Header section end-->
+
+          <!--Conatct form area Start-->
+          <div class="contact-form-info ptb-100 white_bg">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                          <div class="contact-form">
+                              <div class="contact-form-title mb-25">
+                                <h2>Envoyer votre message</h2>
+                              </div>
+                              <div class="contact-form-inner">
+                                  <form id="contact-form" action="mail.php" method="post">
+                                      <p class="form-messege"></p>
+                                      <div class="form-field-top mb-20">
+                                          <div class="form-field-name">
+                                              <input name="name" type="text" placeholder="Votre nom" />
+                                          </div>
+                                          <div class="form-field-name">
+                                              <input name="email" type="text" placeholder="Votre email" />
+                                          </div>
+                                      </div>
+                                      <div class="form-field-bottom">
+                                          <div class="textarea">
+                                              <textarea name="message" placeholder="Insérer votre message"></textarea>
+                                          </div>
+                                          <div class="submit mt-30"><button type="submit">Envoyer</button></div>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                          <div class="contact-info">
+                              <div class="contact-info-title mb-25"><h3>Contacts</h3></div>
+                              <div class="contact-adresses">
+                                  <div class="phone mb-15">
+                                      <p>
+                                          <span><i class="fa fa-phone"></i></span>
+                                          <span class="desc">+237 675 882 167 / 699 538 389
+
+ </span>
+                                      </p>
+                                  </div>
+                                  <div class="mail mb-15">
+                                      <p>
+                                      <span><i class="fa fa-envelope"></i></span>
+                                      <span class="desc">info@scif-immobilier.cm</span>
+                                      </p>
+                                  </div>
+                                  <div class="addresses">
+                                      <p>
+                                          <span><i class="fa fa-map-marker"></i></span>
+                                          <span class="desc">Carrefour Djamboulani - Kribi, CM</span>
+                                      </p>
+                                  </div>
+                              </div>
+                              <div class="social-media mt-50">
+                                 <h3 class="social-medai-title">Réseaux sociaux</h3>
+                                 <div class="social-media-list">
+                                      <a href="#"><i class="fa fa-facebook"></i></a>
+                                      <a href="#"><i class="fa fa-rss"></i></a>
+                                      <a href="#"><i class="fa fa-pinterest"></i></a>
+                                      <a href="#"><i class="fa fa-instagram"></i></a>
+                                 </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--Conatct form area end-->
+
+          <div class="google-map-area">
+            <!--  Map Section -->
+            <div id="contacts" class="map-area">
+              <div style="width: 100%">
+                <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Kribi%20ngoye+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"/>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </t>
+  </template>
+</odoo>
+
+

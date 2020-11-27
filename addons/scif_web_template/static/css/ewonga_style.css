@@ -27,6 +27,93 @@
   background-size: cover;
 }
 
+.nav_booking{
+    width: 100%;
+}
+
+.booking_stepper_body{
+    background-color: #ff5722;
+    padding: 20px 10px;
+}
+.form-check-input{
+    width: fit-content;
+}
+
+
+/* FORM STEP CIRCLE ICONS */
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 1;
+}
+
+.step.active {
+  opacity: 1;
+  background-color: #ff5722;
+}
+.step.finish {
+  background-color: #ff5722;
+}
+.tab {
+  display: none;
+}
+.tab_mobile {
+  display: none;
+}
+
+#prevBtn, prevBtn_mobile {
+  background-color: #bbbbbb;
+  color: #fff;
+}
+.btn-back:hover, .btn-back:active, .btn-back:focus{
+    background-color: #6b6666;
+}
+.btn-next{
+    background-color: #ff5722;
+    color: #fff;
+}
+.btn-next:hover, .btn-next:active, .btn-next:focus{
+    background-color: #e43e0a;
+}
+
+.fieldset_class{
+    border: 1px solid #c0c0c0 !important;
+    margin: 10 16px !important;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.legend_step1{
+    background-color: #d2461a;
+    color: #ffffff;
+    padding: 3px 6px;
+    font-size: 1.2em;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+.custom_booking_welcome{
+  background: url('/scif_web_template/static/img/home/chambre/33.jpg');
+  background-size: cover;
+}
+
+.custom_about_welcome{
+  background: url('/scif_web_template/static/img/home/23.jpg');
+  background-size: cover;
+}
+
+.custom_contact_welcome{
+  background: url('/scif_web_template/static/img/home/4.jpg');
+  background-size: cover;
+}
+
+
 @media (max-width: 767px){
     .custom_container{
         width: 100%;

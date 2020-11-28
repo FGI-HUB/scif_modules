@@ -56,15 +56,12 @@
                       <li class="scif_step">
                         <a href="#personal" data-toggle="tab">
                           <span class="tab-border">2</span><span>Info. appart</span></a></li>
-                      <li class="scif_step">
+                      <!--li class="scif_step">
                         <a href="#payment" data-toggle="tab">
-                          <span class="tab-border">3</span><span>Résumé</span></a></li>
-                      <li class="scif_step">
-                        <a href="#done" data-toggle="tab">
-                          <span class="tab-border">4</span><span>Terminé</span></a></li>
+                          <span class="tab-border">3</span><span>Résumé</span></a></li-->
                     </ul>
                   </div>
-                  <div class="service-tab-desc text-left mt-60 booking_stepper_body col-md-8 offset-md-2 col-xs-12">
+                  <form id="checkoutForm" method="post" action="/checkout/form/submit" class="service-tab-desc text-left mt-60 booking_stepper_body col-md-8 offset-md-2 col-xs-12">
                     <!--tab1 start-->
                     <div class="tab-content tab">
                       <div role="tabpanel" class="tab-pane active" id="booking">
@@ -73,29 +70,57 @@
                         </div>
                         <div class="booking-info-deatils">
                           <div class="row g-3 mt-1" style="margin-left: 0; margin-right: 0">
+
                             <fieldset class="fieldset_class">
                               <legend class="legend_step1">Selectionner une catégorie</legend>
-                              <t t-if="categories">
-                                <div class="col-md-6">
-                                  <div class="form-group">
-                                    <label for="floor" class="text-white">Catégories(s)</label>
-                                    <select name="category_{{ category.slug }}" class="form-control">
+                              <div class="col-md-12" style="margin-left: 0; margin-right: 0; padding: 0">
+                                <t t-if="categories">
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label for="floor" class="text-white">Catégorie</label>
+                                      <select name="category_2rooms" class="form-control" disabled="true">
+                                          <t t-foreach="categories" t-as="category">
+                                            <option t-att-value="category.slug" t-att-selected="category.slug == '2rooms'">
+                                              <t t-esc="category.name"></t>
+                                            </option>
+                                          </t>
+                                      </select>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label for="2rooms_qty" class="text-white">Quantité de chambre</label>
+                                      <input t-attf-name="2rooms_qty" t-attf-id="2rooms_qty" class="form-control" placeholder="Quantité" type="number" min="1" max="10" value="0" />
+                                    </div>
+                                  </div>
+                                </t>
+                              </div>
+
+                              <div class="col-md-12" style="margin-left: 0; margin-right: 0; padding: 0">
+                                <t t-if="categories">
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label for="floor" class="text-white">Catégorie</label>
+                                      <select name="category_3rooms" class="form-control" disabled="true">
+                                        <option value="">----------------</option>
                                         <t t-foreach="categories" t-as="category">
-                                          <option t-att-value="category.slug">
+                                          <option t-att-value="category.slug" t-att-selected="category.slug == '3rooms'">
                                             <t t-esc="category.name"></t>
                                           </option>
                                         </t>
-                                    </select>
+                                      </select>
+                                    </div>
                                   </div>
-                                </div>
 
-                                <div class="col-md-6">
-                                  <div class="form-group">
-                                    <label for="room_qty" class="text-white">Quantité de chambre</label>
-                                    <input t-attf-name="room_qty" t-attf-id="room_qty" class="form-control" placeholder="Quantité" type="number" min="1" max="10"/>
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label for="3rooms_qty" class="text-white">Quantité de chambre</label>
+                                      <input t-attf-name="3rooms_qty" t-attf-id="3rooms_qty" class="form-control" placeholder="Quantité" type="number" min="1" max="10" value="0" />
+                                    </div>
                                   </div>
-                                </div>
-                              </t>
+                                </t>
+                              </div>
                             </fieldset>
                           </div>
 
@@ -118,7 +143,6 @@
                               <div class="form-group">
                                 <label for="floor" class="text-white">Sélectionner l'étage</label>
                                 <select name="floor" class="form-control" default="">
-                                  <option value="">------------</option>
                                   <option value="base">Rez de chaussée</option>
                                   <option value="first_floor">Premier étage</option>
                                   <option value="second_floor">Deuxième étage</option>
@@ -132,13 +156,13 @@
                                 <div class="col-md-6" style="padding-left: 0px">
                                   <div class="form-group">
                                     <label for="child_number" class="text-white">Enfants</label>
-                                    <input name="child_number" id="child_number" class="form-control" placeholder="Nbre" type="number" default="0" min="0" max="10" required="required"/>
+                                    <input name="child_number" id="child_number" class="form-control" placeholder="Nbre" type="number" value="0" min="0" max="10" required="required"/>
                                   </div>
                                 </div>
                                 <div class="col-md-6" style="padding-right: 0px">
                                   <div class="form-group">
                                     <label for="adult_number" class="text-white">Adultes</label>
-                                    <input name="adult_number" id="adult_number" class="form-control" placeholder="Nbre" type="number" default="1" min="1" max="10" required="required" />
+                                    <input name="adult_number" id="adult_number" class="form-control" placeholder="Nbre" type="number" value="1" min="1" max="10" required="required" />
                                   </div>
                                 </div>
                               </div>
@@ -244,13 +268,25 @@
                     </div>
                     <!--Tab2 end-->
 
+                    <!--Tab3 start-->
+                    <!--div class="tab" style="margin-left: 0; margin-right: 0">
+                      <div class="col-md-12" style="margin-top: 10px; margin-bottom: 15px">
+                        Bla bla bla <br/>
+                        Bla bla bla <br/>
+                        Bla bla bla <br/>
+                        Bla bla bla <br/>
+                        Bla bla bla <br/>
+                      </div>
+                    </div-->
+                    <!--Tab3 end-->
+
                     <div style="overflow:auto; padding: 15px">
                       <div style="float:right;">
                         <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="" style="text-transform: uppercase; padding: 15px 40px; margin-right: 10px">Retour</button>
                         <button type="button" id="nextBtn" onclick="nextPrev(1)" class="" style="text-transform: uppercase; padding: 15px 40px">Suivant</button>
                       </div>
                     </div>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -276,20 +312,6 @@
             document.getElementsByName("end_date")[0].setAttribute('min', start_date)
           })
 
-          // Mobile processing
-          showMobileTab(currentTab)
-          // Freeze before the date days
-          var today = new Date().toISOString().split('T')[0];
-          document.getElementsByName("start_date_mobile")[0].setAttribute('min', today)
-
-          // set disabled date from start date
-          $("#start_date_mobile").change(function(){
-            console.log("start_date changed!!!!!!!")
-            var start_date = $("#start_date_mobile")[0].value;
-            document.getElementsByName("end_date_mobile")[0].setAttribute('min', start_date)
-          })
-
-
 
           function showTab(n) {
             // This function will display the specified tab of the form...
@@ -305,25 +327,6 @@
               document.getElementById("nextBtn").innerHTML = "Réserver";
             } else {
               document.getElementById("nextBtn").innerHTML = "Suivant";
-            }
-            //... and run a function that will display the correct step indicator:
-            fixStepIndicator(n)
-          }
-
-          function showMobileTab(n) {
-            // This function will display the specified tab of the form...
-            var x = document.getElementsByClassName("tab_mobile");
-            x[n].style.display = "block";
-            //... and fix the Previous/Next buttons:
-            if (n == 0) {
-              document.getElementById("prevBtn_mobile").style.display = "none";
-            } else {
-              document.getElementById("prevBtn_mobile").style.display = "inline";
-            }
-            if (n == (x.length - 1)) {
-              document.getElementById("nextBtn_mobile").innerHTML = "Réserver";
-            } else {
-              document.getElementById("nextBtn_mobile").innerHTML = "Suivant";
             }
             //... and run a function that will display the correct step indicator:
             fixStepIndicator(n)
@@ -354,7 +357,7 @@
                 // ... the form gets submitted:
                 document.getElementById("checkoutForm").submit();
                 console.log("Submited..............................");
-                return false;
+                return true;
               }
               // Otherwise, display the correct tab:
               showTab(currentTab);
@@ -370,42 +373,6 @@
             }
             //... and adds the "active" class on the current step:
             x[n].className += " active";
-          }
-
-
-          // mobile processing
-          function nextPrev_mobile(n) {
-            var start_date = $("#start_date_mobile")[0].value;
-            var end_date = $("#end_date_mobile")[0].value
-
-            // This function will figure out which tab to display
-            var x = document.getElementsByClassName("tab_mobile");
-            // Exit the function if any field in the current tab is invalid:
-
-            // CHECK IF THE FRONT END FORM IS VALID BEFORE CONTINUE, RETRIEVE ERROR ELSE
-            var valid = false
-            var complete = false
-            if(start_date &amp;&amp; end_date){
-              valid = true
-            }
-
-            if(valid){
-              // Hide the current tab:
-              x[currentTab].style.display = "none";
-              // Increase or decrease the current tab by 1:
-              currentTab = currentTab + n;
-              // if you have reached the end of the form...
-              if (currentTab >= x.length) {
-                // ... the form gets submitted:
-                document.getElementById("checkoutForm_mobile").submit();
-                console.log("Submited..............................");
-                return false;
-              }
-              // Otherwise, display the correct tab:
-              showMobileTab(currentTab);
-            } else {
-              alert("Bien vouloir remplir intégralement le formulaire")
-            }
           }
       </script>
     </t>

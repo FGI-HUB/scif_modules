@@ -27,7 +27,7 @@
                                                 </p>
                                             </div>
                                             <div class="email">
-                                                <p>Courriel: <span>info@scif-immobilier.cm </span></p>
+                                                <p><i class="fa fa-envelope"></i> info@scif-immobilier.cm</p>
                                             </div>
                                         </div>
                                         <div class="social-links">
@@ -41,26 +41,17 @@
                                         <div class="menu-list hidden-sm hidden-xs">
                                             <nav>
                                                 <ul>
-                                                    <li><a href="/">home</a></li>
+                                                    <li><a href="/">Accueil</a></li>
                                                     <li><a href="/gallery">Gallery</a></li>
                                                     <li><a href="/booking">Réserver</a></li>
                                                     <li><a href="/about">A propos </a></li>
                                                     <li><a href="/contact">Contact</a></li>
-                                                    <li><a href="/web/login">Se connecter</a></li>
-                                                    <!--li><a href="#">pages<i class="fa fa-angle-down"></i></a>
-                                                        <ul class="dropdown_menu">
-                                                            <li><a href="404.html">404</a></li>
-															<li><a href="booking-information.html">Booking Information</a></li>
-															<li><a href="personal-information.html">Personal Information</a></li>
-															<li><a href="payment-information.html">Parment Information</a></li>
-															<li><a href="booking-done.html">Booking Done</a></li>
-															<li><a href="room-booking.html">Room booking</a></li>
-															<li><a href="news.html">News</a></li>
-															<li><a href="gallery.html">Gallery</a></li>
-															 <li><a href="staff.html">Staff</a></li>
-															<li><a href="our-room.html">Room</a></li>
-                                                        </ul>
-                                                    </li-->
+                                                    <li t-ignore="true" t-if="user_id._is_public()">
+                                                        <a href="/web/login">Se connecter</a>
+                                                    </li>
+                                                    <li t-ignore="true" t-if="not user_id._is_public()">
+                                                        <a id="o_logout" t-attf-href="/web/session/logout?redirect=/">Se déconnecter</a>
+                                                    </li>
                                                 </ul>
                                             </nav>
                                         </div>
@@ -79,26 +70,17 @@
                         <div class="col-md-12">
                             <nav id="dropdown">
                             <ul>
-                                <li><a href="/">home</a></li>
+                                <li><a href="/">Accueil</a></li>
                                 <li><a href="/gallery">Gallery</a></li>
                                 <li><a href="/booking">Réserver</a></li>
-                                <li><a href="/about">A propos</a></li>
+                                <li><a href="/about">A propos </a></li>
                                 <li><a href="/contact">Contact</a></li>
-                                <li><a href="/web/login">Se connecter</a></li>
-                                <!--li><a href="#">pages</a>
-                                    <ul>
-                                        <li><a href="404.html">404</a></li>
-                                        <li><a href="booking-information.html">Booking Information</a></li>
-                                        <li><a href="personal-information.html">Personal Information</a></li>
-                                        <li><a href="payment-information.html">Parment Information</a></li>
-                                        <li><a href="booking-done.html">Booking Done</a></li>
-                                        <li><a href="room-booking.html">Room booking</a></li>
-                                        <li><a href="news.html">News</a></li>
-                                        <li><a href="gallery.html">Gallery</a></li>
-                                        <li><a href="staff.html">Staff</a></li>
-                                        <li><a href="our-room.html">Room</a></li>
-                                    </ul>
-                                </-li-->
+                                <li t-ignore="true" t-if="user_id._is_public()">
+                                    <a href="/web/login">Se connecter</a>
+                                </li>
+                                <li t-ignore="true" t-if="not user_id._is_public()">
+                                    <a id="o_logout" t-attf-href="/web/session/logout?redirect=/">Se déconnecter</a>
+                                </li>
                             </ul>
                         </nav>
                         </div>

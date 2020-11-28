@@ -128,17 +128,17 @@
                             <div class="col-md-6 custom_appart_block">
                                 <div class="">
                                     <div class="room-img">
-                                        <a href="#"><img src="scif_web_template/static/img/home/home_block2/pic11.jpg" alt="Appartement de deux chambres" /></a>
+                                        <a href="/booking"><img src="scif_web_template/static/img/home/home_block2/pic11.jpg" alt="Appartement de deux chambres" /></a>
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
-                                            <h3><a href="#">2 chambres</a></h3>
+                                            <h3>2 chambres</h3>
                                         </div>
                                         <div class="room-rent">
                                             <h5></h5>
                                         </div>
                                         <div class="room-book">
-                                            <a href="#">Reserver maintenant</a>
+                                            <a href="/booking">Reserver maintenant</a>
                                         </div>
                                     </div>
                                 </div>
@@ -146,17 +146,17 @@
                             <div class="col-md-6">
                                 <div class="">
                                     <div class="room-img">
-                                        <a href="#"><img src="scif_web_template/static/img/home/home_block2/pic2.jpg" alt="Appartement de trois chambre" /></a>
+                                        <a href="/booking"><img src="scif_web_template/static/img/home/home_block2/pic2.jpg" alt="Appartement de trois chambre" /></a>
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
-                                            <h3><a href="#">3 chambres</a></h3>
+                                            <h3>3 chambres</h3>
                                         </div>
                                         <div class="room-rent">
                                             <h5></h5>
                                         </div>
                                         <div class="room-book">
-                                            <a href="#">Réserver maintenant</a>
+                                            <a href="/booking">Réserver maintenant</a>
                                         </div>
                                     </div>
                                 </div>

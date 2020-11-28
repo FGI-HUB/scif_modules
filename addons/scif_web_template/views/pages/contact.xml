@@ -45,19 +45,19 @@
                                 <h2>Envoyer votre message</h2>
                               </div>
                               <div class="contact-form-inner">
-                                  <form id="contact-form" action="mail.php" method="post">
+                                  <form id="contact-form" action="/contact/send" method="post">
                                       <p class="form-messege"></p>
                                       <div class="form-field-top mb-20">
                                           <div class="form-field-name">
-                                              <input name="name" type="text" placeholder="Votre nom" />
+                                              <input name="name" type="text" placeholder="Votre nom" required="true"/>
                                           </div>
                                           <div class="form-field-name">
-                                              <input name="email" type="text" placeholder="Votre email" />
+                                              <input name="email" type="text" placeholder="Votre email" required="true"/>
                                           </div>
                                       </div>
                                       <div class="form-field-bottom">
                                           <div class="textarea">
-                                              <textarea name="message" placeholder="Insérer votre message"></textarea>
+                                              <textarea name="message" placeholder="Insérer votre message" required="true"></textarea>
                                           </div>
                                           <div class="submit mt-30"><button type="submit">Envoyer</button></div>
                                       </div>

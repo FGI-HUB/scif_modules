@@ -31,3 +31,4 @@ access_hotel_order_manager_manager,hotel.order.manager,sale.model_sale_order,hot
 access_hotel_order_line_manager,hotel.order.line.manager,sale.model_sale_order_line,hotel.group_hotel_manager,1,1,1,0
 access_hotel_invoice_manager,account.invoice.manager,account.model_account_invoice,hotel.group_hotel_manager,1,1,1,1
 access_folio_room_line_manager,hotel.folio_room_line.manager,model_folio_room_line,hotel.group_hotel_manager,1,1,1,1
+access_hotel_testimony_group_manager,hotel.testimony.manager,model_hotel_testimony,hotel.group_hotel_manager,1,1,1,1

@@ -13,10 +13,12 @@ class CustomWebHomepage(Home):
         categories = request.env['hotel.room.type'].sudo().search([])
         amenities = request.env['hotel.room.amenities'].sudo().search([])
         services = request.env['hotel.services'].sudo().search([])
+        testimonies = request.env['hotel.testimony'].sudo().search([])
         context = {
             "categories": categories,
             "amenities": amenities,
-            "services": services
+            "services": services,
+            "testimonies": testimonies,
         }
         return request.render('scif_web_template.homepage', context)
 

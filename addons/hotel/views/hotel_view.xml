@@ -71,6 +71,49 @@
               action="open_hotel_floor_form_tree" sequence="21"
               parent="hotel_configuration_menu"/>
 
+    <!-- Action of hotel testimony -->
+    <record id="open_hotel_testimony_tree" model="ir.ui.view">
+        <field name="name">hotel.testimony.tree</field>
+        <field name="model">hotel.testimony</field>
+        <field name="arch" type="xml">
+            <tree string="Témoignagnes des clients">
+                <field name="author"/>
+                <field name="society"/>
+                <field name="role"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hotel_testimony_form" model="ir.ui.view">
+        <field name="name">hotel.testimony.form</field>
+        <field name="model">hotel.testimony</field>
+        <field name="arch" type="xml">
+            <form string=" Témoignages des clients">
+                <sheet>
+                    <group>
+                        <field name="author"/>
+                        <field name="society"/>
+                        <field name="role"/>
+                        <field name="content"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action of hotel testimony -->
+    <record id="open_hotel_testimony_form_tree" model="ir.actions.act_window">
+        <field name="name">Témoignages</field>
+        <field name="res_model">hotel.testimony</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_open_hotel_testimony_form_tree" name="Témoignages"
+              action="open_hotel_testimony_form_tree" sequence="21"
+              parent="hotel_configuration_menu"/>
+
+
     <!--======= Room Type ======= -->
     <!-- Form view of hotel room type -->
     <record id="view_hotel_room_type_form" model="ir.ui.view">

@@ -1272,3 +1272,14 @@ class AccountInvoice(models.Model):
                 {"hotel_invoice_id": res.id, "invoice_status": "invoiced"}
             )
         return res
+
+
+class HotelTestimony(models.Model):
+
+    _name = "hotel.testimony"
+    _description = "Testimony"
+
+    author = fields.Char("Auteur", required=True)
+    society = fields.Char("Société", required=True)
+    role = fields.Char("Poste occupé", required=True)
+    content = fields.Text("Contenu", required=True)

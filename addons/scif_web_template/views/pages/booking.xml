@@ -52,10 +52,10 @@
                     <ul class="nav nav_booking" role="tablist">
                         <li class="scif_step">
                         <a href="#booking" data-toggle="tab">
-                          <span class="tab-border">1</span><span>Info voyage</span></a></li>
+                          <span class="tab-border">1</span><span>Détails du voyage</span></a></li>
                       <li class="scif_step">
                         <a href="#personal" data-toggle="tab">
-                          <span class="tab-border">2</span><span>Info. appart</span></a></li>
+                          <span class="tab-border">2</span><span>Informations personnelle</span></a></li>
                       <!--li class="scif_step">
                         <a href="#payment" data-toggle="tab">
                           <span class="tab-border">3</span><span>Résumé</span></a></li-->
@@ -212,21 +212,21 @@
                       <div class="col-md-12" style="padding: 0">
                         <div class="form-group col-md-6">
                           <label for="name" class="text-white">Nom (s)</label>
-                          <input name="name" id="name" class="form-control" placeholder="Nom du client" type="text" required="required" />
+                          <input name="name" id="name" class="form-control" placeholder="Nom du client" type="text" required="true" />
                         </div>
                         <div class="form-group col-md-6">
                           <label for="surname" class="text-white">Prénom (s)</label>
-                          <input name="surname" id="surname" class="form-control" placeholder="Prénom du client" type="text"/>
+                          <input name="surname" id="surname" class="form-control" placeholder="Prénom du client" type="text" required="true" />
                         </div>
                       </div>
                       <div class="col-md-12" style="padding: 0">
                         <div class="form-group col-md-6">
                           <label for="email" class="text-white">Email</label>
-                          <input name="email" id="email" class="form-control" placeholder="Adresse email" type="email"/>
+                          <input name="email" id="email" class="form-control" placeholder="Adresse email" type="email" required="true"/>
                         </div>
                         <div class="form-group col-md-6">
                           <label for="phone" class="text-white">N° de téléphone</label>
-                          <input name="phone" id="phone" class="form-control" placeholder="Téléphone" type="text"/>
+                          <input name="phone" id="phone" class="form-control" placeholder="Téléphone" type="text" required="true"/>
                         </div>
                       </div>
                       <div class="col-md-12" style="padding: 0">
@@ -300,6 +300,10 @@
       <script>
           var currentTab = 0; // Current tab is set to be the first tab (0)
           showTab(currentTab); // Display the current tab
+          var name = document.getElementsByName("name")[0].value
+          var suname = document.getElementsByName("surname")[0].value
+          var email = document.getElementsByName("email")[0].value
+          var phone = document.getElementsByName("phone")[0].value
 
           // Freeze before the date days
           var today = new Date().toISOString().split('T')[0];
@@ -345,24 +349,29 @@
             var complete = false
             if(start_date &amp;&amp; end_date){
               valid = true
-            }
-
-            if(valid){
               // Hide the current tab:
               x[currentTab].style.display = "none";
               // Increase or decrease the current tab by 1:
               currentTab = currentTab + n;
+            }
+
+            if(valid){
               // if you have reached the end of the form...
               if (currentTab >= x.length) {
-                // ... the form gets submitted:
-                document.getElementById("checkoutForm").submit();
-                console.log("Submited..............................");
-                return true;
+                if(name != "" &amp;&amp; suname != "" &amp;&amp; email != "" &amp;&amp; phone != ""){
+                  // ... the form gets submitted:
+                  document.getElementById("checkoutForm").submit();
+                  console.log("Submited..............................");
+                  return true;
+                } else {
+                  alert("Bien vouloir vérifier la saisie de vos informations personnelles!")
+                  currentTab--;
+                }
               }
               // Otherwise, display the correct tab:
               showTab(currentTab);
             } else {
-              alert("Bien vouloir remplir intégralement le formulaire")
+              alert("La date d'arrivée et de départ doivent être saisies!")
             }
           }
           function fixStepIndicator(n) {

@@ -114,6 +114,21 @@
 }
 
 
+/*CAROUSEL INNER ELEMENT*/
+.caous-2{
+  background: url('/scif_web_template/static/img/carousel/2.jpg');
+  background-size: cover;
+}
+.caous-3{
+  background: url('/scif_web_template/static/img/carousel/3.jpg');
+  background-size: cover;
+}
+.caous-4{
+  background: url('/scif_web_template/static/img/carousel/4.jpg');
+  background-size: cover;
+}
+
+
 @media (max-width: 767px){
     .custom_container{
         width: 100%;

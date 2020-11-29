@@ -18,32 +18,139 @@
           <!-- PRELOADER END -->
 
           <!--Welcome secton-->
-          <div class="welcome-section">
-              <div class="container">
-                  <div class="row">
-                      <div class="col-md-12">
-                          <div class="welcome-text">
-                              <h2>
-                              <span>BIENVENU CHEZ</span> <span class="coloring">VOUS</span>
-                              </h2>
-                              <h1 class="cd-headline clip">
-                                  <span>THE PERFECT</span>
-                                  <span class="cd-words-wrapper coloring">
-                                      <b class="is-visible"> LOCATION</b>
-                                      <b>Room</b>
-                                      <b>places</b>
-                                  </span>
-                              </h1>
-                              <p class="welcome-desc">Vous avez à votre disposition un immeuble de 24 appartements meublés et haut standing, sécurisé, éclairé et situé à quelques mètres de la plage.</p>
-                              <div class="explore">
-                                  <a href="/booking">RESERVER MAINTENANT</a>
-                              </div>
-                          </div>
-                      </div>
+          <div class="container-fluid" style="padding-left: 0; padding-right: 0">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="welcome-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="welcome-text">
+                                    <h2>
+                                    <span>BIENVENU CHEZ</span> <span class="coloring">VOUS</span>
+                                    </h2>
+                                    <h1 class="cd-headline clip">
+                                        <span>LA PERFECTION</span>
+                                        <span class="cd-words-wrapper coloring">
+                                            <b class="is-visible"> en lieux</b>
+                                            <b> en service</b>
+                                            <b> en tout</b>
+                                        </span>
+                                    </h1>
+                                    <p class="welcome-desc">Vous avez à votre disposition un immeuble de 24 appartements meublés et haut standing, sécurisé, éclairé et situé à quelques mètres de la plage.</p>
+                                    <div class="explore">
+                                        <a href="/booking">RESERVER MAINTENANT</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Welcome section END -->
+                  
+                </div>
+                <div class="carousel-item">
+                  <div class="welcome-section caous-2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="welcome-text">
+                                    <h2>
+                                    <span>PASSEZ UN SEJOUR</span> <span class="coloring">AGREABlE</span>
+                                    </h2>
+                                    <h1 class="cd-headline clip">
+                                        <span>LA PERFECTION</span>
+                                        <span class="cd-words-wrapper coloring">
+                                            <b class="is-visible"> en lieux</b>
+                                            <b> en service</b>
+                                            <b> en tout</b>
+                                        </span>
+                                    </h1>
+                                    <p class="welcome-desc">Lorsqu'il s'agit de détente, nous mettons à la disposition de nos clients un environement paisible pour un repos bien mérité.</p>
+                                    <div class="explore">
+                                        <a href="/booking">RESERVER MAINTENANT</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                   </div>
+                  <!-- Welcome section END -->
+                </div>
+                <div class="carousel-item">
+                  <div class="welcome-section caous-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="welcome-text">
+                                    <h2>
+                                    <span>LE STANDING QUI VOUS</span> <span class="coloring">CONVIENT</span>
+                                    </h2>
+                                    <h1 class="cd-headline clip">
+                                        <span>LA PERFECTION</span>
+                                        <span class="cd-words-wrapper coloring">
+                                            <b class="is-visible"> en lieux</b>
+                                            <b> en service</b>
+                                            <b> en tout</b>
+                                        </span>
+                                    </h1>
+                                    <p class="welcome-desc">Nos appartements sont tous équipés avec les outils à la pointe de la technologie.</p>
+                                    <div class="explore">
+                                        <a href="/booking">RESERVER MAINTENANT</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Welcome section END -->
+                </div>
+                <div class="carousel-item">
+                  <div class="welcome-section caous-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="welcome-text">
+                                    <h2>
+                                    <span>LA MODERNITE DU</span> <span class="coloring">QUOTIDIEN</span>
+                                    </h2>
+                                    <h1 class="cd-headline clip">
+                                        <span>LA PERFECTION</span>
+                                        <span class="cd-words-wrapper coloring">
+                                            <b class="is-visible"> en lieux</b>
+                                            <b> en service</b>
+                                            <b> en tout</b>
+                                        </span>
+                                    </h1>
+                                    <p class="welcome-desc">Profitez de toutes les chaïnes disponibles sur Canalsat lorsque vous êtes  chez nous.</p>
+                                    <div class="explore">
+                                        <a href="/booking">RESERVER MAINTENANT</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Welcome section END -->
+                </div>
               </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
           </div>
-          <!-- Welcome section END -->
 
           <!--About Section Title start-->
           <div class="about-section text-center ptb-80 white_bg">

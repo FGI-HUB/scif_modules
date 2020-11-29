@@ -439,7 +439,7 @@
                               </t>
                             </t>
 
-                            <t t-if="not categories">
+                            <t t-if="not testimonies">
                               <div class="single-testimonial">
                                   <h2>Ngando Alexandre</h2>
                                  <p><i class="fa fa-quote-left" style="margin-right: 5px"></i>Les séjours dans les locaux de la Société Immobilière et Familiale du Cameroun ont été très appaisant. Nous avons le plaisir d'être entretenu par un staff de qualité et à l'écoute de toutes nos préocupations.<i style="margin-left: 5px" class="fa fa-quote-right"></i></p>

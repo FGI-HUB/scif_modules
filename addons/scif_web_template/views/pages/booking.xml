@@ -153,13 +153,13 @@
                             </div>
                             <div class="col-md-6">
                               <div class="row" style="margin-left: 0; margin-right: 0">
-                                <div class="col-md-6" style="padding-left: 0px">
+                                <div class="col-md-6 child_old_div" style="padding-left: 0px">
                                   <div class="form-group">
                                     <label for="child_number" class="text-white">Enfants</label>
                                     <input name="child_number" id="child_number" class="form-control" placeholder="Nbre" type="number" value="0" min="0" max="10" required="required"/>
                                   </div>
                                 </div>
-                                <div class="col-md-6" style="padding-right: 0px">
+                                <div class="col-md-6 child_old_div" style="padding-right: 0px">
                                   <div class="form-group">
                                     <label for="adult_number" class="text-white">Adultes</label>
                                     <input name="adult_number" id="adult_number" class="form-control" placeholder="Nbre" type="number" value="1" min="1" max="10" required="required" />
@@ -248,7 +248,7 @@
                               <input class="form-check-input" name="invalid" type="checkbox" id="inlineCheckbox2" value="invalid"/>
                               <label class="form-check-label text-white" for="inlineCheckbox2">Handicapés</label>
                             </div>
-                            <div class="form-check form-check-inline">
+                            <div class="form-check form-check-inline checkbox_allergic_div">
                               <input class="form-check-input" name="allergic" type="checkbox" id="inlineCheckbox3" value="allergic"/>
                               <label class="form-check-label text-white" for="inlineCheckbox3">Allergiques</label>
                             </div>
@@ -281,9 +281,9 @@
                     <!--Tab3 end-->
 
                     <div style="overflow:auto; padding: 15px">
-                      <div style="float:right;">
-                        <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="" style="text-transform: uppercase; padding: 15px 40px; margin-right: 10px">Retour</button>
-                        <button type="button" id="nextBtn" onclick="nextPrev(1)" class="" style="text-transform: uppercase; padding: 15px 40px">Suivant</button>
+                      <div class="butt_wrap" style="float:right;">
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="butt_btn" style="text-transform: uppercase; padding: 15px 40px; margin-right: 10px">Retour</button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)" class="butt_btn" style="text-transform: uppercase; padding: 15px 40px">Suivant</button>
                       </div>
                     </div>
                   </form>

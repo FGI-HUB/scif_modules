@@ -146,8 +146,24 @@
     .our-gallery .single-gallery::before {
         background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     }
-
     .custom_gallery_container{
         width: 100%;
+    }
+    .child_old_div{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .checkbox_allergic_div{
+        width: 100%;
+        padding-left: 15px;
+    }
+    .butt_wrap{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .butt_btn{
+        width: 100%;
+        margin: 5px 0px;
     }
 }

@@ -100,7 +100,7 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <div class="feature-desc text-left">
                     <div class="section-title mb-30">
-                      <h2>Nos points <span>fort</span></h2>
+                      <h2 style="width: 100%" class="text-center">Nos points <span>fort</span></h2>
                       <p>
                         Nous sommes une entreprise de gestion immobilière ayant pour mission de faciliter le service d'hébergement dans la ville de Kribi. Nous ciblons exclusivem€nt les entreprises, car ceux-ci sont le plus souvent confrontés à ces problèmes d'himmobilier lorsqu'il s'agit soit d'éffectuer un séminaire dans la ville ou encore d'une escale de voyage. Nos points fort sont:
                       </p>

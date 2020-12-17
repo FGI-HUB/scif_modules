@@ -37,12 +37,12 @@
 
           <!--Room booking start-->
           <div class="room-booking ptb-80 white_bg">
-            <div class="container">
+            <div class="container redefine_container">
               <div class="row">
                 <div class="col-md-12">
                   <div class="section-title mb-80 text-center">
                     <h2>Réserver un <span>appartement</span></h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered by injected humour.</p>
+                    <p>Réserver maintenant l'appartement ou les appartements qui vous correspondent en fonction de vos différents critères et profitez d'un séjour agréable chez nous.</p>
                   </div>
                 </div>
               </div>

@@ -93,10 +93,10 @@
                               <div class="social-media mt-50">
                                  <h3 class="social-medai-title">Réseaux sociaux</h3>
                                  <div class="social-media-list">
-                                      <a href="#"><i class="fa fa-facebook"></i></a>
-                                      <a href="#"><i class="fa fa-rss"></i></a>
-                                      <a href="#"><i class="fa fa-pinterest"></i></a>
-                                      <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/Soci%C3%A9t%C3%A9-Civile-Immobili%C3%A8re-et-Familiale-103616128355206/"><i class="fa fa-facebook"></i></a>
+                                    <!--a href="#"><i class="fa fa-rss"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a-->
+                                    <a target="_blank" href="https://www.instagram.com/scifsarl/"><i class="fa fa-instagram"></i></a>
                                  </div>
                               </div>
                           </div>

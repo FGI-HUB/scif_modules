@@ -31,10 +31,10 @@
                                             </div>
                                         </div>
                                         <div class="social-links">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-rss"></i></a>
-                                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                            <a target="_blank" href="https://www.facebook.com/Soci%C3%A9t%C3%A9-Civile-Immobili%C3%A8re-et-Familiale-103616128355206/"><i class="fa fa-facebook"></i></a>
+                                            <!--a href="#"><i class="fa fa-rss"></i></a>
+                                            <a href="#"><i class="fa fa-pinterest"></i></a-->
+                                            <a target="_blank" href="https://www.instagram.com/scifsarl/"><i class="fa fa-instagram"></i></a>
                                         </div>
                                     </div>
                                     <div class="menu mt-25">

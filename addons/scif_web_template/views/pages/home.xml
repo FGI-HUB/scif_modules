@@ -414,6 +414,38 @@
 
         <!--Testimonial start-->
         <div class="staff-tesimonial text-center white_bg">
+            <div class="upper_form" id="upper_form">
+              <div class="upper_form_content">
+                <div class="upper_form_content_form">
+                  <span class="upper_form_content_form_close" id="upper_form_close">
+                    <i class="fa fa-times" style="margin-right: 20px"></i>
+                  </span>
+                  <form class="u_f_form" method="post" id="testimony_form" action="/testimony/submit">
+                    <div class="form-group">
+                      <label for="name">Nom et prénom</label>
+                      <input class="form-control" name="name" type="text" id="name" />
+                    </div>
+                    <div class="form-group">
+                      <label for="society_role">Poste occupé</label>
+                      <input class="form-control" name="society_role" type="text" id="society_role" />
+                    </div>
+                    <div class="form-group">
+                      <label for="company">Société</label>
+                      <input class="form-control" name="company" type="text" id="company" />
+                    </div>
+                    <div class="form-group">
+                      <label for="testimony_box">Témoignage</label>
+                      <textarea class="form-control" name="testimony_box" id="testimony_box"></textarea>
+                    </div>
+                    <button class="btn btn-secondary" onclick="submitTestimony()">Enregistrer</button>
+                  </form>
+                </div>
+                <span class="upper_form_content_text" id="upper_form_open">
+                  <i class="fa fa-plus" style="margin-right: 10px"></i>
+                  <span class="upper_form_content_text_to_hide">Ajouter un témoignage</span>
+                </span>
+              </div>
+            </div>
             <div class="testimonail-bg-opacity"></div>
             <div class="container">
                 <div class="row">
@@ -526,6 +558,70 @@
         <!--Hotel communities end-->
       </div>
       <!-- HOME PAGE WHOLE BODY TEMPLATE END -->
+      <script>
+        $("#upper_form_open").click(function(){
+          console.log("On click my element !!!!!!!");
+          var elt =$("#upper_form")
+          elt.addClass('form')
+        })
+
+        $("#upper_form_close").click(function(){
+          console.log("On click Close.");
+          var elt = $("#upper_form")
+          elt.removeClass('form');
+        })
+
+        $("#name").change(function(){
+          var elt = $("#name")
+          elt.removeClass('form-control-error');
+        })
+        $("#society_role").change(function(){
+          var elt = $("#society_role")
+          elt.removeClass('form-control-error');
+        })
+        $("#company").change(function(){
+          var elt = $("#company")
+          elt.removeClass('form-control-error');
+        })
+        $("#testimony_box").change(function(){
+          var elt = $("#testimony_box")
+          elt.removeClass('form-control-error');
+        })
+
+        function submitTestimony(){
+          var valid = false;
+          var name = document.getElementsByName("name")[0].value;
+          var society_role = document.getElementsByName("society_role")[0].value;
+          var company = document.getElementsByName("company")[0].value;
+          var testimony = document.getElementsByName("testimony_box")[0].value;
+
+          if(name == ""){
+            var n = $("#name")
+            n.addClass('form-control-error')
+          }
+          if(company == ""){
+            var n = $("#company")
+            n.addClass('form-control-error')
+          }
+          if(testimony == ""){
+            var n = $("#testimony_box")
+            n.addClass('form-control-error')
+          }
+          if(society_role == ""){
+            var n = $("#society_role")
+            n.addClass('form-control-error')
+          }
+
+          if(name != "" &amp;&amp; company != "" &amp;&amp; testimony != "", society_role != ""){
+            document.getElementById("testimony_form").submit();
+
+            var elt = $("#upper_form")
+            elt.removeClass('form')
+
+            return true;
+          }
+        }
+      </script>
     </t>
   </template>
 </odoo>

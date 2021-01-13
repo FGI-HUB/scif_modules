@@ -209,3 +209,18 @@ class ScifWebController(http.Controller):
     @http.route(['/contact/send'], type='http', auth="public", website=True, csrf=False)
     def send_email(self, **post):
         return request.redirect("/")
+
+    @http.route(['/testimony/submit'], type='http', auth="public", website=True, csrf=False)
+    def post_testimony(self, **post):
+        testimony_orm_object = request.env['hotel.testimony']
+        posted_dict = {
+            "author": post.get("name"),
+            "society": post.get("company"),
+            "role": post.get("society_role"),
+            "content": post.get("testimony_box")
+        }
+
+        testimony = testimony_orm_object.sudo().create(posted_dict)
+        print("My testimony was well sent!", testimony)
+
+        return request.redirect("/")

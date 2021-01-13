@@ -358,7 +358,7 @@
             if(valid){
               // if you have reached the end of the form...
               if (currentTab >= x.length) {
-                if(name != "" &amp;&amp; suname != "" &amp;&amp; email != "" &amp;&amp; phone != ""){
+                if(name != "" &amp;&amp; surname != "" &amp;&amp; email != "" &amp;&amp; phone != ""){
                   // ... the form gets submitted:
                   document.getElementById("checkoutForm").submit();
                   console.log("Submited..............................");
